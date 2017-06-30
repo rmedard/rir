@@ -7642,3 +7642,12 @@ a.list-group-item-danger.active:focus {
 .popover {
   color: #2C3E50;
 }
+.rir-top-banner {
+  display: none;
+}
+@media (min-width: 992px) {
+  .rir-top-banner {
+    display: block;
+    background-color: white;
+  }
+}
