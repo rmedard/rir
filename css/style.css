@@ -7650,4 +7650,14 @@ a.list-group-item-danger.active:focus {
     display: block;
     background-color: white;
   }
+  .super-main {
+    margin-top: 165px;
+  }
+  .super-main .jir-search-bar {
+    padding: 20px;
+    background: #ecf0f1;
+  }
+  header > .container > .navbar-header {
+    display: none;
+  }
 }
