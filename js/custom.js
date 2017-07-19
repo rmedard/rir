@@ -5,8 +5,9 @@
 // });
 
 (function ($) {
-    if ($.inArray($('select#edit-field-advert-district-target-id > option').attr('value'),
-            [75,76,77,78,79])){
-        $(this).attr('disabled', true)
-    }
+    $('select#edit-field-advert-district-target-id > option').each(function () {
+        if ($.inArray($(this).attr('value'), ['75','76','77','78','79'])){
+            $(this).attr('disabled', true)
+        }
+    });
 }(jQuery));
