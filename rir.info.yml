@@ -28,3 +28,4 @@ regions:
 libraries:
   - 'rir/global-styling'
   - 'rir/bootstrap-scripts'
+  - 'rir/additional-scripts'
