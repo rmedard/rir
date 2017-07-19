@@ -6,7 +6,7 @@
 
 (function ($) {
     $('select#edit-field-advert-district-target-id > option').each(function () {
-        if ($(this).attr('value') == 75){
+        if ( $.inArray(this.attr('value'), [75,76,77,78,79])){
             $(this).attr('disabled', true)
         }
     });
