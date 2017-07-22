@@ -26,7 +26,7 @@ function rir_preprocess_menu(&$variables){
 
         $variables['menu_primary_values'] = $menu_primary_values;
 
-    } elseif ($variables['menu_name'] === 'adverts-primary-menu'){
+    } elseif ($variables['menu_name'] === 'adverts-secondary-menu'){
         $rent_all = Drupal::entityQuery('node')
             ->condition('type', 'advert')
             ->condition('status', 1)
