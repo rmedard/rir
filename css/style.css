@@ -3417,7 +3417,7 @@ fieldset[disabled] .btn-link:hover,
 .btn-link[disabled]:focus,
 fieldset[disabled] .btn-link:focus {
   color: #b4bcc2;
-  text-decor(node:11989) DeprecationWarning: util.print is deprecated. Use console.log instead.
+  text-decor(node:12501) DeprecationWarning: util.print is deprecated. Use console.log instead.
 ation: none;
 }
 .btn-lg,
@@ -7685,6 +7685,9 @@ nav#block-advertssecondarymenu > ul.nav-pills li {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+nav#block-advertssecondarymenu > ul.nav-pills li a {
+  padding: 8px 10px;
 }
 #block-advertssecondarymenu,
 #block-advertsprimarymenu {
