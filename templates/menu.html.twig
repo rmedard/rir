@@ -27,6 +27,7 @@
     {% import _self as menus %}
     {% if items %}
         {% if menu_level == 0 %}
+            <p>{{ menu_name }}</p>
             {% if menu_name == 'adverts-primary-menu' %}
                 <ul{{ attributes.addClass('nav', 'nav-pills', 'nav-justified') }}>
             {% else %}
