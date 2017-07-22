@@ -28,7 +28,7 @@
     {% if items %}
         {% if menu_level == 0 %}
 
-            {% if menu_name == 'adverts-primary-menu' %}
+            {% if menu_name == 'adverts-primary-menu' or menu_name == 'adverts-secondary-menu' %}
                 <ul{{ attributes.addClass('nav', 'nav-pills', 'nav-justified') }}>
             {% else %}
                 <ul{{ attributes.addClass('menu', 'nav') }}>
