@@ -8,4 +8,6 @@
             $(this).attr('disabled', true)
         }
     });
+
+    $('button#edit-submit-adverts').removeClass('btn-xs');
 }(jQuery));
