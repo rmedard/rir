@@ -5,3 +5,25 @@
  *
  * Place your custom PHP code in this file.
  */
+
+function rir_preprocess_menu(&$variables){
+    if ($variables['menu_name'] === 'adverts-primary-menu'){
+        $rent = Drupal::entityQuery('node')
+            ->condition('type', 'advert')
+            ->condition('status', 1)
+            ->condition('field_advert_type', ['rent', 'short_rent'], 'IN')
+            ->count();
+        $rent_count = $rent->execute();
+
+        $buy = Drupal::entityQuery('node')
+            ->condition('type', 'advert')
+            ->condition('status', 1)
+            ->condition('field_advert_type', 'buy')
+            ->count();
+        $buy_count = $buy->execute();
+
+        $menu_values = [1 => $rent_count, 2 => $buy_count];
+
+        $variables['menu_values'] = $menu_values;
+    }
+}
