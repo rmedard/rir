@@ -20,6 +20,7 @@
     }
 
     if ($('nav#block-rir-main-menu > ul.menu > li:first-child > a').hasClass('is-active')){
+        console.log("should be okay");
         $('nav#block-rir-main-menu > ul.menu > li:first-child').addClass('active');
     }
 
