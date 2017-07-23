@@ -7,6 +7,7 @@
  */
 
 function rir_preprocess_menu(&$variables){
+    $variables['is_mobile'] = isMobile();
     if ($variables['menu_name'] === 'adverts-primary-menu'){
         $rent = Drupal::entityQuery('node')
             ->condition('type', 'advert')
@@ -81,5 +82,18 @@ function rir_preprocess_menu(&$variables){
             5 => $room_count, 6 => $office_count, 7 => $land_count];
 
         $variables['menu_secondary_values'] = $menu_secondary_values;
+    }
+}
+
+function isMobile(){
+    $detail = Drupal::service('browscap')->getBrowser();
+    $browser_data = implode(',', $detail);
+    $mobile = preg_match('(Mobile)', $browser_data);
+    $android = preg_match('(Android)', $browser_data);
+    $iphone = preg_match('(IOS)', $browser_data);
+    if($mobile or $android or $iphone){
+        return true;
+    }else{
+        return false;
     }
 }
