@@ -19,9 +19,9 @@
         $('nav#block-advertsprimarymenu > ul.nav > li:last-child').addClass('active');
     }
 
-    if ($('nav#block-rir-main-menu > ul.menu > li:first-child > a').hasClass('is-active')){
+    if ($('nav#block-rir-main-menu > ul.nav > li:first-child > a').hasClass('is-active')){
         console.log("should be okay");
-        $('nav#block-rir-main-menu > ul.menu > li:first-child').addClass('active');
+        $('nav#block-rir-main-menu > ul.nav > li:first-child').addClass('active');
     }
 
 }(jQuery));
