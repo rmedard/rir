@@ -41,6 +41,7 @@ function rir_preprocess_menu(&$variables){
         $house = Drupal::entityQuery('node')
             ->condition('type', 'advert')
             ->condition('status', 1)
+            ->condition('field_advert_type', ['rent', 'short_rent'], 'IN')
             ->condition('field_advert_property_type', ['house', 'building'], 'IN')
             ->count();
         $house_count = $house->execute();
@@ -48,6 +49,7 @@ function rir_preprocess_menu(&$variables){
         $apart = Drupal::entityQuery('node')
             ->condition('type', 'advert')
             ->condition('status', 1)
+            ->condition('field_advert_type', ['rent', 'short_rent'], 'IN')
             ->condition('field_advert_property_type', 'apartment')
             ->count();
         $apart_count = $apart->execute();
@@ -55,6 +57,7 @@ function rir_preprocess_menu(&$variables){
         $commerce = Drupal::entityQuery('node')
             ->condition('type', 'advert')
             ->condition('status', 1)
+            ->condition('field_advert_type', ['rent', 'short_rent'], 'IN')
             ->condition('field_advert_property_type', 'commerce')
             ->count();
         $commerce_count = $commerce->execute();
@@ -62,6 +65,7 @@ function rir_preprocess_menu(&$variables){
         $room = Drupal::entityQuery('node')
             ->condition('type', 'advert')
             ->condition('status', 1)
+            ->condition('field_advert_type', ['rent', 'short_rent'], 'IN')
             ->condition('field_advert_property_type', ['room', 'shared_room'], 'IN')
             ->count();
         $room_count = $room->execute();
@@ -69,6 +73,7 @@ function rir_preprocess_menu(&$variables){
         $office = Drupal::entityQuery('node')
             ->condition('type', 'advert')
             ->condition('status', 1)
+            ->condition('field_advert_type', ['rent', 'short_rent'], 'IN')
             ->condition('field_advert_property_type', 'office')
             ->count();
         $office_count = $office->execute();
@@ -76,15 +81,79 @@ function rir_preprocess_menu(&$variables){
         $land = Drupal::entityQuery('node')
             ->condition('type', 'advert')
             ->condition('status', 1)
+            ->condition('field_advert_type', ['rent', 'short_rent'], 'IN')
             ->condition('field_advert_property_type', 'land')
             ->count();
         $land_count = $land->execute();
 
-        $menu_secondary_values = [1 => $rent_all_count, 2 => $house_count,
+        $menu_rent_secondary_values = [1 => $rent_all_count, 2 => $house_count,
             3 => $apart_count, 4 => $commerce_count,
             5 => $room_count, 6 => $office_count, 7 => $land_count];
 
-        $variables['menu_secondary_values'] = $menu_secondary_values;
+        $variables['menu_rent_secondary_values'] = $menu_rent_secondary_values;
+
+    } elseif ($variables['menu_name'] === 'buy-adverts-secondary-menu'){
+
+        $buy_all = Drupal::entityQuery('node')
+            ->condition('type', 'advert')
+            ->condition('status', 1)
+            ->condition('field_advert_type', 'buy')
+            ->count();
+        $buy_all_count = $buy_all->execute();
+
+        $house = Drupal::entityQuery('node')
+            ->condition('type', 'advert')
+            ->condition('status', 1)
+            ->condition('field_advert_type', 'buy')
+            ->condition('field_advert_property_type', ['house', 'building'], 'IN')
+            ->count();
+        $house_count = $house->execute();
+
+        $apart = Drupal::entityQuery('node')
+            ->condition('type', 'advert')
+            ->condition('status', 1)
+            ->condition('field_advert_type', 'buy')
+            ->condition('field_advert_property_type', 'apartment')
+            ->count();
+        $apart_count = $apart->execute();
+
+        $commerce = Drupal::entityQuery('node')
+            ->condition('type', 'advert')
+            ->condition('status', 1)
+            ->condition('field_advert_type', 'buy')
+            ->condition('field_advert_property_type', 'commerce')
+            ->count();
+        $commerce_count = $commerce->execute();
+
+        $room = Drupal::entityQuery('node')
+            ->condition('type', 'advert')
+            ->condition('status', 1)
+            ->condition('field_advert_type', 'buy')
+            ->condition('field_advert_property_type', ['room', 'shared_room'], 'IN')
+            ->count();
+        $room_count = $room->execute();
+
+        $office = Drupal::entityQuery('node')
+            ->condition('type', 'advert')
+            ->condition('status', 1)
+            ->condition('field_advert_type', 'buy')
+            ->condition('field_advert_property_type', 'office')
+            ->count();
+        $office_count = $office->execute();
+
+        $land = Drupal::entityQuery('node')
+            ->condition('type', 'advert')
+            ->condition('status', 1)
+            ->condition('field_advert_type', 'buy')
+            ->condition('field_advert_property_type', 'land')
+            ->count();
+        $land_count = $land->execute();
+
+        $menu_buy_secondary_values = [1 => $buy_all_count, 2 => $house_count,
+            3 => $apart_count, 4 => $commerce_count,
+            5 => $room_count, 6 => $office_count, 7 => $land_count];
+
+        $variables['menu_buy_secondary_values'] = $menu_buy_secondary_values;
     }
 }
 
