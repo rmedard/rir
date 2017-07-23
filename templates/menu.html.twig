@@ -29,7 +29,7 @@
         {% if menu_level == 0 %}
 
             {% if menu_name == 'adverts-primary-menu' or menu_name == 'adverts-secondary-menu' %}
-                {% if 'is_mobile' == true %}
+                {% if is_mobile %}
                     <ul{{ attributes.addClass('nav', 'nav-pills') }}>
                 {% else %}
                     <ul{{ attributes.addClass('nav', 'nav-pills', 'nav-justified') }}>
@@ -48,11 +48,9 @@
             {% endif %}
 
             {%
-            set item_classes = [
-            item.is_expanded? 'expanded',
-            item.is_expanded and menu_level == 0 ? 'dropdown',
-            item.in_active_trail ? 'active',
-            ]
+                set item_classes = [item.is_expanded? 'expanded',
+                    item.is_expanded and menu_level == 0 ? 'dropdown',
+                    item.in_active_trail ? 'active']
             %}
             {% if menu_level == 0 and item.is_expanded %}
             <li{{ item.attributes.addClass(item_classes) }}>
