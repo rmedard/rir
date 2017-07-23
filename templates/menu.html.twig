@@ -30,7 +30,11 @@
 
             {% if menu_name == 'adverts-primary-menu' or menu_name == 'adverts-secondary-menu' %}
                 {% if is_mobile %}
-                    <ul{{ attributes.addClass('nav', 'nav-pills') }}>
+                    {% if menu_name == 'adverts-primary-menu' %}
+                        <ul{{ attributes.addClass('nav', 'nav-pills', 'nav-mobile-primary') }}>
+                    {% else %}
+                        <ul{{ attributes.addClass('nav', 'nav-pills') }}>
+                    {% endif %}
                 {% else %}
                     <ul{{ attributes.addClass('nav', 'nav-pills', 'nav-justified') }}>
                 {% endif %}
