@@ -14,9 +14,7 @@
     $('form#views-exposed-form-adverts-page-adverts-all > div.form-inline > div.form-item > div.select-wrapper > select').addClass('input-sm');
 
     if ($(location).attr('href').match('((\\/)(adverts\\/rent\\/(([a-z])\\w+))?$)')){
-        console.log("Byaciyemo cyane");
-    } else {
-        console.log("Wapi...");
+        $('nav#block-advertsprimarymenu > ul.nav > li:first-child').addClass('active');
     }
 
 
