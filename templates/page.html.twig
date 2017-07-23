@@ -103,19 +103,18 @@
   {% endblock %}
 {% endif %}
 
-<div class="super-main">
-    {% if page.jir_search_bar and show_jir_search %}
-        {% block jir_search_bar %}
-            <div class = "container-fluid jir-search-bar">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12">{{ page.jir_search_bar }}</div>
-                        {#<div class="col-lg-2 col-md-2 col-sm-12">{{ page.jir_upload_cv }}</div>#}
-                    </div>
-                </div>
-            </div>
-        {% endblock %}
-    {% endif %}
+{#<div class="super-main">#}
+    {#{% if page.jir_search_bar and show_jir_search %}#}
+        {#{% block jir_search_bar %}#}
+            {#<div class = "container-fluid jir-search-bar">#}
+                {#<div class="container">#}
+                    {#<div class="row">#}
+                        {#<div class="col-lg-12 col-md-12 col-sm-12">{{ page.rir_search_bar }}</div>#}
+                    {#</div>#}
+                {#</div>#}
+            {#</div>#}
+        {#{% endblock %}#}
+    {#{% endif %}#}
 {# Main #}
 {% block main %}
   <div role="main" class="main-container {{ container }} js-quickedit-main-content">
@@ -196,7 +195,7 @@
     </div>
   </div>
 {% endblock %}
-</div>
+{#</div>#} {# End of Super Main #}
 {% if page.footer %}
 <div class="container-fluid rir-main-footer">
   {% block footer %}
