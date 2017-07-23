@@ -13,4 +13,6 @@
     $('button#edit-submit-adverts').addClass('btn-sm');
     $('form#views-exposed-form-adverts-page-adverts-all > div.form-inline > div.form-item > div.select-wrapper > select').addClass('input-sm');
 
+    console.log($(location).attr('href'));
+
 }(jQuery));
