@@ -9,8 +9,8 @@
         }
     });
 
-    // $('button#edit-submit-adverts').removeClass('btn-xs');
-
+    $('button#edit-submit-adverts').removeClass('btn-xs');
+    $('button#edit-submit-adverts').addClass('btn-sm');
     $('form#views-exposed-form-adverts-page-adverts-all > div.form-inline > div.form-item > div.select-wrapper > select').addClass('input-sm');
 
 }(jQuery));
