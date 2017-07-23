@@ -7,7 +7,7 @@
  */
 
 function rir_preprocess_menu(&$variables){
-    kint(isMobile());
+//    kint(isMobile());
 
     $variables['is_mobile'] = isMobile() ? true : false;
 
