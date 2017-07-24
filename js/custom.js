@@ -26,6 +26,8 @@
         $('nav#block-buyadvertssecondarymenu > ul.nav-pills').removeClass('nav-justified');
     }
 
+    $('select#edit-field-advert-district-target-id > option[value="All"]').text('- Any District -');
+
     $('select#edit-field-advert-district-target-id > option').each(function () {
         if ($(this).attr('value') === '75' ||
             $(this).attr('value') === '76' ||
