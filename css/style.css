@@ -7711,7 +7711,10 @@ nav#block-buyadvertssecondarymenu > ul.nav-pills li a {
 nav#block-advertsprimarymenu {
   border-bottom: #15a589 2px solid;
 }
-nav#block-advertsprimarymenu ul.nav-pills li > a > span.badge {
+nav#block-advertsprimarymenu ul.nav-pills li > a {
+  color: #2C3E50;
+}
+nav#block-advertsprimarymenu ul.nav-pills li > a span.badge {
   background-color: #15a589;
 }
 nav#block-advertsprimarymenu ul.nav-pills li.active > a {
