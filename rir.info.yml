@@ -15,6 +15,7 @@ regions:
   highlighted: 'Highlighted'
   help: 'Help'
   content: 'Content'
+  rir_horizontal_sidebar: 'RIR Horizontal Sidebar'
   sidebar_first: 'Primary'
   sidebar_second: 'Secondary'
   rir_footer_1: 'RIR Footer 1'

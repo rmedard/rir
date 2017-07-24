@@ -175,6 +175,14 @@
         {% endblock %}
       </section>
 
+        {% if page.rir_horizontal_sidebar %}
+            {% block rir_horizontal_sidebar %}
+                <aside class="col-sm-4" role="complementary">
+                    {{ page.rir_horizontal_sidebar }}
+                </aside>
+            {% endblock %}
+        {% endif %}
+
         {# Sidebar First #}
         {% if page.sidebar_first %}
             {% block sidebar_first %}
