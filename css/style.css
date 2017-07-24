@@ -3417,7 +3417,7 @@ fieldset[disabled] .btn-link:hover,
 .btn-link[disabled]:focus,
 fieldset[disabled] .btn-link:focus {
   color: #b4bcc2;
-  text-decor(node:15117) DeprecationWarning: util.print is deprecated. Use console.log instead.
+  text-decor(node:12145) DeprecationWarning: util.print is deprecated. Use console.log instead.
 ation: none;
 }
 .btn-lg,
@@ -7716,4 +7716,18 @@ nav#block-buyadvertssecondarymenu > ul.nav-pills li a {
 }
 div.view-adverts {
   margin-top: 15px;
+}
+div.advert-summary-block .panel-heading {
+  text-align: center;
+}
+div.advert-summary-block ul {
+  font-size: smaller;
+}
+div.advert-summary-block ul li {
+  border: 5px;
+}
+div.advert-summary-block ul li.advert-views-count {
+  background: #ecf0f1;
+  color: #e74c3c;
+  font-weight: bold;
 }
