@@ -23,6 +23,7 @@
     if (isMobile.any()){
         $('nav#block-advertsprimarymenu > ul.nav-pills').removeClass('nav-justified').addClass('nav-mobile-primary');
         $('nav#block-advertssecondarymenu > ul.nav-pills').removeClass('nav-justified');
+        $('nav#block-buyadvertssecondarymenu > ul.nav-pills').removeClass('nav-justified');
     }
 
     $('select#edit-field-advert-district-target-id > option').each(function () {
