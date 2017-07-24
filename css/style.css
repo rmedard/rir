@@ -7695,6 +7695,11 @@ div.view-adverts > div.view-content > div.media-object > div.media div.media-bod
   text-decoration: none;
   color: #19826d;
 }
+div.view-adverts > div.view-content > div.media-object > div.media div.pull-left {
+  height: 90px;
+  line-height: 90px;
+  width: 90px;
+}
 #block-advertsprimarymenu {
   margin-bottom: 10px;
 }
