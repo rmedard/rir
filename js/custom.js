@@ -1,26 +1,26 @@
 (function ($) {
     var isMobile = {
-        Android: function() {
+        Android: function () {
             return navigator.userAgent.match(/Android/i);
         },
-        BlackBerry: function() {
+        BlackBerry: function () {
             return navigator.userAgent.match(/BlackBerry/i);
         },
-        iOS: function() {
+        iOS: function () {
             return navigator.userAgent.match(/iPhone|iPad|iPod/i);
         },
-        Opera: function() {
+        Opera: function () {
             return navigator.userAgent.match(/Opera Mini/i);
         },
-        Windows: function() {
+        Windows: function () {
             return navigator.userAgent.match(/IEMobile/i);
         },
-        any: function() {
+        any: function () {
             return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
         }
     };
 
-    if (isMobile.any()){
+    if (isMobile.any()) {
         $('nav#block-advertsprimarymenu > ul.nav-pills').removeClass('nav-justified').addClass('nav-mobile-primary');
         $('nav#block-advertssecondarymenu > ul.nav-pills').removeClass('nav-justified');
         $('nav#block-buyadvertssecondarymenu > ul.nav-pills').removeClass('nav-justified');
@@ -36,7 +36,7 @@
             $(this).attr('value') === '76' ||
             $(this).attr('value') === '77' ||
             $(this).attr('value') === '78' ||
-            $(this).attr('value') === '79'){
+            $(this).attr('value') === '79') {
             $(this).attr('disabled', true);
         }
     });
@@ -46,15 +46,15 @@
     $('div.view-adverts > div.view-filters > form.views-exposed-form > div.form-inline > div.form-item > div.select-wrapper > select').addClass('input-sm');
 
     //Activate primary menu while navigating secondary menu
-    if ($(location).attr('href').match('((\\/)(adverts\\/rent\\/(([a-z])\\w+))?$)')){
+    if ($(location).attr('href').match('((\\/)(adverts\\/rent\\/(([a-z])\\w+))?$)')) {
         $('nav#block-advertsprimarymenu > ul.nav > li:first-child').addClass('active');
-    } else if ($(location).attr('href').match('((\\/)(adverts\\/buy\\/(([a-z])\\w+))?$)')){
+    } else if ($(location).attr('href').match('((\\/)(adverts\\/buy\\/(([a-z])\\w+))?$)')) {
         $('nav#block-advertsprimarymenu > ul.nav > li:last-child').addClass('active');
     }
     //End
 
     //Activate home link while on homepage
-    if ($('nav#block-rir-main-menu > ul.nav > li:first-child > a').hasClass('is-active')){
+    if ($('nav#block-rir-main-menu > ul.nav > li:first-child > a').hasClass('is-active')) {
         $('nav#block-rir-main-menu > ul.nav > li:first-child').addClass('active');
     }
     //End
