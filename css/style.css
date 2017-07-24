@@ -7715,13 +7715,16 @@ nav#block-advertsprimarymenu ul.nav-pills li > a {
   color: #2C3E50;
 }
 nav#block-advertsprimarymenu ul.nav-pills li > a span.badge {
+  color: white;
   background-color: #15a589;
 }
 nav#block-advertsprimarymenu ul.nav-pills li.active > a {
+  color: white;
   background-color: #15a589;
 }
 nav#block-advertsprimarymenu ul.nav-pills li.active > a span.badge {
   color: #15a589;
+  background-color: white;
 }
 #block-advertssecondarymenu,
 #block-buyadvertssecondarymenu {
