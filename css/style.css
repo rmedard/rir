@@ -7691,6 +7691,10 @@ div.view-adverts > div.view-content > div.media-object > div.media {
   padding-bottom: 10px;
   border-bottom: #2C3E50 2px solid;
 }
+div.view-adverts > div.view-content > div.media-object > div.media div.media-body > .media-heading > a:hover {
+  text-decoration: none;
+  color: #19826d;
+}
 #block-advertsprimarymenu {
   margin-bottom: 10px;
 }
@@ -7709,21 +7713,21 @@ nav#block-buyadvertssecondarymenu > ul.nav-pills li a {
   padding: 8px 10px;
 }
 nav#block-advertsprimarymenu {
-  border-bottom: #15a589 2px solid;
+  border-bottom: #19826d 2px solid;
 }
 nav#block-advertsprimarymenu ul.nav-pills li > a {
   color: #2C3E50;
 }
 nav#block-advertsprimarymenu ul.nav-pills li > a span.badge {
   color: white;
-  background-color: #15a589;
+  background-color: #19826d;
 }
 nav#block-advertsprimarymenu ul.nav-pills li.active > a {
   color: white;
-  background-color: #15a589;
+  background-color: #19826d;
 }
 nav#block-advertsprimarymenu ul.nav-pills li.active > a span.badge {
-  color: #15a589;
+  color: #19826d;
   background-color: white;
 }
 #block-advertssecondarymenu,
