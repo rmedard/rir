@@ -1,65 +1,65 @@
 // Bootstrap Framework.
 @import 'bootstrap';
-
 // Base-theme overrides.
 @import 'overrides';
-
 // Bootswatch overrides.
 @import 'variables';
 @import 'bootswatch';
 
-@brand-violet:          #9b59b6;
-@brand-yellow:          #f1c40f;
+@brand-dark-green: #15a589;
+@brand-violet: #9b59b6;
+@brand-yellow: #f1c40f;
 
-.label-violet{
+.label-violet {
   background-color: @brand-violet;
 }
 
-.label-yellow{
+.label-yellow {
   background-color: @brand-yellow;
 }
 
-.rir-top-banner{
+.rir-top-banner {
   display: none;
 }
 
-@media (max-width: @screen-md-min){ //Mobile devices
-  a.logo > img{
+@media (max-width: @screen-md-min) {
+  //Mobile devices
+  a.logo > img {
     height: 45px;
     width: auto;
   }
 
-  ul.nav-mobile-primary > li{
+  ul.nav-mobile-primary > li {
     display: table-cell;
     width: 1%;
     float: none;
-    a{
+    a {
       border-radius: 4px 4px 0 0;
       text-align: center;
     }
   }
 
-  div.view-adverts > div.view-filters{
+  div.view-adverts > div.view-filters {
     display: none;
   }
 }
 
-@media (min-width: @screen-md-min){
+@media (min-width: @screen-md-min) {
 
-  div.main-container{
+  div.main-container {
     margin-top: 180px;
   }
 
-  body.toolbar-tray-open > div.main-container{
+  body.toolbar-tray-open > div.main-container {
     margin-top: 105px;
   }
 
-  .rir-top-banner{
+  .rir-top-banner {
     display: block;
     background-color: white;
   }
 
-  ul.nav-pills > li > a{
+  ul.nav-pills > li > a {
     border-radius: 4px 4px 0 0;
   }
 
@@ -70,37 +70,52 @@
   //    background: @gray-lighter;
   //  }
   //}
-
-  header > .container > .navbar-header{
+  header > .container > .navbar-header {
     display: none;
   }
 }
 
-div.view-adverts > div.view-content > div.media-object > div.media{
+div.view-adverts > div.view-content > div.media-object > div.media {
   padding-bottom: 10px;
   border-bottom: @brand-primary 2px solid;
 }
 
-#block-advertsprimarymenu{
+#block-advertsprimarymenu {
   margin-bottom: 10px;
 }
 
 nav#block-advertssecondarymenu > ul.nav-pills, nav#block-buyadvertssecondarymenu > ul.nav-pills {
   font-size: 13px;
-  li{
+  li {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-     a{
-       padding: 8px 10px;
-     }
+    a {
+      padding: 8px 10px;
+    }
   }
 }
 
-#block-advertsprimarymenu, #block-advertssecondarymenu, #block-buyadvertssecondarymenu{
+nav#block-advertsprimarymenu {
+  border-bottom: @brand-dark-green 2px solid;
+  ul.nav-pills {
+    li > a > span.badge {
+      background-color: @brand-dark-green;
+    }
+
+    li.active > a {
+      background-color: @brand-dark-green;
+      span.badge {
+        color: @brand-dark-green;
+      }
+    }
+  }
+}
+
+#block-advertssecondarymenu, #block-buyadvertssecondarymenu {
   border-bottom: @brand-primary 2px solid;
 }
 
-div.view-adverts{
+div.view-adverts {
   margin-top: 15px;
 }

@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Lato:400,700,400italic");
 /**
  * Variable Overrides.
  *
@@ -6,6 +5,7 @@
  * these variables directly from ../bootstrap/less/variables.less to this file.
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700,400italic");
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -7708,7 +7708,18 @@ nav#block-advertssecondarymenu > ul.nav-pills li a,
 nav#block-buyadvertssecondarymenu > ul.nav-pills li a {
   padding: 8px 10px;
 }
-#block-advertsprimarymenu,
+nav#block-advertsprimarymenu {
+  border-bottom: #15a589 2px solid;
+}
+nav#block-advertsprimarymenu ul.nav-pills li > a > span.badge {
+  background-color: #15a589;
+}
+nav#block-advertsprimarymenu ul.nav-pills li.active > a {
+  background-color: #15a589;
+}
+nav#block-advertsprimarymenu ul.nav-pills li.active > a span.badge {
+  color: #15a589;
+}
 #block-advertssecondarymenu,
 #block-buyadvertssecondarymenu {
   border-bottom: #2C3E50 2px solid;
