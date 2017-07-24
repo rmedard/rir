@@ -27,17 +27,8 @@
     {% import _self as menus %}
     {% if items %}
         {% if menu_level == 0 %}
-
             {% if menu_name == 'adverts-primary-menu' or menu_name == 'adverts-secondary-menu' or menu_name == 'buy-adverts-secondary-menu' %}
-                {#{% if is_mobile %}#}
-                    {#{% if menu_name == 'adverts-primary-menu' %}#}
-                        {#<ul{{ attributes.addClass('nav', 'nav-pills', 'nav-mobile-primary') }}>#}
-                    {#{% else %}#}
-                        {#<ul{{ attributes.addClass('nav', 'nav-pills') }}>#}
-                    {#{% endif %}#}
-                {#{% else %}#}
-                    <ul{{ attributes.addClass('nav', 'nav-pills', 'nav-justified') }}>
-                {#{% endif %}#}
+                <ul{{ attributes.addClass('nav', 'nav-pills', 'nav-justified') }}>
             {% else %}
                 <ul{{ attributes.addClass('menu', 'nav') }}>
             {% endif %}
