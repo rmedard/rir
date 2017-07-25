@@ -58,6 +58,6 @@
     }
     //End
 
-    $('input.interest-visitor-phone').width($('input.interest-visitor-names').width());
+    // $('input.interest-visitor-phone').width($('input.interest-visitor-names').width());
 
 }(jQuery));
