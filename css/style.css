@@ -7756,12 +7756,12 @@ div.advert-summary-block ul li.advert-views-count {
   color: #E74C3C;
   font-weight: bold;
 }
+div.intl-tel-input {
+  width: 100%;
+}
 section#block-request-details-webform .block-title {
   text-align: center;
 }
 section#block-request-details-webform div > form > div.form-actions {
   margin-bottom: 0;
-}
-div.intl-tel-input {
-  width: 100%;
 }
