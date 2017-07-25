@@ -42,7 +42,6 @@
     });
 
     $('div.view-adverts > div.view-filters').addClass('well well-sm');
-    $('button#edit-submit-adverts').removeClass('btn-xs').addClass('btn-sm');
     $('div.view-adverts > div.view-filters > form.views-exposed-form > div.form-inline > div.form-item > div.select-wrapper > select').addClass('input-sm');
 
     //Activate primary menu while navigating secondary menu
