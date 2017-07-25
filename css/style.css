@@ -7768,6 +7768,9 @@ div.agent-block-summary div.group-right {
 div.agent-block-summary div.group-right div.field > .agent-block-title {
   margin-top: 0;
 }
+section#block-views-block-adverts-block-ads-per-agent > .block-title {
+  text-align: center;
+}
 section#block-request-details-webform .block-title {
   text-align: center;
 }
