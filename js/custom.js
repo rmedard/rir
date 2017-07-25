@@ -59,4 +59,7 @@
     }
     //End
 
+    var visitorNamesWidth = $('input#edit-visitor-names').width();
+    $('input#edit-visitor-phone-number').width(visitorNamesWidth);
+
 }(jQuery));
