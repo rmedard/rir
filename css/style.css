@@ -7759,6 +7759,9 @@ div.advert-summary-block ul li.advert-views-count {
 div.intl-tel-input {
   width: 100%;
 }
+.agent-block-title {
+  margin-top: 0;
+}
 section#block-request-details-webform .block-title {
   text-align: center;
 }
