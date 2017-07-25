@@ -28,7 +28,7 @@
 
     $('select#edit-field-advert-district-target-id > option[value="All"]').text('- Any District -');
     $('select#edit-field-advert-bedrooms-value > option[value="All"]').text('- Any nbr of Rooms -');
-    $('select#edit-field-advert-property-type-value > option[value="All"]').text('- Any type of Property -');
+    $('select#edit-field-advert-property-type-value > option[value="All"]').text('- Any Property -');
     $('select#edit-field-advert-price-value > option[value="All"]').text('- Any Price -');
 
     $('select#edit-field-advert-district-target-id > option').each(function () {
