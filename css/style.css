@@ -7762,3 +7762,6 @@ section#block-request-details-webform .block-title {
 section#block-request-details-webform div > form > div.form-actions {
   margin-bottom: 0;
 }
+div.intl-tel-input {
+  width: 100%;
+}
