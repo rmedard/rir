@@ -125,22 +125,6 @@ function rir_preprocess_menu(&$variables){
             ->count();
         $commerce_count = $commerce->execute();
 
-//        $room = Drupal::entityQuery('node')
-//            ->condition('type', 'advert')
-//            ->condition('status', 1)
-//            ->condition('field_advert_type', 'buy')
-//            ->condition('field_advert_property_type', ['room', 'shared_room'], 'IN')
-//            ->count();
-//        $room_count = $room->execute();
-//
-//        $office = Drupal::entityQuery('node')
-//            ->condition('type', 'advert')
-//            ->condition('status', 1)
-//            ->condition('field_advert_type', 'buy')
-//            ->condition('field_advert_property_type', 'office')
-//            ->count();
-//        $office_count = $office->execute();
-
         $land = Drupal::entityQuery('node')
             ->condition('type', 'advert')
             ->condition('status', 1)
@@ -149,9 +133,6 @@ function rir_preprocess_menu(&$variables){
             ->count();
         $land_count = $land->execute();
 
-//        $menu_buy_secondary_values = [1 => $buy_all_count, 2 => $house_count,
-//            3 => $apart_count, 4 => $commerce_count,
-//            5 => $room_count, 6 => $office_count, 7 => $land_count];
 				$menu_buy_secondary_values = [1 => $buy_all_count, 2 => $house_count,
 					3 => $apart_count, 4 => $commerce_count, 5 => $land_count];
 
