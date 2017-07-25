@@ -58,4 +58,6 @@
     }
     //End
 
+    $('div.form-type-fivestar > div.form-type-select > div').removeClass('select-wrapper');
+
 }(jQuery));
