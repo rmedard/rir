@@ -178,7 +178,7 @@ function rir_preprocess_page(&$variables) {
         $variables['show_sidebars'] = FALSE;
     }
 
-    if (preg_match('(\/direct-access\/)', $page_path)){
+    if (preg_match('(\/direct-access)', $page_path)){
       $reference = Drupal::request()->query->get('field_advert_reference_value');
       if (!empty($reference)){
         if ($reference !== null){
