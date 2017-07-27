@@ -175,7 +175,7 @@
         {% endblock %}
       </section>
 
-        {% if page.rir_horizontal_sidebar %}
+        {% if page.rir_horizontal_sidebar and show_sidebars %}
             {% block rir_horizontal_sidebar %}
                 <aside class="col-sm-4" role="complementary">
                     {{ page.rir_horizontal_sidebar }}
@@ -184,7 +184,7 @@
         {% endif %}
 
         {# Sidebar First #}
-        {% if page.sidebar_first %}
+        {% if page.sidebar_first and show_sidebars %}
             {% block sidebar_first %}
                 <aside class="col-sm-2" role="complementary">
                     {{ page.sidebar_first }}
@@ -193,7 +193,7 @@
         {% endif %}
 
       {# Sidebar Second #}
-      {% if page.sidebar_second %}
+      {% if page.sidebar_second and show_sidebars %}
         {% block sidebar_second %}
           <aside class="col-sm-2" role="complementary">
             {{ page.sidebar_second }}
