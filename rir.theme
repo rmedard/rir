@@ -182,7 +182,7 @@ function rir_preprocess_page(&$variables) {
       $reference = Drupal::request()->query->get('field_advert_reference_value');
       if (!empty($reference)){
         if ($reference !== null){
-          return new \Symfony\Component\HttpFoundation\RedirectResponse(\Drupal\Core\Url::fromUri('/advert/'.$reference));
+          return new \Symfony\Component\HttpFoundation\RedirectResponse(\Drupal\Core\Url::fromUri('internal:/advert/'.$reference));
         }
       }
     }
