@@ -5,6 +5,8 @@
  *
  * Place your custom PHP code in this file.
  */
+use Symfony\Component\HttpFoundation\RedirectResponse;
+use Drupal\Core\Url;
 
 function rir_preprocess_menu(&$variables) {
     //    kint(isMobile());
@@ -182,7 +184,7 @@ function rir_preprocess_page(&$variables) {
       $reference = Drupal::request()->query->get('field_advert_reference_value');
       if (!empty($reference)){
         if ($reference !== null){
-          return new \Symfony\Component\HttpFoundation\RedirectResponse(\Drupal\Core\Url::fromUri('internal:/advert/'.$reference));
+          return new RedirectResponse('/advert/'.$reference);
         }
       }
     }
