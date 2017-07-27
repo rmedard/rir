@@ -26,6 +26,9 @@
         $('nav#block-buyadvertssecondarymenu > ul.nav-pills').removeClass('nav-justified');
     }
 
+    $('form#direct-access-form').addClass('form-inline');
+    $('form#direct-access-form > button.form-submit').removeClass('btn-sm');
+
     $('select#edit-field-advert-district-target-id > option[value="All"]').text('- Any District -');
     $('select#edit-field-advert-bedrooms-value > option[value="All"]').text('- Any nbr of Rooms -');
     $('select#edit-field-advert-property-type-value > option[value="All"]').text('- Any Property -');
