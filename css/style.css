@@ -7672,6 +7672,7 @@ a.list-group-item-danger.active:focus {
 @media (min-width: 992px) {
   div.main-container {
     margin-top: 180px;
+    min-height: 600px;
   }
   body.toolbar-tray-open > div.main-container {
     margin-top: 105px;
