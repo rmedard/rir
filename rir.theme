@@ -5,7 +5,6 @@
  *
  * Place your custom PHP code in this file.
  */
-use Symfony\Component\HttpFoundation\RedirectResponse;
 
 function rir_preprocess_menu(&$variables) {
     //    kint(isMobile());
@@ -177,14 +176,5 @@ function rir_preprocess_page(&$variables) {
 
     if (preg_match('(/pricing-plans)', $page_path) or preg_match('(/page/services)', $page_path) or preg_match('(\/manage\/)', $page_path)) {
         $variables['show_sidebars'] = FALSE;
-    }
-
-    if (preg_match('(\/direct-access)', $page_path)){
-      $reference = Drupal::request()->query->get('field_advert_reference_value');
-      if (!empty($reference)){
-        if ($reference !== null){
-          return new RedirectResponse('/advert/'.$reference);
-        }
-      }
     }
 }
