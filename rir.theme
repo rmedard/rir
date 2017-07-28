@@ -170,11 +170,11 @@ function isMobile() {
     }
 }
 
-//function rir_preprocess_page(&$variables) {
-//    $page_path = Drupal::request()->getPathInfo();
-//    $variables['show_sidebars'] = TRUE;
-//
-//    if (preg_match('(/pricing-plans)', $page_path) or preg_match('(/page/services)', $page_path) or preg_match('(\/manage\/)', $page_path)) {
-//        $variables['show_sidebars'] = FALSE;
-//    }
-//}
+function rir_preprocess_page(&$variables) {
+    $page_path = Drupal::request()->getPathInfo();
+    $variables['show_sidebars'] = TRUE;
+
+    if (preg_match('(/pricing-plans)', $page_path) or preg_match('(/page/services)', $page_path) or preg_match('(\/manage\/)', $page_path)) {
+        $variables['show_sidebars'] = FALSE;
+    }
+}
