@@ -7789,6 +7789,11 @@ form#direct-access-form div.form-item {
 form#direct-access-form div.form-item input {
   width: 100%;
 }
+div.view-id-services > div.view-content div.pricing-plan-block {
+  margin-bottom: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
 .rir-pricing-plan {
   text-align: center;
 }
