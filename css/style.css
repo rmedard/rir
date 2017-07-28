@@ -7783,3 +7783,15 @@ section#block-request-details-webform div > form > div.form-actions {
 .ref-number {
   color: #95a5a7;
 }
+.rir-pricing-plan {
+  text-align: center;
+}
+.rir-pricing-plan .panel-heading {
+  font-size: x-large;
+}
+.rir-pricing-plan .rir-pricing-price {
+  font-weight: bolder;
+  font-variant: small-caps;
+  font-size: xx-large;
+  background-color: #ecf0f1;
+}
