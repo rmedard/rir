@@ -7812,3 +7812,6 @@ div.view-id-services > div.view-content div.pricing-plan-block {
   padding-top: 15px;
   margin-top: 15px;
 }
+.rir-main-footer div.container footer {
+  padding-left: 0;
+}
