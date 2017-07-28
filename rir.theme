@@ -6,7 +6,6 @@
  * Place your custom PHP code in this file.
  */
 use Symfony\Component\HttpFoundation\RedirectResponse;
-use Drupal\Core\Url;
 
 function rir_preprocess_menu(&$variables) {
     //    kint(isMobile());
