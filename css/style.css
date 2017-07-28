@@ -7806,3 +7806,8 @@ div.view-id-services > div.view-content div.pricing-plan-block {
   font-size: xx-large;
   background-color: #ecf0f1;
 }
+.rir-main-footer {
+  background-color: #2C3E50;
+  padding-top: 15px;
+  margin-top: 15px;
+}
