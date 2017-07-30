@@ -30,6 +30,7 @@
     $('form#direct-access-form > button.form-submit').removeClass('btn-sm');
     $('button#edit-submit-agents').removeClass('btn-sm');
     $('section#block-directaccessblock').addClass('well well-sm');
+    $('section#block-request-details-webform').addClass('well well-sm');
 
     $('select#edit-field-advert-district-target-id > option[value="All"]').text('- Any District -');
     $('select#edit-field-advert-bedrooms-value > option[value="All"]').text('- Any nbr of Rooms -');
