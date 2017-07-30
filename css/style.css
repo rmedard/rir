@@ -3417,7 +3417,7 @@ fieldset[disabled] .btn-link:hover,
 .btn-link[disabled]:focus,
 fieldset[disabled] .btn-link:focus {
   color: #b4bcc2;
-  text-decor(node:14500) DeprecationWarning: util.print is deprecated. Use console.log instead.
+  text-decor(node:14671) DeprecationWarning: util.print is deprecated. Use console.log instead.
 ation: none;
 }
 .btn-lg,
@@ -7654,6 +7654,9 @@ a.list-group-item-danger.active:focus {
 }
 nav#block-rir-main-menu ul.menu > li:last-child {
   background-color: #e74c3c;
+}
+nav#block-rir-main-menu ul.menu > li:hover {
+  color: #2c3e50;
 }
 @media (max-width: 992px) {
   a.logo > img {
