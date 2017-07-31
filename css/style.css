@@ -7838,7 +7838,8 @@ section.block-rir-interface > div.panel > div.panel-heading {
   background-color: #2C3E50;
 }
 div.toolbar-menu-administration > ul.toolbar-menu > li:last-child {
-  background-color: #d9faf4;
+  background-color: #18BC9C;
+  color: #2C3E50;
 }
 div.region-rir-horizontal-sidebar section {
   margin-bottom: 10px;
