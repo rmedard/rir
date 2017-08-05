@@ -66,13 +66,12 @@
 
     $('div.form-type-fivestar > div.form-type-select > div').removeClass('select-wrapper');
 
-    var uri = window.location.href;
-    var decoded = decodeURIComponent(uri);
-    var districtsStr = decoded.substring(decoded.indexOf('field_advert_district_target_id[]'), decoded.lastIndexOf('field_advert_district_target_id[]') + 37);
-    console.log(decoded);
-    console.log(districtsStr.match(/(\d+)/g));
+    var decodedUri = decodeURIComponent(window.location.href);
+    var districtsStr = decodedUri.substring(decodedUri.indexOf('field_advert_district_target_id[]'), decodedUri.lastIndexOf('field_advert_district_target_id[]') + 37);
+    var districts = districtsStr.match(/(\d+)/g).join('-');
+    console.log(districts);
     console.log(districtsStr);
-    console.log(url('field_advert_district_target_id[]', decoded));
+    console.log(url('field_advert_district_target_id[]', decodedUri));
 
     var propertyType = getParameterByName('field_advert_property_type_value');
 
