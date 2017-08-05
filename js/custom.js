@@ -67,7 +67,7 @@
     $('div.form-type-fivestar > div.form-type-select > div').removeClass('select-wrapper');
 
     var uri = window.location.href;
-    console.log(url('query', uri));
+    console.log(url('%5B%5D', uri));
 
     var propertyType = getParameterByName('field_advert_property_type_value');
 
