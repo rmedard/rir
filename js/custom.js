@@ -70,11 +70,12 @@
     var districtsStr = decodedUri.substring(decodedUri.indexOf('field_advert_district_target_id[]'), decodedUri.lastIndexOf('field_advert_district_target_id[]') + 37);
     var districts = districtsStr.match(/(\d+)/g) === null ? 'any' : districtsStr.match(/(\d+)/g).join('-');
 
+    var advertType = url('2', decodedUri);
     var rooms = getParameterByName('field_advert_bedrooms_value');
     var propertyType = getParameterByName('field_advert_property_type_value');
     var price = getParameterByName('field_price_in_rwf_value');
 
-    $('section#block-rirsearchsubscribeblock > a').attr('href', '/search-subscribe?districts='+ districts +'&rooms='+ rooms +'&property_type=' + propertyType + '&price=' + price);
+    $('section#block-rirsearchsubscribeblock > a').attr('href', '/search-subscribe?advert='+ advertType +'&districts='+ districts +'&rooms='+ rooms +'&property_type=' + propertyType + '&price=' + price);
 
 
 }(jQuery));
