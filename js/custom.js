@@ -68,8 +68,9 @@
 
     var uri = window.location.href;
     var decoded = decodeURIComponent(uri);
+    var districtsStr = decoded.substring(decoded.indexOf('field_advert_district_target_id[]'), decoded.lastIndexOf('field_advert_district_target_id[]'));
     console.log(decoded);
-    console.log(decoded.indexOf('field_advert_district_target_id[]')  + ' ' +decoded.lastIndexOf('field_advert_district_target_id[]'));
+    console.log(districtsStr);
     console.log(url('field_advert_district_target_id[]', decoded));
 
     var propertyType = getParameterByName('field_advert_property_type_value');
