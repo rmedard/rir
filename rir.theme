@@ -177,3 +177,9 @@ function rir_preprocess_page(&$variables) {
         $variables['show_sidebars'] = FALSE;
     }
 }
+
+function rir_preprocess_block(&$variables){
+  if ($variables['derivative_plugin_id'] == 'rir_search_subscribe_block'){
+    $variables['#cache']['max-age'] = 0;
+  }
+}
