@@ -23,4 +23,5 @@ additional-scripts:
     js/custom.js: {}
   dependancies:
     - core/jquery
+    - core/drupal.ajax
     - core/drupal
