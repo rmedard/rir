@@ -21,3 +21,6 @@ bootstrap-scripts:
 additional-scripts:
   js:
     js/custom.js: {}
+  dependancies:
+    - core/jquery
+    - core/drupal
