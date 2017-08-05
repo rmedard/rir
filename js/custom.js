@@ -75,7 +75,7 @@
     var propertyType = getParameterByName('field_advert_property_type_value');
     var price = getParameterByName('field_price_in_rwf_value');
 
-    $('section#block-rirsearchsubscribeblock > div#search-subscribe-button-id > a').attr('href', '/search-subscribe?advert='+ advertType +'&districts='+ districts +'&rooms='+ rooms +'&property_type=' + propertyType + '&price=' + price);
+    $('section#block-rirsearchsubscribeblock > a').attr('href', '/search-subscribe?advert='+ advertType +'&districts='+ districts +'&rooms='+ rooms +'&property_type=' + propertyType + '&price=' + price);
 
 
 }(jQuery));
