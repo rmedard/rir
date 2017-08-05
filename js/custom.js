@@ -67,7 +67,9 @@
     $('div.form-type-fivestar > div.form-type-select > div').removeClass('select-wrapper');
 
     var uri = window.location.href;
-    console.log(url('%5B%5D', uri));
+    var decoded = decodeURIComponent(uri);
+    console.log(decoded);
+    console.log(url('field_advert_district_target_id[]', decoded));
 
     var propertyType = getParameterByName('field_advert_property_type_value');
 
