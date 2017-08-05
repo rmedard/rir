@@ -66,7 +66,11 @@
 
     $('div.form-type-fivestar > div.form-type-select > div').removeClass('select-wrapper');
 
-    console.log(getParameterByName('field_advert_property_type_value'));
+    var propertyType = getParameterByName('field_advert_property_type_value');
+
+    $('section#block-rirsearchsubscribeblock > a').attr('href', '/search-subscribe?field_advert_property_type_value=' + propertyType);
+
+    console.log(propertyType);
 
 }(jQuery));
 
