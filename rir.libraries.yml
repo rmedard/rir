@@ -20,4 +20,5 @@ bootstrap-scripts:
 
 additional-scripts:
   js:
+    js/url.js: {}
     js/custom.js: {}

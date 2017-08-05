@@ -66,15 +66,13 @@
 
     $('div.form-type-fivestar > div.form-type-select > div').removeClass('select-wrapper');
 
-  var parser = document.createElement('a');
-  parser.href = window.location.href;
-  console.log(parser.hostname);
+    var uri = window.location.href;
+    console.log(url('?', uri));
 
     var propertyType = getParameterByName('field_advert_property_type_value');
 
     $('section#block-rirsearchsubscribeblock > a').attr('href', '/search-subscribe?field_advert_property_type_value=' + propertyType);
 
-    console.log(propertyType);
 
 }(jQuery));
 
