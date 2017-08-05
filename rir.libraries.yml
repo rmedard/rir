@@ -21,9 +21,3 @@ bootstrap-scripts:
 additional-scripts:
   js:
     js/custom.js: {}
-  dependancies:
-    - core/jquery
-    - core/drupal.ajax
-    - core/drupal
-    - core/drupalSettings
-    - core/jquery.once
