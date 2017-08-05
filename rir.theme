@@ -7,7 +7,6 @@
  */
 
 function rir_preprocess_menu(&$variables) {
-    //    kint(isMobile());
 
     $variables['is_mobile'] = isMobile() ? TRUE : FALSE;
 
@@ -171,6 +170,7 @@ function isMobile() {
 }
 
 function rir_preprocess_page(&$variables) {
+  $variables['#attached']['library'][] =  'rir/additional-scripts';
     $page_path = Drupal::request()->getPathInfo();
     $variables['show_sidebars'] = TRUE;
 
