@@ -28,7 +28,7 @@
     %}
     {% block input %}
         {#{{ kint(attributes.name.value) }}#}
-        {% if attributes.name.value starts with 'edit-field-advert-advertiser' %}
+        {% if attributes.name['value'] starts with 'edit-field-advert-advertiser' %}
             <input{{ attributes.addClass(classes) }} />
             <p>Click...</p>
         {% else %}
