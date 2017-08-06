@@ -35,6 +35,7 @@ function rir_preprocess_menu(&$variables) {
           ->condition('type', 'advert')
           ->condition('status', 1)
           ->condition('field_advert_type', ['rent', 'short_rent'], 'IN')
+          ->condition('field_advert_posting_plan', 'standard', '<>')
           ->count();
         $rent_all_count = $rent_all->execute();
 
