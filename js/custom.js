@@ -77,6 +77,11 @@
 
     $('section#block-rirsearchsubscribeblock > div#search-subscribe-button-id > a').attr('href', '/search-subscribe?advert='+ advertType +'&districts='+ districts +'&rooms='+ rooms +'&property_type=' + propertyType + '&price=' + price);
 
+    $('section#block-rirsearchsubscribeblock').hide();
+
+    $('form.views-exposed-form').submit(function () {
+        $('section#block-rirsearchsubscribeblock').show();
+    });
 
 }(jQuery));
 
@@ -89,3 +94,4 @@ function getParameterByName(name, url) {
   if (!results[2]) return '';
   return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
+
