@@ -31,13 +31,13 @@ function rir_preprocess_menu(&$variables) {
 
     }
     elseif ($variables['menu_name'] === 'adverts-secondary-menu') {
-        $rent_all = Drupal::entityQuery('node')
+        $rent_featured = Drupal::entityQuery('node')
           ->condition('type', 'advert')
           ->condition('status', 1)
           ->condition('field_advert_type', ['rent', 'short_rent'], 'IN')
           ->condition('field_advert_posting_plan', 'standard', '<>')
           ->count();
-        $rent_all_count = $rent_all->execute();
+        $rent_featured_count = $rent_featured->execute();
 
         $house = Drupal::entityQuery('node')
           ->condition('type', 'advert')
@@ -91,7 +91,7 @@ function rir_preprocess_menu(&$variables) {
         $land_count = $land->execute();
 
         $menu_rent_secondary_values = [
-          1 => $rent_all_count,
+          1 => $rent_featured_count,
           2 => $house_count,
           3 => $apart_count,
           4 => $commerce_count,
@@ -105,12 +105,13 @@ function rir_preprocess_menu(&$variables) {
     }
     elseif ($variables['menu_name'] === 'buy-adverts-secondary-menu') {
 
-        $buy_all = Drupal::entityQuery('node')
+        $buy_featured = Drupal::entityQuery('node')
           ->condition('type', 'advert')
           ->condition('status', 1)
           ->condition('field_advert_type', 'buy')
+          ->condition('field_advert_posting_plan', 'standard', '<>')
           ->count();
-        $buy_all_count = $buy_all->execute();
+        $buy_featured_count = $buy_featured->execute();
 
         $house = Drupal::entityQuery('node')
           ->condition('type', 'advert')
@@ -145,7 +146,7 @@ function rir_preprocess_menu(&$variables) {
         $land_count = $land->execute();
 
         $menu_buy_secondary_values = [
-          1 => $buy_all_count,
+          1 => $buy_featured_count,
           2 => $house_count,
           3 => $apart_count,
           4 => $commerce_count,
