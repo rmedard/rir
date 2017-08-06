@@ -72,7 +72,7 @@
     //Activate primary menu while navigating secondary menu
     if (advertType === 'rent') {
         $('nav#block-advertsprimarymenu > ul.nav > li:first-child').addClass('active');
-    } else if (advertType === 'rent') {
+    } else if (advertType === 'buy') {
         $('nav#block-advertsprimarymenu > ul.nav > li:last-child').addClass('active');
     }
     //End
