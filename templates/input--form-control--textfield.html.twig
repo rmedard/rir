@@ -26,6 +26,7 @@
     'form-control',
     ]
     %}
+    {{ kint(attributes) }}
     {% block input %}
         <input{{ attributes.addClass(classes) }} />
     {% endblock %}
