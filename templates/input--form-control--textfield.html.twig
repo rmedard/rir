@@ -28,6 +28,11 @@
     %}
     {% block input %}
         {{ kint(attributes.id) }}
-        <input{{ attributes.addClass(classes) }} />
+        {% if attributes.id.value starts with 'edit-field-advert-advertiser' %}
+            <input{{ attributes.addClass(classes) }} />
+            <p>Click...</p>
+        {% else %}
+            <input{{ attributes.addClass(classes) }} />
+        {% endif %}
     {% endblock %}
 {% endspaceless %}
