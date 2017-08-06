@@ -57,12 +57,12 @@
     var districtsStr = decodedUri.substring(decodedUri.indexOf('field_advert_district_target_id[]'), decodedUri.lastIndexOf('field_advert_district_target_id[]') + 37);
     var districts = districtsStr.match(/(\d+)/g) === null ? 'any' : districtsStr.match(/(\d+)/g).join('-');
 
-    var advertType = url('2', decodedUri);
+    var advertType = url('2', decodedUri); //Get second path variable
     var rooms = getParameterByName('field_advert_bedrooms_value');
     var propertyType = getParameterByName('field_advert_property_type_value');
     var price = getParameterByName('field_price_in_rwf_value');
 
-    if (typeof url('query', decodedUri) === 'undefined'){
+    if (typeof url('query', decodedUri) === 'undefined'){ //Check if there are query parameters
         $('section#block-rirsearchsubscribeblock').hide();
     } else {
         $('section#block-rirsearchsubscribeblock > div#search-subscribe-button-id > a')
