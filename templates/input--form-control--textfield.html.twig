@@ -27,6 +27,7 @@
     ]
     %}
     {% block input %}
+        {{ kint(attributes.id) }}
         <input{{ attributes.addClass(classes) }} />
     {% endblock %}
 {% endspaceless %}
