@@ -50,19 +50,6 @@
     $('div.view-adverts > div.view-filters').addClass('well well-sm');
     $('div.view-adverts > div.view-filters > form.views-exposed-form > div.form-inline > div.form-item > div.select-wrapper > select').addClass('input-sm');
 
-    //Activate primary menu while navigating secondary menu
-    if ($(location).attr('href').match('((\\/)(adverts\\/rent\\/(([a-z])\\w+))?$)')) {
-        $('nav#block-advertsprimarymenu > ul.nav > li:first-child').addClass('active');
-    } else if ($(location).attr('href').match('((\\/)(adverts\\/buy\\/(([a-z])\\w+))?$)')) {
-        $('nav#block-advertsprimarymenu > ul.nav > li:last-child').addClass('active');
-    }
-    //End
-
-    //Activate home link while on homepage
-    if ($('nav#block-rir-main-menu > ul.nav > li:first-child > a').hasClass('is-active')) {
-        $('nav#block-rir-main-menu > ul.nav > li:first-child').addClass('active');
-    }
-    //End
 
     $('div.form-type-fivestar > div.form-type-select > div').removeClass('select-wrapper');
 
@@ -81,6 +68,20 @@
         $('section#block-rirsearchsubscribeblock > div#search-subscribe-button-id > a')
             .attr('href', '/search-subscribe?advert='+ advertType +'&districts='+ districts +'&rooms='+ rooms +'&property_type=' + propertyType + '&price=' + price);
     }
+
+    //Activate primary menu while navigating secondary menu
+    if (advertType === 'rent') {
+        $('nav#block-advertsprimarymenu > ul.nav > li:first-child').addClass('active');
+    } else if (advertType === 'rent') {
+        $('nav#block-advertsprimarymenu > ul.nav > li:last-child').addClass('active');
+    }
+    //End
+
+    //Activate home link while on homepage
+    if ($('nav#block-rir-main-menu > ul.nav > li:first-child > a').hasClass('is-active')) {
+        $('nav#block-rir-main-menu > ul.nav > li:first-child').addClass('active');
+    }
+    //End
 
 }(jQuery));
 
