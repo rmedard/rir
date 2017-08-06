@@ -3417,7 +3417,7 @@ fieldset[disabled] .btn-link:hover,
 .btn-link[disabled]:focus,
 fieldset[disabled] .btn-link:focus {
   color: #b4bcc2;
-  text-decor(node:29562) DeprecationWarning: util.print is deprecated. Use console.log instead.
+  text-decor(node:9936) DeprecationWarning: util.print is deprecated. Use console.log instead.
 ation: none;
 }
 .btn-lg,
@@ -7850,4 +7850,7 @@ div.region-rir-horizontal-sidebar section {
 div.chosen-container {
   padding: 0;
   height: auto;
+}
+div#search-subscribe-button-id {
+  padding: 10px;
 }
