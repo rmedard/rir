@@ -187,6 +187,8 @@ function rir_preprocess_block(&$variables){
 }
 
 function rir_preprocess_field(&$variables, $hook){
+  $var = $variables['element']['field_name'];
+  print $var;
   if ($variables['element']['field_name'] == 'field_advert_advertiser'){
     print '<p>dore dore...</p>';
   }
