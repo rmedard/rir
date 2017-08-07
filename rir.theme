@@ -185,3 +185,9 @@ function rir_preprocess_block(&$variables){
     $variables['#cache']['max-age'] = 0;
   }
 }
+
+function rir_preprocess_field(&$variables){
+  if ($variables['element']['#field_name'] == 'field_advert_advertiser'){
+    print '<p>dore dore...</p>';
+  }
+}
