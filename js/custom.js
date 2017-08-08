@@ -87,6 +87,8 @@
     }
     //End
 
+    $('div#edit-field-advert-advertiser-wrapper').append("<div><a href='/node/add/agent'>Can't find agent? Click here.</a></div>");
+
 }(jQuery));
 
 function getParameterByName(name, url) {
