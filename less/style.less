@@ -57,15 +57,19 @@ nav#block-rir-main-menu{
 
 @media (min-width: @screen-md-min) {
 
-  div.main-container {
-    //margin-top: 180px;
-    div.row > section{
-      min-height: 600px;
+  div.super-main{
+    margin-top: 169px;
+    div.main-container {
+      div.row > section{
+        min-height: 600px;
+      }
     }
   }
 
-  body.toolbar-tray-open > div.main-container {
-    margin-top: 105px;
+  body.navbar-is-fixed-top{
+    div.super-main{
+      margin-top: 94px;
+    }
   }
 
   .rir-top-banner {
