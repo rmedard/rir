@@ -48,7 +48,7 @@
     });
 
     $('div.view-adverts > div.view-filters').addClass('well well-sm');
-    $('div.view-adverts > div.view-filters > form.views-exposed-form > div.form-inline > div.form-item > div.select-wrapper > select').addClass('input-sm');
+    $('form#views-exposed-form-adverts-page-adverts-all > div.form-inline > div.form-item > div.select-wrapper > select').addClass('input-sm');
 
 
     $('div.form-type-fivestar > div.form-type-select > div').removeClass('select-wrapper');
