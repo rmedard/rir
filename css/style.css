@@ -3417,7 +3417,7 @@ fieldset[disabled] .btn-link:hover,
 .btn-link[disabled]:focus,
 fieldset[disabled] .btn-link:focus {
   color: #b4bcc2;
-  text-decor(node:26097) DeprecationWarning: util.print is deprecated. Use console.log instead.
+  text-decor(node:26981) DeprecationWarning: util.print is deprecated. Use console.log instead.
 ation: none;
 }
 .btn-lg,
@@ -7706,9 +7706,6 @@ div.view-adverts > div.view-content > div.media-object > div.media div.pull-left
   line-height: 90px;
   width: 90px;
 }
-#block-advertsprimarymenu {
-  margin-bottom: 10px;
-}
 nav#block-advertssecondarymenu > ul.nav-pills,
 nav#block-buyadvertssecondarymenu > ul.nav-pills {
   font-size: 13px;
@@ -7722,24 +7719,6 @@ nav#block-buyadvertssecondarymenu > ul.nav-pills li {
 nav#block-advertssecondarymenu > ul.nav-pills li a,
 nav#block-buyadvertssecondarymenu > ul.nav-pills li a {
   padding: 8px 10px;
-}
-nav#block-advertsprimarymenu {
-  border-bottom: #19826d 2px solid;
-}
-nav#block-advertsprimarymenu ul.nav-pills li > a {
-  color: #2c3e50;
-}
-nav#block-advertsprimarymenu ul.nav-pills li > a span.badge {
-  color: white;
-  background-color: #19826d;
-}
-nav#block-advertsprimarymenu ul.nav-pills li.active > a {
-  color: white;
-  background-color: #19826d;
-}
-nav#block-advertsprimarymenu ul.nav-pills li.active > a span.badge {
-  color: #19826d;
-  background-color: white;
 }
 #block-advertssecondarymenu,
 #block-buyadvertssecondarymenu {
