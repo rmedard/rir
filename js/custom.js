@@ -33,7 +33,7 @@
     $('section#block-request-details-webform').addClass('well well-sm');
 
     $('select#edit-field-advert-district-target-id > option[value="All"]').text('- Any District -');
-    $('select#edit-field-advert-type-value > option[value="All"]').text('- Any Property Type -');
+    $('select#edit-field-advert-type-value > option[value="All"]').text('- Any Advert Type -');
     $('select#edit-field-advert-bedrooms-value > option[value="All"]').text('- Any nbr of Rooms -');
     $('select#edit-field-advert-property-type-value > option[value="All"]').text('- Any Property -');
     $('select#edit-field-price-in-rwf-value > option[value="All"]').text('- Any Price -');
