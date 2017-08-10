@@ -180,7 +180,7 @@ function rir_preprocess_page(&$variables) {
         $variables['show_sidebars'] = FALSE;
     }
 
-    if (preg_match('(/search-adverts)', $page_path)){
+    if (preg_match('(\/adverts\/)', $page_path) or preg_match('(/search-adverts)', $page_path)){
       $variables['show_rir_search'] = TRUE;
     }
 }
