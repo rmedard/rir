@@ -10,39 +10,16 @@ function rir_preprocess_menu(&$variables) {
 
     $variables['is_mobile'] = isMobile() ? TRUE : FALSE;
 
-    if ($variables['menu_name'] === 'adverts-primary-menu') {
-        $rent = Drupal::entityQuery('node')
+    if ($variables['menu_name'] === 'adverts-secondary-menu') {
+        $rent_all = Drupal::entityQuery('node')
           ->condition('type', 'advert')
           ->condition('status', 1)
-          ->condition('field_advert_type', ['rent', 'short_rent'], 'IN')
           ->count();
-        $rent_count = $rent->execute();
-
-        $buy = Drupal::entityQuery('node')
-          ->condition('type', 'advert')
-          ->condition('status', 1)
-          ->condition('field_advert_type', 'buy')
-          ->count();
-        $buy_count = $buy->execute();
-
-        $menu_primary_values = [1 => $rent_count, 2 => $buy_count];
-
-        $variables['menu_primary_values'] = $menu_primary_values;
-
-    }
-    elseif ($variables['menu_name'] === 'adverts-secondary-menu') {
-        $rent_featured = Drupal::entityQuery('node')
-          ->condition('type', 'advert')
-          ->condition('status', 1)
-          ->condition('field_advert_type', ['rent', 'short_rent'], 'IN')
-          ->condition('field_advert_posting_plan', 'standard', '<>')
-          ->count();
-        $rent_featured_count = $rent_featured->execute();
+        $rent_all_count = $rent_all->execute();
 
         $house = Drupal::entityQuery('node')
           ->condition('type', 'advert')
           ->condition('status', 1)
-          ->condition('field_advert_type', ['rent', 'short_rent'], 'IN')
           ->condition('field_advert_property_type', ['house', 'building'], 'IN')
           ->count();
         $house_count = $house->execute();
@@ -50,7 +27,6 @@ function rir_preprocess_menu(&$variables) {
         $apart = Drupal::entityQuery('node')
           ->condition('type', 'advert')
           ->condition('status', 1)
-          ->condition('field_advert_type', ['rent', 'short_rent'], 'IN')
           ->condition('field_advert_property_type', 'apartment')
           ->count();
         $apart_count = $apart->execute();
@@ -58,7 +34,6 @@ function rir_preprocess_menu(&$variables) {
         $commerce = Drupal::entityQuery('node')
           ->condition('type', 'advert')
           ->condition('status', 1)
-          ->condition('field_advert_type', ['rent', 'short_rent'], 'IN')
           ->condition('field_advert_property_type', 'commerce')
           ->count();
         $commerce_count = $commerce->execute();
@@ -66,7 +41,6 @@ function rir_preprocess_menu(&$variables) {
         $room = Drupal::entityQuery('node')
           ->condition('type', 'advert')
           ->condition('status', 1)
-          ->condition('field_advert_type', ['rent', 'short_rent'], 'IN')
           ->condition('field_advert_property_type', [
             'room',
             'shared_room',
@@ -77,7 +51,6 @@ function rir_preprocess_menu(&$variables) {
         $office = Drupal::entityQuery('node')
           ->condition('type', 'advert')
           ->condition('status', 1)
-          ->condition('field_advert_type', ['rent', 'short_rent'], 'IN')
           ->condition('field_advert_property_type', 'office')
           ->count();
         $office_count = $office->execute();
@@ -85,13 +58,12 @@ function rir_preprocess_menu(&$variables) {
         $land = Drupal::entityQuery('node')
           ->condition('type', 'advert')
           ->condition('status', 1)
-          ->condition('field_advert_type', ['rent', 'short_rent'], 'IN')
           ->condition('field_advert_property_type', 'land')
           ->count();
         $land_count = $land->execute();
 
-        $menu_rent_secondary_values = [
-          1 => $rent_featured_count,
+        $menu_adverts_tabs_values = [
+          1 => $rent_all_count,
           2 => $house_count,
           3 => $apart_count,
           4 => $commerce_count,
@@ -99,61 +71,7 @@ function rir_preprocess_menu(&$variables) {
           6 => $office_count,
           7 => $land_count,
         ];
-
-        $variables['menu_rent_secondary_values'] = $menu_rent_secondary_values;
-
-    }
-    elseif ($variables['menu_name'] === 'buy-adverts-secondary-menu') {
-
-        $buy_featured = Drupal::entityQuery('node')
-          ->condition('type', 'advert')
-          ->condition('status', 1)
-          ->condition('field_advert_type', 'buy')
-          ->condition('field_advert_posting_plan', 'standard', '<>')
-          ->count();
-        $buy_featured_count = $buy_featured->execute();
-
-        $house = Drupal::entityQuery('node')
-          ->condition('type', 'advert')
-          ->condition('status', 1)
-          ->condition('field_advert_type', 'buy')
-          ->condition('field_advert_property_type', ['house', 'building'], 'IN')
-          ->count();
-        $house_count = $house->execute();
-
-        $apart = Drupal::entityQuery('node')
-          ->condition('type', 'advert')
-          ->condition('status', 1)
-          ->condition('field_advert_type', 'buy')
-          ->condition('field_advert_property_type', 'apartment')
-          ->count();
-        $apart_count = $apart->execute();
-
-        $commerce = Drupal::entityQuery('node')
-          ->condition('type', 'advert')
-          ->condition('status', 1)
-          ->condition('field_advert_type', 'buy')
-          ->condition('field_advert_property_type', 'commerce')
-          ->count();
-        $commerce_count = $commerce->execute();
-
-        $land = Drupal::entityQuery('node')
-          ->condition('type', 'advert')
-          ->condition('status', 1)
-          ->condition('field_advert_type', 'buy')
-          ->condition('field_advert_property_type', 'land')
-          ->count();
-        $land_count = $land->execute();
-
-        $menu_buy_secondary_values = [
-          1 => $buy_featured_count,
-          2 => $house_count,
-          3 => $apart_count,
-          4 => $commerce_count,
-          5 => $land_count,
-        ];
-
-        $variables['menu_buy_secondary_values'] = $menu_buy_secondary_values;
+        $variables['menu_adverts_tabs_values'] = $menu_adverts_tabs_values;
     }
 }
 
