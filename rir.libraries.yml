@@ -18,28 +18,6 @@ bootstrap-scripts:
     bootstrap/js/tab.js: {}
     bootstrap/js/transition.js: {}
 
-semantic_ui.form:
-  js:
-    bower_components/semantic/dist/components/form.js: {}
-  css:
-    component:
-      bower_components/semantic/dist/components/form.css: {}
-
-semantic_ui.button:
-  css:
-    component:
-      bower_components/semantic/dist/components/button.css: {}
-
-semantic_ui.input:
-  css:
-    component:
-      bower_components/semantic/dist/components/input.css: {}
-
-semantic_ui.label:
-  css:
-    component:
-      bower_components/semantic/dist/components/label.css: {}
-
 additional-scripts:
   js:
     js/url.js: {}
