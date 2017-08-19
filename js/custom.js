@@ -68,9 +68,9 @@
     // var advertType = url('2', decodedUri); //Get second path variable
     var propertyLocation = getParameterByName('combine');
     var advertType = getParameterByName('field_advert_type_value');
-    var rooms = getParameterByName('field_advert_bedrooms_value');
+    // var rooms = getParameterByName('field_advert_bedrooms_value');
     var propertyType = getParameterByName('field_advert_property_type_value');
-    var price = getParameterByName('field_price_in_rwf_value');
+    // var price = getParameterByName('field_price_in_rwf_value');
 
     $('section#block-rirsearchsubscribeblock > div#search-subscribe-button-id > a')
         .attr('href', '/search-subscribe?advert='+ advertType +'&location='+ propertyLocation +'&property_type=' + propertyType);
