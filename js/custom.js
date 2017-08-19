@@ -62,17 +62,18 @@
      */
 
     var decodedUri = decodeURIComponent(window.location.href);
-    var districtsStr = decodedUri.substring(decodedUri.indexOf('field_advert_district_target_id[]'), decodedUri.lastIndexOf('field_advert_district_target_id[]') + 37);
-    var districts = districtsStr.match(/(\d+)/g) === null ? 'any' : districtsStr.match(/(\d+)/g).join('-');
+    // var districtsStr = decodedUri.substring(decodedUri.indexOf('field_advert_district_target_id[]'), decodedUri.lastIndexOf('field_advert_district_target_id[]') + 37);
+    // var districts = districtsStr.match(/(\d+)/g) === null ? 'any' : districtsStr.match(/(\d+)/g).join('-');
 
     // var advertType = url('2', decodedUri); //Get second path variable
+    var propertyLocation = getParameterByName('combine');
     var advertType = getParameterByName('field_advert_type_value');
     var rooms = getParameterByName('field_advert_bedrooms_value');
     var propertyType = getParameterByName('field_advert_property_type_value');
     var price = getParameterByName('field_price_in_rwf_value');
 
     $('section#block-rirsearchsubscribeblock > div#search-subscribe-button-id > a')
-        .attr('href', '/search-subscribe?advert='+ advertType +'&districts='+ districts +'&rooms='+ rooms +'&property_type=' + propertyType + '&price=' + price);
+        .attr('href', '/search-subscribe?advert='+ advertType +'&location='+ propertyLocation +'&property_type=' + propertyType);
 
     //Activate home link while on homepage
     if ($('nav#block-rir-main-menu > ul.nav > li:first-child > a').hasClass('is-active')) {
