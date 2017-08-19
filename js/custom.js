@@ -50,6 +50,8 @@
 
     $('div.view-adverts > div.view-filters').addClass('well well-sm');
     $('form#views-exposed-form-adverts-page-search-adverts > div.form-inline > div.form-item > div.select-wrapper > select').addClass('input-sm');
+    $('form#views-exposed-form-adverts-page-search-adverts > div.form-inline > div.form-item > input#edit-combine')
+        .addClass('input-sm').attr("placeholder", "Search address: district, sector or village");
 
 
     $('div.form-type-fivestar > div.form-type-select > div').removeClass('select-wrapper');
@@ -70,14 +72,6 @@
 
     $('section#block-rirsearchsubscribeblock > div#search-subscribe-button-id > a')
         .attr('href', '/search-subscribe?advert='+ advertType +'&districts='+ districts +'&rooms='+ rooms +'&property_type=' + propertyType + '&price=' + price);
-
-    //Activate primary menu while navigating secondary menu
-    // if (advertType === 'rent') {
-    //     $('nav#block-advertsprimarymenu > ul.nav > li:first-child').addClass('active');
-    // } else if (advertType === 'buy') {
-    //     $('nav#block-advertsprimarymenu > ul.nav > li:last-child').addClass('active');
-    // }
-    //End
 
     //Activate home link while on homepage
     if ($('nav#block-rir-main-menu > ul.nav > li:first-child > a').hasClass('is-active')) {
