@@ -50,7 +50,10 @@
 
     $('div.view-adverts > div.view-filters').addClass('well well-sm');
     $('form#views-exposed-form-adverts-page-search-adverts > div.form-inline > div.form-item > div.select-wrapper > select').addClass('input-sm');
-
+    $('form#views-exposed-form-adverts-page-search-adverts > div.form-inline > div.form-item > div.input-group > input#edit-combine')
+        .addClass('input-sm').attr("placeholder", "Search address: district, sector or village");
+    $('form#views-exposed-form-adverts-page-search-adverts > div.form-inline > div.form-item > div.input-group > span.input-group-addon')
+        .addClass('input-sm');
 
     $('div.form-type-fivestar > div.form-type-select > div').removeClass('select-wrapper');
 
@@ -59,25 +62,18 @@
      */
 
     var decodedUri = decodeURIComponent(window.location.href);
-    var districtsStr = decodedUri.substring(decodedUri.indexOf('field_advert_district_target_id[]'), decodedUri.lastIndexOf('field_advert_district_target_id[]') + 37);
-    var districts = districtsStr.match(/(\d+)/g) === null ? 'any' : districtsStr.match(/(\d+)/g).join('-');
+    // var districtsStr = decodedUri.substring(decodedUri.indexOf('field_advert_district_target_id[]'), decodedUri.lastIndexOf('field_advert_district_target_id[]') + 37);
+    // var districts = districtsStr.match(/(\d+)/g) === null ? 'any' : districtsStr.match(/(\d+)/g).join('-');
 
     // var advertType = url('2', decodedUri); //Get second path variable
+    var propertyLocation = getParameterByName('combine');
     var advertType = getParameterByName('field_advert_type_value');
-    var rooms = getParameterByName('field_advert_bedrooms_value');
+    // var rooms = getParameterByName('field_advert_bedrooms_value');
     var propertyType = getParameterByName('field_advert_property_type_value');
-    var price = getParameterByName('field_price_in_rwf_value');
+    // var price = getParameterByName('field_price_in_rwf_value');
 
     $('section#block-rirsearchsubscribeblock > div#search-subscribe-button-id > a')
-        .attr('href', '/search-subscribe?advert='+ advertType +'&districts='+ districts +'&rooms='+ rooms +'&property_type=' + propertyType + '&price=' + price);
-
-    //Activate primary menu while navigating secondary menu
-    // if (advertType === 'rent') {
-    //     $('nav#block-advertsprimarymenu > ul.nav > li:first-child').addClass('active');
-    // } else if (advertType === 'buy') {
-    //     $('nav#block-advertsprimarymenu > ul.nav > li:last-child').addClass('active');
-    // }
-    //End
+        .attr('href', '/search-subscribe?advert='+ advertType +'&location='+ propertyLocation +'&property_type=' + propertyType);
 
     //Activate home link while on homepage
     if ($('nav#block-rir-main-menu > ul.nav > li:first-child > a').hasClass('is-active')) {
