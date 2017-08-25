@@ -83,7 +83,8 @@
 
     $('div#edit-field-advert-advertiser-wrapper').append("<div><a href='/node/add/agent'>Can't find agent? Click here.</a></div>");
     var menuTab = $('nav#block-advertssecondarymenu > ul.nav > li');
-    if (menuTab.val() == '0'){
+    var menuTabBadge = $('nav#block-advertssecondarymenu > ul.nav > li > a > span.badge');
+    if (menuTabBadge.val() == '0'){
         menuTab.hide();
     }
 }(jQuery));
