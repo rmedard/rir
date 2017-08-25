@@ -87,7 +87,7 @@
     menuTab.each(function (index) {
         console.log(index);
         console.log($("nav#block-advertssecondarymenu > ul.nav > li:nth-child(" + index + ") > a > span.badge").text());
-        if ($("nav#block-advertssecondarymenu > ul.nav > li:nth-child(" + index + ") > a > span.badge").text() === '0'){
+        if ($.trim($("nav#block-advertssecondarymenu > ul.nav > li:nth-child(" + (index + 1) + ") > a > span.badge").text()) === '0'){
             $(this).hide();
         }
     });
