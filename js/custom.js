@@ -84,8 +84,8 @@
     $('div#edit-field-advert-advertiser-wrapper').append("<div><a href='/node/add/agent'>Can't find agent? Click here.</a></div>");
     var menuTab = $('nav#block-advertssecondarymenu > ul.nav > li');
     // var menuTabBadge = $('nav#block-advertssecondarymenu > ul.nav > li > a > span.badge');
-    menuTab.each(function () {
-        if ($.trim($(this + '> a > span.badge').text() === '0')){
+    menuTab.each(function (index) {
+        if ($('nav#block-advertssecondarymenu > ul.nav > li:nth-child(' + index + ') > a > span.badge').text() === '0'){
             $(this).hide();
         }
     });
