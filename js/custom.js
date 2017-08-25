@@ -83,10 +83,7 @@
 
     $('div#edit-field-advert-advertiser-wrapper').append("<div><a href='/node/add/agent'>Can't find agent? Click here.</a></div>");
     var menuTab = $('nav#block-advertssecondarymenu > ul.nav > li');
-    // var menuTabBadge = $('nav#block-advertssecondarymenu > ul.nav > li > a > span.badge');
     menuTab.each(function (index) {
-        console.log(index);
-        console.log($("nav#block-advertssecondarymenu > ul.nav > li:nth-child(" + index + ") > a > span.badge").text());
         if ($.trim($("nav#block-advertssecondarymenu > ul.nav > li:nth-child(" + (index + 1) + ") > a > span.badge").text()) === '0'){
             $(this).hide();
         }
