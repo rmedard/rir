@@ -85,7 +85,9 @@
     var menuTab = $('nav#block-advertssecondarymenu > ul.nav > li');
     // var menuTabBadge = $('nav#block-advertssecondarymenu > ul.nav > li > a > span.badge');
     menuTab.each(function (index) {
-        if ($('nav#block-advertssecondarymenu > ul.nav > li:nth-child(' + index + ') > a > span.badge').text() === '0'){
+        console.log(index);
+        console.log($("nav#block-advertssecondarymenu > ul.nav > li:nth-child(" + index + ") > a > span.badge").text());
+        if ($("nav#block-advertssecondarymenu > ul.nav > li:nth-child(" + index + ") > a > span.badge").text() === '0'){
             $(this).hide();
         }
     });
