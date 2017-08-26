@@ -32,11 +32,11 @@
     $('section#block-directaccessblock').addClass('well well-sm');
     $('section#block-request-details-webform').addClass('well well-sm');
 
-    $('select#edit-field-advert-district-target-id > option[value="All"]').text('- Any District -');
-    $('select#edit-field-advert-type-value > option[value="All"]').text('- Any Advert Type -');
-    $('select#edit-field-advert-bedrooms-value > option[value="All"]').text('- Any nbr of Rooms -');
-    $('select#edit-field-advert-property-type-value > option[value="All"]').text('- Any Property -');
-    $('select#edit-field-price-in-rwf-value > option[value="All"]').text('- Any Price -');
+    $('select#edit-field-advert-district-target-id > option[value="All"]').text('- District -');
+    $('select#edit-field-advert-type-value > option[value="All"]').text('- Advert Type -');
+    $('select#edit-field-advert-bedrooms-value > option[value="All"]').text('- Rooms -');
+    $('select#edit-field-advert-property-type-value > option[value="All"]').text('- Property type -');
+    $('select#edit-field-price-in-rwf-value > option[value="All"]').text('- Price -');
 
     $('select#edit-field-advert-district-target-id > option').each(function () {
         if ($(this).attr('value') === '75' ||
