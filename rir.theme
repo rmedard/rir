@@ -10,7 +10,7 @@ function rir_preprocess_menu(&$variables) {
 
     $variables['is_mobile'] = isMobile() ? TRUE : FALSE;
 
-    if ($variables['menu_name'] == 'adverts-secondary-menu') {
+    if ($variables['menu_name'] === 'adverts-secondary-menu') {
         $rent_all = Drupal::entityQuery('node')
           ->condition('type', 'advert')
           ->condition('status', 1)
