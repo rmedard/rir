@@ -113,8 +113,15 @@ function rir_preprocess_page(&$variables) {
     }
 }
 
-function rir_preprocess_block(&$variables) {
-    if ($variables['derivative_plugin_id'] == 'rir_realtime_block') {
-        $variables['#cache']['max-age'] = 0;
+function rir_preprocess_block(&$variables){
+  if ($variables['derivative_plugin_id'] == 'rir_realtime_block'){
+    $variables['#cache']['max-age'] = 0;
+  } elseif ($variables['rir_advert_details']){
+    $node = Drupal::routeMatch()->getParameter('node');
+    $advert = NULL;
+    if (isset($node)){
+      $advert = Node::load($node->id());
     }
+    $variables['advert'] = $advert;
+  }
 }
