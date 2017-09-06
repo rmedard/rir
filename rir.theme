@@ -108,7 +108,8 @@ function rir_preprocess_page(&$variables) {
         $advert = Drupal::request()->query->get('advert');
         $property = Drupal::request()->query->get('property_type');
         $pathVariables = explode('/', $page_path);
-        Drupal::logger('rir_theme')->debug($pathVariables);
+        kint($pathVariables);
+        die();
         $dataAccessor = Drupal::service('rir_notifier.data_accessor');
         $variables['adverts'] = $dataAccessor->getDailyAdverts($location, $advert, $property);
         Drupal::logger('rir_theme')->debug('adverts: ' . json_encode($variables['adverts'], true));
