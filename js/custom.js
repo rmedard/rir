@@ -21,9 +21,7 @@
     };
 
     if (isMobile.any()) {
-        $('nav#block-advertsprimarymenu > ul.nav-pills').removeClass('nav-justified').addClass('nav-mobile-primary');
         $('nav#block-advertssecondarymenu > ul.nav-pills').removeClass('nav-justified');
-        $('nav#block-buyadvertssecondarymenu > ul.nav-pills').removeClass('nav-justified');
     }
 
     $('form#direct-access-form').addClass('form-inline');
@@ -33,7 +31,7 @@
     $('section#block-request-details-webform').addClass('well well-sm');
 
     $('select#edit-field-advert-district-target-id > option[value="All"]').text('- District -');
-    $('select#edit-field-advert-type-value > option[value="All"]').text('- Advert Type -');
+    $('select#edit-field-advert-type-value > option[value="All"]').text('- Advert type -');
     $('select#edit-field-advert-bedrooms-value > option[value="All"]').text('- Rooms -');
     $('select#edit-field-advert-property-type-value > option[value="All"]').text('- Property type -');
     $('select#edit-field-price-in-rwf-value > option[value="All"]').text('- Price -');
