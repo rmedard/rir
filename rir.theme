@@ -104,15 +104,12 @@ function rir_preprocess_page(&$variables) {
     }
 
     if (preg_match('(\/newsletter\/)', $page_path)){
-        $location = Drupal::request()->query->get('location');
-        $advert = Drupal::request()->query->get('advert');
-        $property = Drupal::request()->query->get('property_type');
         $pathVariables = explode('/', $page_path);
-        kint($pathVariables);
-        die();
+        $location = $pathVariables[2];
+        $advert = $pathVariables[3];
+        $property = $pathVariables[4];
         $dataAccessor = Drupal::service('rir_notifier.data_accessor');
         $variables['adverts'] = $dataAccessor->getDailyAdverts($location, $advert, $property);
-        Drupal::logger('rir_theme')->debug('adverts: ' . json_encode($variables['adverts'], true));
     }
 }
 
