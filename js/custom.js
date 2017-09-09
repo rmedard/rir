@@ -55,9 +55,7 @@
 
     $('div.form-type-fivestar > div.form-type-select > div').removeClass('select-wrapper');
 
-    if(!$.trim($('div.view-adverts.well').html()).length ){
-       $(this).hide();
-    }
+    $('div.view-adverts.well:empty').hide();
     /*
      * URL.js docs => https://websanova.com/plugins/url
      */
