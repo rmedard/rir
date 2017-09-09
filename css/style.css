@@ -3417,7 +3417,7 @@ fieldset[disabled] .btn-link:hover,
 .btn-link[disabled]:focus,
 fieldset[disabled] .btn-link:focus {
   color: #b4bcc2;
-  text-decor(node:25487) DeprecationWarning: util.print is deprecated. Use console.log instead.
+  text-decor(node:4893) DeprecationWarning: util.print is deprecated. Use console.log instead.
 ation: none;
 }
 .btn-lg,
@@ -7859,4 +7859,8 @@ div.agent-thumbnail > div.caption {
 div.view-display-id-page_agents > div.view-content > div {
   padding-left: 5px;
   padding-right: 5px;
+}
+div.property-map-block > div.panel-heading > div.panel-title {
+  font-weight: bolder;
+  font-size: large;
 }
