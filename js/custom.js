@@ -55,11 +55,14 @@
 
     $('div.form-type-fivestar > div.form-type-select > div').removeClass('select-wrapper');
 
+    if(!$.trim($('div.view-adverts.well').html()).length ){
+       $(this).hide();
+    }
     /*
      * URL.js docs => https://websanova.com/plugins/url
      */
 
-    var decodedUri = decodeURIComponent(window.location.href);
+    // var decodedUri = decodeURIComponent(window.location.href);
     // var districtsStr = decodedUri.substring(decodedUri.indexOf('field_advert_district_target_id[]'), decodedUri.lastIndexOf('field_advert_district_target_id[]') + 37);
     // var districts = districtsStr.match(/(\d+)/g) === null ? 'any' : districtsStr.match(/(\d+)/g).join('-');
 
