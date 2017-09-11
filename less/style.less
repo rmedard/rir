@@ -27,11 +27,15 @@ body, .form-control{
 }
 
 nav#block-rir-main-menu{
+  ul.menu > li{
+    a:hover{
+      color: @brand-dark;
+    }
+  }
   ul.menu > li:last-child{
     background-color: @brand-success;
     font-weight: bolder;
     a:hover{
-      color: @brand-dark;
       background-color: lighten(@brand-success, 12%);
     }
   }
