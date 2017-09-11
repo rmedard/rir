@@ -3417,7 +3417,7 @@ fieldset[disabled] .btn-link:hover,
 .btn-link[disabled]:focus,
 fieldset[disabled] .btn-link:focus {
   color: #b4bcc2;
-  text-d(node:5053) DeprecationWarning: util.print is deprecated. Use console.log instead.
+  text-d(node:9254) DeprecationWarning: util.print is deprecated. Use console.log instead.
 ecoration: none;
 }
 .btn-lg,
@@ -7818,7 +7818,7 @@ div.view-id-services > div.view-content div.pricing-plan-block {
   background-color: #ecf0f1;
 }
 .rir-main-footer {
-  background-color: #248cc7;
+  background-color: #333333;
   padding-top: 15px;
   margin-top: 15px;
 }
