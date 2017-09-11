@@ -3417,7 +3417,7 @@ fieldset[disabled] .btn-link:hover,
 .btn-link[disabled]:focus,
 fieldset[disabled] .btn-link:focus {
   color: #b4bcc2;
-  text-d(node:9572) DeprecationWarning: util.print is deprecated. Use console.log instead.
+  text-d(node:10076) DeprecationWarning: util.print is deprecated. Use console.log instead.
 ecoration: none;
 }
 .btn-lg,
@@ -7661,7 +7661,7 @@ nav#block-rir-main-menu ul.menu > li:last-child {
   font-weight: bolder;
 }
 nav#block-rir-main-menu ul.menu > li:last-child a:hover {
-  color: #248cc7;
+  color: #333333;
   background-color: #75c378;
 }
 @media (max-width: 992px) {
