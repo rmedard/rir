@@ -3417,7 +3417,7 @@ fieldset[disabled] .btn-link:hover,
 .btn-link[disabled]:focus,
 fieldset[disabled] .btn-link:focus {
   color: #b4bcc2;
-  text-d(node:3813) DeprecationWarning: util.print is deprecated. Use console.log instead.
+  text-d(node:3996) DeprecationWarning: util.print is deprecated. Use console.log instead.
 ecoration: none;
 }
 .btn-lg,
@@ -7656,12 +7656,12 @@ body {
   display: none;
 }
 nav#block-rir-main-menu ul.menu > li:last-child {
-  background-color: #e74c3c;
+  background-color: #4caf50;
   font-weight: bolder;
 }
 nav#block-rir-main-menu ul.menu > li:last-child a:hover {
   color: #248cc7;
-  background-color: #ee7e72;
+  background-color: #75c378;
 }
 @media (max-width: 992px) {
   a.logo > img {
@@ -7759,7 +7759,7 @@ div.advert-summary-block ul li {
 }
 div.advert-summary-block ul li.advert-views-count {
   background: #ecf0f1;
-  color: #4caf50;
+  color: #e74c3c;
   font-weight: bold;
 }
 div.intl-tel-input {
