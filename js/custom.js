@@ -49,7 +49,7 @@
     $('div.view-adverts > div.view-filters').addClass('well well-sm');
     $('form#views-exposed-form-adverts-page-search-adverts > div.form-inline > div.form-item > div.select-wrapper > select').addClass('input-sm');
     $('form#views-exposed-form-adverts-page-search-adverts > div.form-inline > div.form-item > div.input-group > input#edit-combine')
-        .addClass('input-sm').attr("placeholder", "Search address: district, sector or village");
+        .addClass('input-sm').attr("placeholder", "Search address: district, sector, cell or village");
     $('form#views-exposed-form-adverts-page-search-adverts > div.form-inline > div.form-item > div.input-group > span.input-group-addon')
         .addClass('input-sm');
     $('form#views-exposed-form-agents-page-agents > div.form-inline > div.form-item > div > input').attr('placeholder', 'Search for: Name of an agent');
