@@ -128,7 +128,6 @@ function rir_preprocess_views_view_field(&$variables){
     $field = $variables['field'];
     if ($view->storage->id() === 'details_requests' and $field->realField === 'entity_id'){
         $advert_id = intval($field->getValue($variables['row']));
-        Drupal::logger('rir_theme')->debug('row: ' . $variables['row']);
         Drupal::logger('rir_theme')->debug('deep row: ' . $advert_id);
         if (isset($advert_id)){
             $advert = \Drupal\node\Entity\Node::load($advert_id);
