@@ -56,7 +56,7 @@
  * @see html.html.twig
  */
 #}
-{% set container = theme.settings.fluid_container or management_page ? 'container-fluid' : 'container' %}
+{% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
 {# Navbar #}
 {% if page.navigation or page.navigation_collapsible %}
     {% block navbar %}
@@ -116,6 +116,7 @@
     {% endif %}
 {# Main #}
 {% block main %}
+    {% set container = management_page ? 'container-fluid' : 'container' %}
     <div role="main" class="main-container {{ container }} js-quickedit-main-content">
         <div class="row">
 
