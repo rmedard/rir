@@ -122,3 +122,15 @@ function rir_preprocess_block(&$variables){
     $variables['#cache']['max-age'] = 0;
   }
 }
+
+function rir_preprocess_views_view_field(&$variables){
+    $view = $variables['view'];
+    $field = $variables['field']->realField;
+    if ($view === 'details_requests' and $field === 'entity_id'){
+        $advert_id = intval($variables['row']);
+        if (isset($advert_id)){
+            $advert = \Drupal\node\Entity\Node::load($advert_id);
+            $variables['output'] = $advert->getTitle();
+        }
+    }
+}
