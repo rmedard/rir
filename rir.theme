@@ -11,34 +11,34 @@ function rir_preprocess_menu(&$variables) {
     $variables['is_mobile'] = isMobile() ? TRUE : FALSE;
 
     if ($variables['menu_name'] === 'adverts-secondary-menu') {
-        $rent_all = Drupal::entityQuery('node')
+        $rent_all = \Drupal::entityQuery('node')
           ->condition('type', 'advert')
           ->condition('status', 1)
           ->count();
         $rent_all_count = $rent_all->execute();
 
-        $house = Drupal::entityQuery('node')
+        $house = \Drupal::entityQuery('node')
           ->condition('type', 'advert')
           ->condition('status', 1)
           ->condition('field_advert_property_type', ['house', 'building'], 'IN')
           ->count();
         $house_count = $house->execute();
 
-        $apart = Drupal::entityQuery('node')
+        $apart = \Drupal::entityQuery('node')
           ->condition('type', 'advert')
           ->condition('status', 1)
           ->condition('field_advert_property_type', 'apartment')
           ->count();
         $apart_count = $apart->execute();
 
-        $commerce = Drupal::entityQuery('node')
+        $commerce = \Drupal::entityQuery('node')
           ->condition('type', 'advert')
           ->condition('status', 1)
           ->condition('field_advert_property_type', 'commerce')
           ->count();
         $commerce_count = $commerce->execute();
 
-        $room = Drupal::entityQuery('node')
+        $room = \Drupal::entityQuery('node')
           ->condition('type', 'advert')
           ->condition('status', 1)
           ->condition('field_advert_property_type', [
@@ -48,14 +48,14 @@ function rir_preprocess_menu(&$variables) {
           ->count();
         $room_count = $room->execute();
 
-        $office = Drupal::entityQuery('node')
+        $office = \Drupal::entityQuery('node')
           ->condition('type', 'advert')
           ->condition('status', 1)
           ->condition('field_advert_property_type', 'office')
           ->count();
         $office_count = $office->execute();
 
-        $land = Drupal::entityQuery('node')
+        $land = \Drupal::entityQuery('node')
           ->condition('type', 'advert')
           ->condition('status', 1)
           ->condition('field_advert_property_type', 'land')
@@ -76,7 +76,7 @@ function rir_preprocess_menu(&$variables) {
 }
 
 function isMobile() {
-    $detail = Drupal::service('browscap')->getBrowser();
+    $detail = \Drupal::service('browscap')->getBrowser();
     $browser_data = implode(',', $detail);
     $mobile = preg_match('(Mobile)', $browser_data);
     $android = preg_match('(Android)', $browser_data);
@@ -90,12 +90,16 @@ function isMobile() {
 }
 
 function rir_preprocess_page(&$variables) {
-    $page_path = Drupal::request()->getPathInfo();
+    $page_path = \Drupal::request()->getPathInfo();
     $variables['show_sidebars'] = TRUE;
     $variables['show_rir_search'] = FALSE;
+    $variables['management_page'] = FALSE;
 
     if (preg_match('(/pricing-plans)', $page_path) or preg_match('(/page/services)', $page_path) or preg_match('(\/manage\/)', $page_path)) {
         $variables['show_sidebars'] = FALSE;
+        if (preg_match('(\/manage\/)', $page_path)){
+            $variables['management_page'] = TRUE;
+        }
     }
 
     if (preg_match('(\/adverts\/)', $page_path) or preg_match('(/search-adverts)', $page_path) or Drupal::service('path.matcher')
@@ -108,7 +112,7 @@ function rir_preprocess_page(&$variables) {
         $location = $pathVariables[2];
         $advert = $pathVariables[3];
         $property = $pathVariables[4];
-        $dataAccessor = Drupal::service('rir_notifier.data_accessor');
+        $dataAccessor = \Drupal::service('rir_notifier.data_accessor');
         $variables['adverts'] = $dataAccessor->getDailyAdverts($location, $advert, $property);
     }
 }
