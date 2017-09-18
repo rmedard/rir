@@ -1,4 +1,8 @@
 <?php
+
+use Drupal\Core\Render\Markup;
+use Drupal\node\Entity\Node;
+
 /**
  * @file
  * Bootstrap sub-theme.
@@ -129,10 +133,10 @@ function rir_preprocess_views_view_field(&$variables){
     if ($view->storage->id() === 'details_requests' and $field->realField === 'entity_id'){
         $advert_id = intval($field->getValue($variables['row']));
         if (isset($advert_id)){
-            $advert = \Drupal\node\Entity\Node::load($advert_id);
+            $advert = Node::load($advert_id);
             if (isset($advert)){
-                $advert_url = '/node/' . $advert->get('field_advert_reference')->value;
-                $variables['output'] =  \Drupal\Core\Render\Markup::create('<a href="'. $advert_url .'"> ' . $advert->getTitle() . '</a>');
+                $advert_url = '/advert/' . $advert->get('field_advert_reference')->value;
+                $variables['output'] = Markup::create('<a href="'. $advert_url .'"> ' . $advert->getTitle() . '</a>');
             }
         }
     }
