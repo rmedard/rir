@@ -132,7 +132,7 @@ function rir_preprocess_views_view_field(&$variables){
             $advert = \Drupal\node\Entity\Node::load($advert_id);
             if (isset($advert)){
                 $advert_url = '/node/' . $advert->get('field_advert_reference')->value;
-                $variables['output'] = '<a href="'. $advert_url .'"> ' . $advert->getTitle() . '</a>';
+                $variables['output'] =  \Drupal\Core\Render\Markup::create('<a href="'. $advert_url .'"> ' . $advert->getTitle() . '</a>');
             }
         }
     }
