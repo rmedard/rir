@@ -160,7 +160,7 @@ function getSimilarAdverts($advert_id){
         $advertsQuery = \Drupal::entityQuery('node')
           ->condition('type', 'advert')
           ->condition('status', 1)
-          ->condition('nid', $advert_id, '!=')
+          ->condition('nid', $advert_id, '<>')
           ->condition('field_advert_signature', $signature, '=');
         $advert_ids = $advertsQuery->execute();
         if (count($advert_ids) > 0){
