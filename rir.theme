@@ -160,6 +160,7 @@ function getSimilarAdverts($data){
           ->condition('nid', $id, '!=')
           ->condition('field_advert_signature', trim($signature));
         $advert_ids = $advertsQuery->execute();
+        Drupal::logger('rir_theme')->debug('Found id:' . $advert_ids[0]);
         if (count($advert_ids) > 0){
             if (count($advert_ids) == 1){
                 $advert = Node::load($advert_ids[0]);
