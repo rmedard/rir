@@ -94,10 +94,12 @@
         }
     });
 
-    var tableRow = 'form#views-form-adverts-page-manage-adverts > table > tbody > tr';
-    if( $(tableRow + ' > td.views-field-id > p').text().length > 5){
-        $(tableRow).addClass('danger');
-    }
+    var tableRow = $('form#views-form-adverts-page-manage-adverts > table > tbody > tr');
+    tableRow.each(function () {
+        if( $(tableRow + ' > td.views-field-id > p').text().length > 5){
+            $(tableRow).addClass('danger');
+        }
+    });
 }(jQuery));
 
 function getParameterByName(name, url) {
