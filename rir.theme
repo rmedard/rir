@@ -174,10 +174,10 @@ function getSimilarAdverts($data){
                 }
             }
         } else {
-            $output .= t('None');
+            $output .= t('None.');
         }
     } else {
-        $output .= t('None');
+        $output .= t('None..');
     }
     $output .= '</p>';
     return $output;
