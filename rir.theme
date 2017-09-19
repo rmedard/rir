@@ -142,4 +142,40 @@ function rir_preprocess_views_view_field(&$variables){
             }
         }
     }
+
+    if ($view->storage->id() === 'adverts' and $field->realField === 'nothing'){
+        $data = explode('_', $field->getValue($variables['row']));
+        $variables['output'] = Markup::create(getSimilarAdverts($data));
+    }
+}
+
+function getSimilarAdverts($data){
+    $id = intval($data[0]);
+    $signature = $data[1];
+    $output = '<p>';
+    if (isset($signature) and !empty($signature)){
+        $advertsQuery = \Drupal::entityQuery('node')
+          ->condition('type', 'advert')
+          ->condition('status', 1)
+          ->condition('nid', $id, '<>')
+          ->condition('field_advert_signature', trim($signature));
+        $advert_ids = $advertsQuery->execute();
+        if (count($advert_ids) > 0){
+            if (count($advert_ids) == 1){
+                $advert = Node::load($advert_ids[0]);
+                $output .= $advert->get('field_advert_reference')->value . '<br>';
+            } else {
+                $adverts = Node::loadMultiple($advert_ids);
+                foreach ($adverts as $advert){
+                    $output .= $advert->get('field_advert_reference')->value . '<br>';
+                }
+            }
+        } else {
+            $output .= t('None');
+        }
+    } else {
+        $output .= t('None');
+    }
+    $output .= '</p>';
+    return $output;
 }
