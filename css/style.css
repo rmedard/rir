@@ -7662,13 +7662,6 @@ nav#block-rir-main-menu ul.menu > li a.is-active {
   color: #333333;
   font-weight: bolder;
 }
-nav#block-rir-main-menu ul.menu > li:last-child {
-  background-color: #4caf50;
-  font-weight: bolder;
-}
-nav#block-rir-main-menu ul.menu > li:last-child a:hover {
-  background-color: #75c378;
-}
 @media (max-width: 992px) {
   a.logo > img {
     height: 45px;
