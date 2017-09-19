@@ -143,7 +143,7 @@ function rir_preprocess_views_view_field(&$variables){
         }
     }
 
-    if ($view->storage->id() === 'page_manage_adverts' and $field->realField === 'nothing'){
+    if ($view->storage->id() === 'adverts' and $field->realField === 'nothing'){
         $data = explode('_', $field->getValue($variables['row']));
         $variables['output'] = Markup::create(getSimilarAdverts($data));
     }
@@ -153,6 +153,7 @@ function getSimilarAdverts($data){
     $id = intval($data[0]);
     $signature = $data[1];
     $output = '<p>';
+    Drupal::logger('rir_theme')->debug('Check duplicates called...');
     if (isset($signature) and !empty($signature)){
         $advertsQuery = \Drupal::entityQuery('node')
           ->condition('type', 'advert')
