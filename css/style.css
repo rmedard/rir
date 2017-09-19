@@ -7679,6 +7679,9 @@ nav#block-rir-main-menu ul.menu > li a.is-active {
     border-radius: 4px 4px 0 0;
     text-align: center;
   }
+  #post-advert-button {
+    margin-bottom: 8px;
+  }
 }
 @media (min-width: 992px) {
   a.logo > img {
@@ -7718,6 +7721,10 @@ nav#block-rir-main-menu ul.menu > li a.is-active {
   }
   section#block-views-block-adverts-block-advert-carousel {
     max-height: 530px;
+  }
+  #post-advert-button {
+    margin-top: 8px;
+    float: right;
   }
 }
 div.view-adverts > div.view-content > div.media-object > div.media {
