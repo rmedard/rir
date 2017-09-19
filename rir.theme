@@ -145,7 +145,6 @@ function rir_preprocess_views_view_field(&$variables){
     }
 
     if ($view->storage->id() === 'adverts' and $view->current_display == 'page_manage_adverts' and $field->realField === 'nid'){
-        Drupal::logger('rir_theme')->debug('Raw: ' . $field->getValue($variables['row']));
         $advert_id = intval($field->getValue($variables['row']));
         $variables['output'] = Markup::create(getSimilarAdverts($advert_id));
     }
@@ -168,10 +167,10 @@ function getSimilarAdverts($advert_id){
                 $output .= $advert->get('field_advert_reference')->value . '<br>';
             }
         } else {
-            $output .= t('None.');
+            $output .= t('None');
         }
     } else {
-        $output .= t('None..');
+        $output .= t('None');
     }
     $output .= '</p>';
     return $output;
