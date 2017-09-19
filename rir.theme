@@ -151,7 +151,7 @@ function rir_preprocess_views_view_field(&$variables){
 
 function getSimilarAdverts($data){
     $id = intval($data[0]);
-    $signature = $data[1];
+    $signature = count($data) > 1 ? $data[1] : NULL;
     $output = '<p>';
     Drupal::logger('rir_theme')->debug('Check duplicates called...');
     if (isset($signature) and !empty($signature)){
