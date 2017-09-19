@@ -132,8 +132,7 @@ function rir_preprocess_block(&$variables){
 function rir_preprocess_views_view_field(&$variables){
     $view = $variables['view'];
     $field = $variables['field'];
-    kint($variables);
-    die();
+
     if ($view->storage->id() === 'details_requests' and $field->realField === 'entity_id'){
         $advert_id = intval($field->getValue($variables['row']));
         if (isset($advert_id)){
@@ -145,7 +144,7 @@ function rir_preprocess_views_view_field(&$variables){
         }
     }
 
-    if ($view->storage->id() === 'adverts' and $field->realField === 'nothing'){
+    if ($view->storage->id() === 'adverts' and $view->current_display == 'page_manage_adverts' and $field->realField === 'nothing'){
         $data = explode('_', $field->getValue($variables['row']));
         $variables['output'] = Markup::create(getSimilarAdverts($data));
     }
