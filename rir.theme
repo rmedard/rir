@@ -168,7 +168,9 @@ function getSimilarAdverts($advert_id){
                 Drupal::logger('rir_theme')->debug('Array > 1:' . json_encode($advert_ids, TRUE));
                 Drupal::logger('rir_theme')->debug('Found id:' . $advert_ids[0]);
                 $advert = Node::load($advert_ids[0]);
-                $output .= $advert->get('field_advert_reference')->value . '<br>';
+                if (isset($advert)){
+                    $output .= $advert->get('field_advert_reference')->value . '<br>';
+                }
             } else {
                 $adverts = Node::loadMultiple($advert_ids);
                 foreach ($adverts as $advert){
