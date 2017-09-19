@@ -177,7 +177,7 @@ function getSimilarAdverts($data){
             $output .= t('None.');
         }
     } else {
-        $output .= t('None..');
+        $output .= t('None..') . $id . '__' . $signature == NULL ? 'null' : $signature;
     }
     $output .= '</p>';
     return $output;
