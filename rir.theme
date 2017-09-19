@@ -144,24 +144,24 @@ function rir_preprocess_views_view_field(&$variables){
         }
     }
 
-    if ($view->storage->id() === 'adverts' and $view->current_display == 'page_manage_adverts' and $field->realField === 'field_advert_signature'){
+    if ($view->storage->id() === 'adverts' and $view->current_display == 'page_manage_adverts' and $field->realField === 'nid'){
         Drupal::logger('rir_theme')->debug('Raw: ' . $field->getValue($variables['row']));
-        $data = explode('_', $field->getValue($variables['row']));
-        $variables['output'] = Markup::create(getSimilarAdverts($data));
+        $advert_id = intval($field->getValue($variables['row']));
+        $variables['output'] = Markup::create(getSimilarAdverts($advert_id));
     }
 }
 
-function getSimilarAdverts($data){
-    $id = intval($data[0]);
-    $signature = count($data) > 1 ? $data[1] : NULL;
+function getSimilarAdverts($advert_id){
+    $advert = Node::load($advert_id);
+    $signature = $advert->get('field_advert_signature')->value;
     $output = '<p>';
     Drupal::logger('rir_theme')->debug('Check duplicates called...');
     if (isset($signature) and !empty($signature)){
         $advertsQuery = \Drupal::entityQuery('node')
           ->condition('type', 'advert')
           ->condition('status', 1)
-          ->condition('nid', $id, '!=')
-          ->condition('field_advert_signature', trim($signature));
+          ->condition('nid', $advert_id, '!=')
+          ->condition('field_advert_signature', $signature);
         $advert_ids = $advertsQuery->execute();
         Drupal::logger('rir_theme')->debug('Found id:' . $advert_ids[0]);
         if (count($advert_ids) > 0){
@@ -178,7 +178,7 @@ function getSimilarAdverts($data){
             $output .= t('None.');
         }
     } else {
-        $output .= t('None..') . $id;
+        $output .= t('None..') . $advert_id;
     }
     $output .= '</p>';
     return $output;
