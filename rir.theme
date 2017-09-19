@@ -99,6 +99,8 @@ function rir_preprocess_page(&$variables) {
     $variables['show_rir_search'] = FALSE;
     $variables['management_page'] = FALSE;
 
+    $variables['is_mobile'] = isMobile() ? TRUE : FALSE;
+
     if (preg_match('(/pricing-plans)', $page_path) or preg_match('(/page/services)', $page_path) or preg_match('(\/manage\/)', $page_path)) {
         $variables['show_sidebars'] = FALSE;
         if (preg_match('(\/manage\/)', $page_path)){
