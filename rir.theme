@@ -155,7 +155,6 @@ function getSimilarAdverts($advert_id){
     $advert = Node::load($advert_id);
     $signature = $advert->get('field_advert_signature')->value;
     $output = '<p>';
-    Drupal::logger('rir_theme')->debug('Check duplicates called...');
     if (isset($signature) and !empty($signature)){
         $advertsQuery = \Drupal::entityQuery('node')
           ->condition('type', 'advert')
@@ -164,24 +163,15 @@ function getSimilarAdverts($advert_id){
           ->condition('field_advert_signature', $signature, '=');
         $advert_ids = $advertsQuery->execute();
         if (count($advert_ids) > 0){
-            if (count($advert_ids) == 1){
-                Drupal::logger('rir_theme')->debug('Array > 1:' . json_encode($advert_ids, TRUE));
-                Drupal::logger('rir_theme')->debug('Found id:' . $advert_ids[0]);
-                $advert = Node::load($advert_ids[0]);
-                if (isset($advert)){
-                    $output .= $advert->get('field_advert_reference')->value . '<br>';
-                }
-            } else {
-                $adverts = Node::loadMultiple($advert_ids);
-                foreach ($adverts as $advert){
-                    $output .= $advert->get('field_advert_reference')->value . '<br>';
-                }
+            $adverts = Node::loadMultiple($advert_ids);
+            foreach ($adverts as $advert){
+                $output .= $advert->get('field_advert_reference')->value . '<br>';
             }
         } else {
             $output .= t('None.');
         }
     } else {
-        $output .= t('None..') . $advert_id;
+        $output .= t('None..');
     }
     $output .= '</p>';
     return $output;
