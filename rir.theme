@@ -144,7 +144,7 @@ function rir_preprocess_views_view_field(&$variables){
         }
     }
 
-    if ($view->storage->id() === 'adverts' and $view->current_display == 'page_manage_adverts' and $field->realField === 'nothing'){
+    if ($view->storage->id() === 'adverts' and $view->current_display == 'page_manage_adverts' and $field->realField === 'field_advert_signature'){
         Drupal::logger('rir_theme')->debug('Raw: ' . $field->getValue($variables['row']));
         $data = explode('_', $field->getValue($variables['row']));
         $variables['output'] = Markup::create(getSimilarAdverts($data));
