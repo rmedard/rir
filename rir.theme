@@ -161,11 +161,11 @@ function getSimilarAdverts($advert_id){
           ->condition('type', 'advert')
           ->condition('status', 1)
           ->condition('nid', $advert_id, '!=')
-          ->condition('field_advert_signature', $signature);
+          ->condition('field_advert_signature', $signature, '=');
         $advert_ids = $advertsQuery->execute();
-        Drupal::logger('rir_theme')->debug('Found id:' . $advert_ids[0]);
         if (count($advert_ids) > 0){
             if (count($advert_ids) == 1){
+                Drupal::logger('rir_theme')->debug('Found id:' . $advert_ids[0]);
                 $advert = Node::load($advert_ids[0]);
                 $output .= $advert->get('field_advert_reference')->value . '<br>';
             } else {
