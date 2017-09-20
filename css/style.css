@@ -7889,6 +7889,6 @@ div.property-map-block > div.panel-heading > div.panel-title {
 table > thead {
   background: #4caf50;
 }
-data-drupal-selector.edit-node-bulk-form {
+div[data-drupal-selector="edit-node-bulk-form"] {
   max-width: 30%;
 }
