@@ -94,8 +94,8 @@
         }
     });
 
-    var tableRow = $('form#views-form-adverts-page-manage-adverts > table > tbody > tr');
-    if (tableRow.find('.duplicate-refs').length > 5){
+    var tableRow = $('form#views-form-adverts-page-manage-adverts > table > tbody > tr > td.views-field-id > p.duplicate-refs');
+    if (tableRow.length > 5){
         $(this).css('color', 'red');
     }
 
