@@ -94,10 +94,12 @@
         }
     });
 
-    var tableRow = $('form#views-form-adverts-page-manage-adverts > table > tbody > tr > td.views-field-id > p.duplicate-refs');
-    if (tableRow.length > 5){
-        tableRow.css('color', 'red');
-    }
+    $('p.duplicate-refs').each(function () {
+       var size = $(this).text().length;
+       if (size > 5){
+           $(this).parent().toggleClass('danger', true);
+       }
+    });
 
 }(jQuery));
 
