@@ -97,7 +97,7 @@
     $('.duplicate-refs').each(function () {
        var size = $(this).text();
        if (size > 5){
-           $(this).parent('tr').addClass('danger');
+           $(this).parent().parent().addClass('danger');
        }
     });
 
