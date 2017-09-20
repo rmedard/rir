@@ -153,7 +153,7 @@ function rir_preprocess_views_view_field(&$variables){
 function getSimilarAdverts($advert_id){
     $advert = Node::load($advert_id);
     $signature = $advert->get('field_advert_signature')->value;
-    $output = '<p>';
+    $output = '<p class="duplicate-refs">';
     if (isset($signature) and !empty($signature)){
         $advertsQuery = \Drupal::entityQuery('node')
           ->condition('type', 'advert')

@@ -95,11 +95,10 @@
     });
 
     var tableRow = $('form#views-form-adverts-page-manage-adverts > table > tbody > tr');
-    tableRow.each(function () {
-        if( $(this + ' > td.views-field-id > p').text().length > 5){
-            $(this).addClass('danger');
-        }
-    });
+    if (tableRow.find('.duplicate-refs').length > 5){
+        $(this).parent.parent().toggleClass('danger', true);
+    }
+
 }(jQuery));
 
 function getParameterByName(name, url) {
