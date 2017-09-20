@@ -94,8 +94,8 @@
         }
     });
 
-    $('.duplicate-refs').each(function () {
-       var size = $(this).text();
+    $('p.duplicate-refs').each(function () {
+       var size = $(this).text().length;
        if (size > 5){
            $(this).parent().parent().addClass('danger');
        }
