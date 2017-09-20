@@ -96,7 +96,7 @@
 
     var tableRow = $('form#views-form-adverts-page-manage-adverts > table > tbody > tr > td.views-field-id > p.duplicate-refs');
     if (tableRow.length > 5){
-        $(this).css('color', 'red');
+        tableRow.css('color', 'red');
     }
 
 }(jQuery));
