@@ -41,7 +41,7 @@ nav#block-rir-main-menu{
 @media (max-width: @screen-sm) {
   header#navbar{
     background-color: @gray-lighter;
-    border-bottom: 2px @brand-primary solid;
+    border-bottom: 1px @brand-primary solid;
     div.container > div.navbar-header{
       border-bottom: 1px @brand-primary solid;
     }
@@ -52,8 +52,13 @@ nav#block-rir-main-menu{
   }
 
   nav#block-rir-main-menu{
-    ul.menu > li > a {
-      color: @gray-darker;
+    ul.menu > li {
+      a {
+        color: @gray-darker;
+      }
+    }
+    ul.menu > li:hover{
+      background-color: @gray-light;
     }
   }
 }
