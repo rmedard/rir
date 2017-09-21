@@ -38,8 +38,25 @@ nav#block-rir-main-menu{
   }
 }
 
+@media (max-width: @screen-sm) {
+  header#navbar{
+    background-color: @gray-lighter;
+    border-bottom: 2px @brand-primary solid;
+  }
+
+  button.navbar-toggle{
+    background-color: @brand-primary;
+  }
+
+  nav#block-rir-main-menu{
+    ul.menu > li > a {
+      color: @gray-darker;
+    }
+  }
+}
+
 @media (max-width: @screen-md-min) {
-  //Mobile devices
+  //Less than desktop
   a.logo > img {
     height: 45px;
     width: auto;
