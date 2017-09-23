@@ -105,7 +105,7 @@
 {% endif %}
 
 <div class="super-main">
-    {% if page.rir_search_bar and show_rir_search %}
+    {% if page.rir_search_bar and show_rir_search and not is_mobile %}
         {% block rir_search_bar %}
             <div class = "container-fluid rir-search-bar well well-sm">
                 <div class="container">
