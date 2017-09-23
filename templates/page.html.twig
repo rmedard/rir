@@ -105,14 +105,15 @@
 {% endif %}
 
 <div class="super-main">
-    {% if is_mobile %}
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <a href="#" data-toggle="collapse" class="panel-title collapsed" role="button">Search</a>
-            </div>
-            <div class="panel-body panel-collapse collapse">
-                {% if page.rir_search_bar and show_rir_search%}
-                    {% block rir_search_bar %}
+    {% if page.rir_search_bar and show_rir_search and not is_mobile %}
+        {% block rir_search_bar %}
+
+            {% if is_mobile %}
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <a href="#" data-toggle="collapse" class="panel-title collapsed" role="button">Search</a>
+                    </div>
+                    <div class="panel-body panel-collapse collapse">
                         <div class = "container-fluid rir-search-bar well well-sm">
                             <div class="container">
                                 <div class="row">
@@ -120,13 +121,9 @@
                                 </div>
                             </div>
                         </div>
-                    {% endblock %}
-                {% endif %}
-            </div>
-        </div>
-    {% else %}
-        {% if page.rir_search_bar and show_rir_search%}
-            {% block rir_search_bar %}
+                    </div>
+                </div>
+            {% else %}
                 <div class = "container-fluid rir-search-bar well well-sm">
                     <div class="container">
                         <div class="row">
@@ -134,10 +131,9 @@
                         </div>
                     </div>
                 </div>
-            {% endblock %}
-        {% endif %}
+            {% endif %}
+        {% endblock %}
     {% endif %}
-
 {# Main #}
 {% block main %}
     {% set container = management_page ? 'container-fluid' : 'container' %}
