@@ -105,9 +105,8 @@
 {% endif %}
 
 <div class="super-main">
-    {% if page.rir_search_bar and show_rir_search and not is_mobile %}
+    {% if page.rir_search_bar and show_rir_search %}
         {% block rir_search_bar %}
-
             {% if is_mobile %}
                 <div class="panel panel-default">
                     <div class="panel-heading">
