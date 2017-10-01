@@ -129,14 +129,6 @@ function rir_preprocess_block(&$variables){
   }
 }
 
-/**
- * Remove query strings from static resources
- * @param $variables
- */
-function rir_process_html(&$variables){
-    $variables['styles'] = preg_replace('/\.css\?[^"]+/','.css', $variables['styles']);
-}
-
 function rir_preprocess_views_view_field(&$variables){
     $view = $variables['view'];
     $field = $variables['field'];
