@@ -5,365 +5,315 @@
 // Bootswatch overrides.
 @import 'variables';
 @import 'bootswatch';
-
 @brand-dark-green: #19826d;
 @brand-violet: #9b59b6;
 @brand-yellow: #f1c40f;
 
-body, .form-control{
-  color: @brand-text;
+body, .form-control {
+    color: @brand-text;
 }
-
 .label-violet {
-  background-color: @brand-violet;
+    background-color: @brand-violet;
 }
-
 .label-yellow {
-  background-color: @brand-yellow;
+    background-color: @brand-yellow;
 }
-
 .rir-top-banner {
-  display: none;
+    display: none;
 }
-
-nav#block-rir-main-menu{
-  ul.menu > li{
-    a:hover{
-      color: @brand-dark;
-    }
-    a.is-active{
-      color: @brand-dark;
-      font-weight: bolder;
-    }
-  }
-}
-
-@media (max-width: @screen-sm) {
-  header#navbar{
-    background-color: @gray-lighter;
-    border-bottom: 1px @brand-primary solid;
-    div.container > div.navbar-header{
-      border-bottom: 1px @brand-primary solid;
-    }
-  }
-
-  button.navbar-toggle{
-    background-color: @brand-primary;
-  }
-
-  button[aria-expanded='true']{
-    background: darken(@brand-primary, 13,5%);
-  }
-
-  nav#block-rir-main-menu{
+nav#block-rir-main-menu {
     ul.menu > li {
-      a {
-        color: @gray-darker;
-      }
+        a:hover {
+            color: @brand-dark;
+        }
+        a.is-active {
+            color: @brand-dark;
+            font-weight: bolder;
+        }
     }
-    ul.menu > li:hover{
-      background-color: @gray-light;
+}
+@media (max-width: @screen-sm) {
+    header#navbar {
+        background-color: @gray-lighter;
+        border-bottom: 1px @brand-primary solid;
+        div.container > div.navbar-header {
+            border-bottom: 1px @brand-primary solid;
+        }
     }
-  }
-    #post-advert-button{
+    button.navbar-toggle {
+        background-color: @brand-primary;
+    }
+    button[aria-expanded='true'] {
+        background: darken(@brand-primary, 13, 5%);
+    }
+    nav#block-rir-main-menu {
+        ul.menu > li {
+            a {
+                color: @gray-darker;
+            }
+        }
+        ul.menu > li:hover {
+            background-color: @gray-light;
+        }
+    }
+    a#post-advert-button {
         width: 100%;
     }
 }
-
 @media (max-width: @screen-md-min) {
-  //Less than desktop
-  a.logo > img {
-    height: 45px;
-    width: auto;
-  }
-
-  a.navbar-brand{
-    display: none;
-  }
-
-  ul.nav-mobile-primary > li {
-    display: table-cell;
-    width: 1%;
-    float: none;
-    a {
-      border-radius: 4px 4px 0 0;
-      text-align: center;
+    //Less than desktop
+    a.logo > img {
+        height: 45px;
+        width: auto;
     }
-  }
-
-  #post-advert-button{
-    margin-bottom: 8px;
-  }
+    a.navbar-brand {
+        display: none;
+    }
+    ul.nav-mobile-primary > li {
+        display: table-cell;
+        width: 1%;
+        float: none;
+        a {
+            border-radius: 4px 4px 0 0;
+            text-align: center;
+        }
+    }
+    #post-advert-button {
+        margin-bottom: 8px;
+    }
 }
-
 @media (min-width: @screen-md-min) {
-  a.logo > img{
-    max-height: 94px;
-    width: auto;
-  }
-  div.super-main{
-    margin-top: 169px;
-    div.rir-search-bar{
-      margin-bottom: 0;
+    a.logo > img {
+        max-height: 94px;
+        width: auto;
     }
-    div.main-container {
-      padding-top: 10px;
-      div.row > section{
-        min-height: 300px;
-      }
+    div.super-main {
+        margin-top: 169px;
+        div.rir-search-bar {
+            margin-bottom: 0;
+        }
+        div.main-container {
+            padding-top: 10px;
+            div.row > section {
+                min-height: 300px;
+            }
+        }
     }
-  }
-
-  body.toolbar-tray-open > {
-    div.super-main{
-      margin-top: 94px;
+    body.toolbar-tray-open > {
+        div.super-main {
+            margin-top: 94px;
+        }
     }
-  }
-
-  .rir-top-banner {
-    display: block;
-    background-color: white;
-  }
-
-  ul.nav-pills {
-    font-weight: bolder;
-
-    li > a {
-      border-radius: 4px 4px 0 0;
+    .rir-top-banner {
+        display: block;
+        background-color: white;
     }
-  }
+    ul.nav-pills {
+        font-weight: bolder;
 
-  header > .container > .navbar-header{
-    display: none;
-  }
-
-  div.form-item-combine > div.input-group{
-    width: 310px;
-  }
-  section#block-views-block-adverts-block-advert-carousel{
-    max-height: 530px;
-  }
-
-  #post-advert-button{
-    margin-top: 8px;
-    margin-left: 15px;
-  }
-
-  section#rir-footer > div.container > div.row > div.region{
-    padding-left: 0;
-  }
+        li > a {
+            border-radius: 4px 4px 0 0;
+        }
+    }
+    header > .container > .navbar-header {
+        display: none;
+    }
+    div.form-item-combine > div.input-group {
+        width: 310px;
+    }
+    section#block-views-block-adverts-block-advert-carousel {
+        max-height: 530px;
+    }
+    #post-advert-button {
+        margin-top: 8px;
+        margin-left: 15px;
+    }
+    section#rir-footer > div.container > div.row > div.region {
+        padding-left: 0;
+    }
 }
-
 form.contact-message-feedback-form > div.form-actions > button#edit-preview {
-  display: none;
+    display: none;
 }
-
 div.view-adverts > div.view-content > div.media-object > div.media {
-  padding-bottom: 10px;
-  border-bottom: @brand-primary 2px solid;
-  div.media-body > .media-heading{
-    a:hover{
-      text-decoration: none;
-      color: @brand-dark-green;
+    padding-bottom: 10px;
+    border-bottom: @brand-primary 2px solid;
+    div.media-body > .media-heading {
+        a:hover {
+            text-decoration: none;
+            color: @brand-dark-green;
+        }
+        span.label > small {
+            color: @gray-lighter;
+        }
     }
-    span.label > small{
-      color: @gray-lighter;
+    div.pull-left {
+        height: 90px;
+        line-height: 90px;
+        width: 90px;
     }
-  }
-  div.pull-left{
-    height: 90px;
-    line-height: 90px;
-    width: 90px;
-  }
 }
-
-nav#block-advertssecondarymenu > ul.nav-pills{
-  font-size: 13px;
-  li {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    a {
-      padding: 8px 10px;
+nav#block-advertssecondarymenu > ul.nav-pills {
+    font-size: 13px;
+    li {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        a {
+            padding: 8px 10px;
+        }
     }
-  }
 }
-
-#block-advertssecondarymenu{
-  border-bottom: @brand-primary 2px solid;
+#block-advertssecondarymenu {
+    border-bottom: @brand-primary 2px solid;
 }
-
 div.view-adverts {
-  margin-top: 15px;
+    margin-top: 15px;
 }
+div.advert-summary-block {
+    .panel-heading {
+        text-align: center;
+    }
 
-div.advert-summary-block{
-  .panel-heading{
+    ul {
+        font-size: smaller;
+        li {
+            padding: 5px;
+        }
+        li.advert-views-count {
+            background: @gray-lighter;
+            color: @brand-danger;
+            font-weight: bold;
+        }
+    }
+}
+div.intl-tel-input {
+    width: 100%;
+}
+div.agent-block-summary {
+    div.group-left {
+        width: 20%;
+    }
+    div.group-right {
+        width: 80%;
+        div.field > .agent-block-title {
+            margin-top: 0;
+        }
+    }
+}
+section#block-views-block-adverts-block-ads-per-agent > .block-title {
     text-align: center;
-  }
-
-  ul{
-    font-size: smaller;
-    li{
-      padding: 5px;
+}
+section#block-request-details-webform {
+    .block-title {
+        text-align: center;
     }
-    li.advert-views-count{
-      background: @gray-lighter;
-      color: @brand-danger;
-      font-weight: bold;
+    div > form > div.form-actions {
+        margin-bottom: 0;
     }
-  }
 }
-
-div.intl-tel-input{
-  width: 100%;
-}
-
-div.agent-block-summary{
-  div.group-left{
-    width: 20%;
-  }
-  div.group-right{
-    width: 80%;
-    div.field > .agent-block-title{
-      margin-top: 0;
-    }
-  }
-}
-
-section#block-views-block-adverts-block-ads-per-agent > .block-title{
-  text-align: center;
-}
-
-section#block-request-details-webform{
-  .block-title{
-    text-align: center;
-  }
-  div > form > div.form-actions {
+.page-header {
     margin-bottom: 0;
-  }
+    text-align: center;
 }
-.page-header{
-  margin-bottom: 0;
-  text-align: center;
+.ref-number {
+    color: @gray;
 }
-
-.ref-number{
-  color: @gray;
-}
-
-form#direct-access-form{
-  div.form-item{
-    width: 80%;
-    input{
-      width: 100%;
+form#direct-access-form {
+    div.form-item {
+        width: 80%;
+        input {
+            width: 100%;
+        }
     }
-  }
 }
-
-div.view-id-services > div.view-content{
-  div.pricing-plan-block{
-    margin-bottom: 15px;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
+div.view-id-services > div.view-content {
+    div.pricing-plan-block {
+        margin-bottom: 15px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 }
-
-.rir-pricing-plan{
-  text-align: center;
-  .panel-heading{
-    font-size: x-large;
-  }
-  .rir-pricing-price{
-    font-weight: bolder;
-    font-variant: small-caps;
-    font-size: xx-large;
-    background-color: @gray-lighter;
-  }
+.rir-pricing-plan {
+    text-align: center;
+    .panel-heading {
+        font-size: x-large;
+    }
+    .rir-pricing-price {
+        font-weight: bolder;
+        font-variant: small-caps;
+        font-size: xx-large;
+        background-color: @gray-lighter;
+    }
 }
-
-.rir-main-footer{
-  background-color: @brand-dark;
-  div.container > footer{
-    color: @gray-lighter;
-  }
-  padding-top: 15px;
-  margin-top: 15px;
-  div.container{
-    section#rir-footer{
-      div.container > div.row > div.region{
+.rir-main-footer {
+    background-color: @brand-dark;
+    div.container > footer {
+        color: @gray-lighter;
+    }
+    padding-top: 15px;
+    margin-top: 15px;
+    div.container {
+        section#rir-footer {
+            div.container > div.row > div.region {
+                margin-bottom: 10px;
+            }
+        }
+        footer {
+            padding-left: 0;
+            margin-top: 10px;
+        }
+    }
+}
+section.block-rir-interface > div.panel > div.panel-heading {
+    background-color: @brand-primary;
+}
+div.toolbar-menu-administration > ul.toolbar-menu > li:last-child {
+    background-color: @brand-success;
+    a {
+        color: @gray-darker;
+    }
+}
+div.region-rir-horizontal-sidebar {
+    section {
         margin-bottom: 10px;
-      }
     }
-    footer{
-      padding-left: 0;
-      margin-top: 10px;
+}
+div.chosen-container {
+    padding: 0;
+    height: auto;
+}
+div#search-subscribe-button-id {
+    padding: 10px;
+    margin-bottom: 0;
+}
+section#block-views-block-adverts-block-ads-per-agent > .block-title {
+    margin-top: 0;
+}
+#block-riradvertdetails {
+    margin-bottom: 10px;
+    div.panel {
+        margin-bottom: 10px;
     }
-  }
 }
-
-section.block-rir-interface > div.panel > div.panel-heading{
-  background-color: @brand-primary;
+div.agent-thumbnail > div.caption {
+    width: 100%;
+    text-align: center;
 }
-
-div.toolbar-menu-administration > ul.toolbar-menu > li:last-child{
-  background-color: @brand-success;
-  a{
-    color: @gray-darker;
-  }
+div.view-display-id-page_agents > div.view-content > div {
+    padding-left: 5px;
+    padding-right: 5px;
 }
-
-div.region-rir-horizontal-sidebar{
-  section{
-    margin-bottom: 10px;
-  }
+div.property-map-block > div.panel-heading > div.panel-title {
+    font-weight: bolder;
+    font-size: large;
 }
-
-div.chosen-container{
-  padding: 0;
-  height: auto;
+#post-advert-button {
+    font-weight: bold;
 }
-
-div#search-subscribe-button-id{
-  padding: 10px;
-  margin-bottom: 0;
-}
-
-section#block-views-block-adverts-block-ads-per-agent > .block-title{
-  margin-top: 0;
-}
-
-#block-riradvertdetails{
-  margin-bottom: 10px;
-  div.panel{
-    margin-bottom: 10px;
-  }
-}
-
-div.agent-thumbnail > div.caption{
-  width:100%;
-  text-align:center;
-}
-
-div.view-display-id-page_agents > div.view-content > div{
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-div.property-map-block > div.panel-heading > div.panel-title{
-  font-weight: bolder;
-  font-size: large;
-}
-
-#post-advert-button{
-  font-weight: bold;
-}
-
 div.view-id-services > div.view-content, div.view-id-agents > div.view-content {
-  display: table;
+    display: table;
 }
-
-
-section#block-hircreateagentblock{
-  margin-bottom: 15px;
+section#block-hircreateagentblock {
+    margin-bottom: 15px;
 }

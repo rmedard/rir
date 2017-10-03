@@ -7682,7 +7682,7 @@ nav#block-rir-main-menu ul.menu > li a.is-active {
   nav#block-rir-main-menu ul.menu > li:hover {
     background-color: #b4bcc2;
   }
-  #post-advert-button {
+  a#post-advert-button {
     width: 100%;
   }
 }
