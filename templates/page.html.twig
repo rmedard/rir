@@ -93,8 +93,7 @@
                 {% if page.navigation_collapsible %}
                     <div id="navbar-collapse" class="navbar-collapse collapse">
                         {{ page.navigation_collapsible }}
-                        {% set post_ad_btn_classes = is_mobile ? 'btn-block' : '' %}
-                        <a href="/page/services" class="btn btn-warning {{ post_ad_btn_classes }}" id="post-advert-button">Post an advert</a>
+                        <a href="/page/services" class="btn btn-warning" id="post-advert-button">Post an advert</a>
                     </div>
                 {% endif %}
                 {% if not navbar_attributes.hasClass(container) %}
