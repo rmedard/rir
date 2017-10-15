@@ -4,7 +4,7 @@
 @import 'overrides';
 // Bootswatch overrides.
 @import 'variables';
-@import 'bootswatch';
+@import-once 'bootswatch.less';
 @brand-dark-green: #19826d;
 @brand-violet: #9b59b6;
 @brand-yellow: #f1c40f;
@@ -299,6 +299,7 @@ section#block-views-block-adverts-block-ads-per-agent > .block-title {
 div.agent-thumbnail > div.caption {
     width: 100%;
     text-align: center;
+    min-height: 67px;
 }
 div.view-display-id-page_agents > div.view-content > div {
     padding-left: 5px;
