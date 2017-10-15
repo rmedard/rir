@@ -12,7 +12,7 @@ use Drupal\node\Entity\Node;
 
 function rir_preprocess_menu(&$variables) {
 
-    $variables['is_mobile'] = isMobile() ? TRUE : FALSE;
+    $variables['is_mobile'] = isMobile();
 
     if ($variables['menu_name'] === 'adverts-secondary-menu') {
         $rent_all = \Drupal::entityQuery('node')
@@ -88,9 +88,7 @@ function isMobile() {
     if ($mobile or $android or $iphone) {
         return TRUE;
     }
-    else {
-        return FALSE;
-    }
+    return FALSE;
 }
 
 function rir_preprocess_page(&$variables) {
@@ -99,7 +97,7 @@ function rir_preprocess_page(&$variables) {
     $variables['show_rir_search'] = FALSE;
     $variables['management_page'] = FALSE;
 
-    $variables['is_mobile'] = isMobile() ? TRUE : FALSE;
+    $variables['is_mobile'] = isMobile();
 
     if (preg_match('(/pricing-plans)', $page_path) or preg_match('(/page/services)', $page_path) or preg_match('(\/manage\/)', $page_path)) {
         $variables['show_sidebars'] = FALSE;
