@@ -7670,6 +7670,9 @@ nav#block-rir-main-menu ul.menu > li a.is-active {
   header#navbar div.container > div.navbar-header {
     border-bottom: 1px #248cc7 solid;
   }
+  header#navbar div.container > div.navbar-header div.region-navigation > .navbar-text {
+    visibility: hidden;
+  }
   button.navbar-toggle {
     background-color: #248cc7;
   }
