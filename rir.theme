@@ -12,39 +12,39 @@ use Drupal\node\Entity\Node;
 
 function rir_preprocess_menu(&$variables) {
 
-    $variables['is_mobile'] = isMobile() ? TRUE : FALSE;
+    $variables['is_mobile'] = isMobile();
 
     if ($variables['menu_name'] === 'adverts-secondary-menu') {
         $rent_all = \Drupal::entityQuery('node')
           ->condition('type', 'advert')
-          ->condition('status', 1)
+          ->condition('status', Node::PUBLISHED)
           ->count();
         $rent_all_count = $rent_all->execute();
 
         $house = \Drupal::entityQuery('node')
           ->condition('type', 'advert')
-          ->condition('status', 1)
+          ->condition('status', Node::PUBLISHED)
           ->condition('field_advert_property_type', ['house', 'building'], 'IN')
           ->count();
         $house_count = $house->execute();
 
         $apart = \Drupal::entityQuery('node')
           ->condition('type', 'advert')
-          ->condition('status', 1)
+          ->condition('status', Node::PUBLISHED)
           ->condition('field_advert_property_type', 'apartment')
           ->count();
         $apart_count = $apart->execute();
 
         $commerce = \Drupal::entityQuery('node')
           ->condition('type', 'advert')
-          ->condition('status', 1)
+          ->condition('status', Node::PUBLISHED)
           ->condition('field_advert_property_type', 'commerce')
           ->count();
         $commerce_count = $commerce->execute();
 
         $room = \Drupal::entityQuery('node')
           ->condition('type', 'advert')
-          ->condition('status', 1)
+          ->condition('status', Node::PUBLISHED)
           ->condition('field_advert_property_type', [
             'room',
             'shared_room',
@@ -54,14 +54,14 @@ function rir_preprocess_menu(&$variables) {
 
         $office = \Drupal::entityQuery('node')
           ->condition('type', 'advert')
-          ->condition('status', 1)
+          ->condition('status', Node::PUBLISHED)
           ->condition('field_advert_property_type', 'office')
           ->count();
         $office_count = $office->execute();
 
         $land = \Drupal::entityQuery('node')
           ->condition('type', 'advert')
-          ->condition('status', 1)
+          ->condition('status', Node::PUBLISHED)
           ->condition('field_advert_property_type', 'land')
           ->count();
         $land_count = $land->execute();
@@ -88,9 +88,7 @@ function isMobile() {
     if ($mobile or $android or $iphone) {
         return TRUE;
     }
-    else {
-        return FALSE;
-    }
+    return FALSE;
 }
 
 function rir_preprocess_page(&$variables) {
@@ -99,7 +97,7 @@ function rir_preprocess_page(&$variables) {
     $variables['show_rir_search'] = FALSE;
     $variables['management_page'] = FALSE;
 
-    $variables['is_mobile'] = isMobile() ? TRUE : FALSE;
+    $variables['is_mobile'] = isMobile();
 
     if (preg_match('(/pricing-plans)', $page_path) or preg_match('(/page/services)', $page_path) or preg_match('(\/manage\/)', $page_path)) {
         $variables['show_sidebars'] = FALSE;
@@ -113,14 +111,6 @@ function rir_preprocess_page(&$variables) {
         $variables['show_rir_search'] = TRUE;
     }
 
-    if (preg_match('(\/newsletter\/)', $page_path)){
-        $pathVariables = explode('/', $page_path);
-        $location = $pathVariables[2];
-        $advert = $pathVariables[3];
-        $property = $pathVariables[4];
-        $dataAccessor = \Drupal::service('rir_notifier.data_accessor');
-        $variables['adverts'] = $dataAccessor->getDailyAdverts($location, $advert, $property);
-    }
 }
 
 function rir_preprocess_block(&$variables){
@@ -157,7 +147,7 @@ function getSimilarAdverts($advert_id){
     if (isset($signature) and !empty($signature)){
         $advertsQuery = \Drupal::entityQuery('node')
           ->condition('type', 'advert')
-          ->condition('status', 1)
+          ->condition('status', Node::PUBLISHED)
           ->condition('nid', $advert_id, '<>')
           ->condition('field_advert_signature', $signature, '=');
         $advert_ids = $advertsQuery->execute();
