@@ -100,16 +100,21 @@ function rir_preprocess_page(&$variables) {
     $variables['is_mobile'] = isMobile();
 
     if (preg_match('(/pricing-plans)', $page_path) or preg_match('(/page/services)', $page_path)
-      or preg_match('(\/manage\/)', $page_path) or preg_match('(\/error\/)', $page_path)) {
+      or preg_match('(\/manage\/)', $page_path)) {
         $variables['show_sidebars'] = FALSE;
         if (preg_match('(\/manage\/)', $page_path)){
             $variables['management_page'] = TRUE;
         }
     }
 
-    if (preg_match('(\/adverts\/)', $page_path) or preg_match('(/search-adverts)', $page_path) or Drupal::service('path.matcher')
-        ->isFrontPage()) {
+    if (preg_match('(\/adverts\/)', $page_path) or preg_match('(/search-adverts)', $page_path)
+        or Drupal::service('path.matcher')->isFrontPage()) {
         $variables['show_rir_search'] = TRUE;
+    }
+
+    $route_name = \Drupal::request()->attributes->get('_route');
+    if ('system.404' === $route_name or 'system.403' === $route_name) {
+        $variables['show_sidebars'] = FALSE;
     }
 
 }
