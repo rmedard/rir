@@ -114,7 +114,7 @@ function rir_preprocess_page(&$variables) {
 
     $route_name = \Drupal::request()->attributes->get('exception');
     if ($route_name){
-        Drupal::logger('rir_theme')->debug('Route: ' . $route_name);
+        Drupal::logger('rir_theme')->debug('Route: ' . $route_name->getStatusCode());
     }
     if ('system.404' === $route_name or 'system.403' === $route_name) {
         $variables['show_sidebars'] = FALSE;
