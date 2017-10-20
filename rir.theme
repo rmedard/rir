@@ -113,7 +113,8 @@ function rir_preprocess_page(&$variables) {
     }
 
     $exception = \Drupal::request()->attributes->get('exception');
-    if ($exception and $exception->getStatusCode() === '404'){
+    if ($exception and $exception->getStatusCode() == '404'){
+
         $variables['show_sidebars'] = FALSE;
     }
 }
