@@ -112,14 +112,10 @@ function rir_preprocess_page(&$variables) {
         $variables['show_rir_search'] = TRUE;
     }
 
-    $route_name = \Drupal::request()->attributes->get('exception');
-    if ($route_name){
-        Drupal::logger('rir_theme')->debug('Route: ' . $route_name->getStatusCode());
-    }
-    if ('system.404' === $route_name or 'system.403' === $route_name) {
+    $exception = \Drupal::request()->attributes->get('exception');
+    if ($exception and $exception->getStatusCode() === '404'){
         $variables['show_sidebars'] = FALSE;
     }
-
 }
 
 function rir_preprocess_block(&$variables){
