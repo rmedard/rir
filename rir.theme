@@ -91,6 +91,14 @@ function isMobile() {
     return FALSE;
 }
 
+function rir_preprocess_page_title(&$variables){
+    $variables['show_page_title'] = TRUE;
+    $exception = \Drupal::request()->attributes->get('exception');
+    if ($exception and $exception->getStatusCode() == '404'){
+        $variables['show_page_title'] = FALSE;
+    }
+}
+
 function rir_preprocess_page(&$variables) {
     $page_path = \Drupal::request()->getPathInfo();
     $variables['show_sidebars'] = TRUE;
