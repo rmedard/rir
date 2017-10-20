@@ -94,7 +94,7 @@ function isMobile() {
 function rir_preprocess_page_title(&$variables){
     $variables['show_page_title'] = TRUE;
     $exception = \Drupal::request()->attributes->get('exception');
-    if ($exception and $exception->getStatusCode() == '404'){
+    if ($exception and ($exception->getStatusCode() == '404' or $exception->getStatusCode() == '403')){
         $variables['show_page_title'] = FALSE;
     }
 }
@@ -121,8 +121,7 @@ function rir_preprocess_page(&$variables) {
     }
 
     $exception = \Drupal::request()->attributes->get('exception');
-    if ($exception and $exception->getStatusCode() == '404'){
-
+    if ($exception and ($exception->getStatusCode() == '404' or $exception->getStatusCode() == '403')){
         $variables['show_sidebars'] = FALSE;
     }
 }
