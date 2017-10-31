@@ -7489,6 +7489,9 @@ nav#block-rir-main-menu ul.menu > li a.is-active {
     padding-left: 0;
   }
 }
+div#advert-main-slider.flexslider {
+  margin: 0;
+}
 form.contact-message-feedback-form > div.form-actions > button#edit-preview {
   display: none;
 }
