@@ -7498,6 +7498,7 @@ div#advert-slider-thumbnails.flexslider {
 div.flexslider {
   background: #ecf0f1;
   border-color: #ecf0f1;
+  border-radius: 6px;
 }
 form.contact-message-feedback-form > div.form-actions > button#edit-preview {
   display: none;
