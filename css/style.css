@@ -7565,10 +7565,12 @@ div.agent-block-summary div.group-right div.field > .agent-block-title {
 section#block-views-block-adverts-block-ads-per-agent > .block-title {
   text-align: center;
 }
-section#block-request-details-webform .block-title {
+section#block-request-details-webform .block-title,
+section#block-registertoourfreepropertyalert .block-title {
   text-align: center;
 }
-section#block-request-details-webform div > form > div.form-actions {
+section#block-request-details-webform div > form > div.form-actions,
+section#block-registertoourfreepropertyalert div > form > div.form-actions {
   margin-bottom: 0;
 }
 .page-header {

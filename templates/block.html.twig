@@ -56,7 +56,7 @@ set classes = [
 <section{{ attributes.addClass(classes) }}>
     {{ title_prefix }}
     {% if label %}
-        {% if attributes.id == 'block-request-details-webform' %}
+        {% if attributes.id == 'block-request-details-webform' or attributes.id == 'block-registertoourfreepropertyalert' %}
             <h4{{ title_attributes.addClass('block-title') }}>{{ label }}</h4>
         {% else %}
             <h2{{ title_attributes.addClass('block-title') }}>{{ label }}</h2>
