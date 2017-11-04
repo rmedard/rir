@@ -7669,7 +7669,7 @@ div.flex-caption {
   color: white;
   padding: 10px;
 }
-div.flex-caption :empty {
+div.flex-caption:empty {
   display: none;
 }
 div.view-display-id-page_agents > div.view-content > div {
