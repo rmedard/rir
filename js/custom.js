@@ -58,6 +58,8 @@
 
     $('div.form-type-fivestar > div.form-type-select > div').removeClass('select-wrapper');
 
+    $('div.flex-slider:empty').hide();
+
     var featuredWell = $('div.view-adverts.well');
     if($.trim(featuredWell.text()) === "") {
         featuredWell.hide();
