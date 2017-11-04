@@ -7669,6 +7669,9 @@ div.agent-thumbnail div.caption {
   color: white;
   padding: 10px;
 }
+.flex-caption :empty {
+  display: none;
+}
 div.view-display-id-page_agents > div.view-content > div {
   padding-left: 5px;
   padding-right: 5px;
