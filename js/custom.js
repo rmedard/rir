@@ -27,6 +27,7 @@
     $('form#direct-access-form').addClass('form-inline');
     $('form#direct-access-form > button.form-submit').removeClass('btn-sm');
     $('button#edit-submit-agents').removeClass('btn-sm');
+    $('button#edit-submit-adverts').removeClass('btn-sm');
     $('section#block-directaccessblock').addClass('well well-sm');
     $('section#block-request-details-webform').addClass('well well-sm');
 
