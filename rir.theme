@@ -47,10 +47,7 @@ function rir_preprocess_menu(&$variables)
         $room = \Drupal::entityQuery('node')
             ->condition('type', 'advert')
             ->condition('status', Node::PUBLISHED)
-            ->condition('field_advert_property_type', [
-                'room',
-                'shared_room',
-            ], 'IN')
+            ->condition('field_advert_property_type', ['room', 'shared_room'], 'IN')
             ->count();
         $room_count = $room->execute();
 
@@ -148,7 +145,7 @@ function rir_preprocess_views_view_field(&$variables)
         if (isset($advert_id)) {
             $advert = Node::load($advert_id);
             if (isset($advert)) {
-                $advert_url = '/advert/' . $advert->get('field_advert_reference')->value;
+                $advert_url = Drupal::service('path.alias_manager')->getAliasByPath('/node/' . $advert->id());
                 $variables['output'] = Markup::create('<a href="' . $advert_url . '"> ' . $advert->getTitle() . '</a>');
             }
         }
