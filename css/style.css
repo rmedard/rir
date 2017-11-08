@@ -7701,3 +7701,6 @@ div#advertiser-images > div.field--name-field-introductory-images div.field--ite
   margin-bottom: 5px;
   float: left;
 }
+form#views-form-adverts-page-manage-adverts > div.form-group > div.form-group > div.form-item {
+  width: 20%;
+}
