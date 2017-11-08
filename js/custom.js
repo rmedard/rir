@@ -48,6 +48,7 @@
     });
 
     $('div.view-adverts > div.view-filters').addClass('well well-sm');
+    $('div.view-agents > div.view-filters').addClass('well well-sm');
     $('form#views-exposed-form-adverts-page-search-adverts > div.form-inline > div.form-item > div.select-wrapper > select').addClass('input-sm');
     $('form#views-exposed-form-adverts-page-search-adverts > div.form-inline > div.form-item > div.input-group > input#edit-combine')
         .addClass('input-sm').attr("placeholder", "Search address: district, sector, cell or village");
