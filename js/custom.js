@@ -30,6 +30,7 @@
     $('button#edit-submit-adverts').removeClass('btn-sm');
     $('section#block-directaccessblock').addClass('well well-sm');
     $('section#block-request-details-webform').addClass('well well-sm');
+    $('section#block-registertoourfreepropertyalert').addClass('well well-sm');
 
     $('select#edit-field-advert-district-target-id > option[value="All"]').text('- District -');
     $('select#edit-field-advert-type-value > option[value="All"]').text('- Advert type -');
