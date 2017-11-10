@@ -26,8 +26,8 @@
 
     $('form#direct-access-form').addClass('form-inline');
     $('form#direct-access-form > button.form-submit').removeClass('btn-sm');
+    $('form#views-exposed-form-adverts-page-search-adverts > div.form--inline > div.form-actions > button.button-submit').addClass('btn-sm');
     $('button#edit-submit-agents').removeClass('btn-sm');
-    $('button#edit-submit-adverts').removeClass('btn-sm');
     $('section#block-directaccessblock').addClass('well well-sm');
     $('section#block-request-details-webform').addClass('well well-sm');
     $('section#block-registertoourfreepropertyalert').addClass('well well-sm');
