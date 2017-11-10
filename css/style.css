@@ -7685,8 +7685,7 @@ div.property-map-block > div.panel-heading > div.panel-title {
 #post-advert-button {
   font-weight: bold;
 }
-div.view-id-services > div.view-content,
-div.view-id-agents > div.view-content {
+div.view-id-services > div.view-content {
   display: table;
 }
 section#block-hircreateagentblock {
@@ -7701,4 +7700,13 @@ div#advertiser-images > div.field--name-field-introductory-images div.field--ite
   margin-right: 5px;
   margin-bottom: 5px;
   float: left;
+}
+form#views-form-adverts-page-manage-adverts > div.form-group > div.form-group > div.form-item,
+form#views-form-agents-page-manage-advertisers > div.form-group > div.form-group > div.form-item {
+  width: 20%;
+}
+.featured-star {
+  color: #ff9800;
+  font-size: 1.4em;
+  padding-right: 10px;
 }
