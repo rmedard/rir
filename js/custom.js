@@ -55,8 +55,8 @@
         .addClass('input-sm').attr("placeholder", "Search address: district, sector, cell or village");
     $('form#views-exposed-form-adverts-page-search-adverts > div.form-inline > div.form-item > div.input-group > span.input-group-addon')
         .addClass('input-sm');
-    $('form#views-exposed-form-agents-page-agents > div.form-inline > div.form-item > div > input').attr('placeholder', 'Search for: Name of an agent');
-    $('div.form-item-field-agent-operations-area-value > input').attr('placeholder', 'Location where the agent operates');
+    $('form#views-exposed-form-agents-page-agents > div.form-inline > div.form-item > div > input').attr('placeholder', 'Name of an advertiser');
+    $('div.form-item-field-agent-operations-area-value > input').attr('placeholder', 'Location');
 
 
     $('div.form-type-fivestar > div.form-type-select > div').removeClass('select-wrapper');
