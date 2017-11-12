@@ -19,7 +19,7 @@ function rir_preprocess_menu(&$variables)
         $featured = \Drupal::entityQuery('node')
             ->condition('type', 'advert')
             ->condition('status', Node::PUBLISHED)
-            ->condition('field_advert_posting_plan', ['featured', 'full_service'], 'IN')
+            ->condition('field_advert_posting_plan', 'standard', '<>')
             ->count();
         $featured_count = $featured->execute();
 
