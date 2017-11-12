@@ -7494,6 +7494,9 @@ nav#block-rir-main-menu ul.menu > li a.is-active {
   form#views-exposed-form-agents-page-agents > div.form-inline div.form-item-field-agent-operations-area-value {
     width: 200px;
   }
+  form#views-exposed-form-agents-page-agents > div.form-inline div.form-item-field-agent-operations-area-value input {
+    width: 100%;
+  }
 }
 div#advert-main-slider.flexslider {
   margin: 0;
