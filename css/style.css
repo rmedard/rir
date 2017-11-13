@@ -7555,9 +7555,7 @@ div.advert-summary-block ul li {
   padding: 5px;
 }
 div.advert-summary-block ul li.advert-views-count {
-  background: #ecf0f1;
-  color: #E74C3C;
-  font-weight: bold;
+  display: none;
 }
 div.intl-tel-input {
   width: 100%;
