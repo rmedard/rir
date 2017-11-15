@@ -7718,3 +7718,9 @@ form#views-form-agents-page-manage-advertisers > div.form-group > div.form-group
   font-size: 1.4em;
   padding-right: 10px;
 }
+label.has-error {
+  color: #E74C3C;
+}
+input.has-error {
+  border-color: #E74C3C;
+}
