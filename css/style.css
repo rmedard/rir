@@ -7718,11 +7718,9 @@ form#views-form-agents-page-manage-advertisers > div.form-group > div.form-group
   font-size: 1.4em;
   padding-right: 10px;
 }
-label.has-error,
-label.error {
+div.form-type-email.has-error label {
   color: #E74C3C;
 }
-input.has-error,
-input.error {
+div.form-type-email.has-error input {
   border-color: #E74C3C;
 }

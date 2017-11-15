@@ -399,10 +399,11 @@ form#views-form-agents-page-manage-advertisers > div.form-group > div.form-group
     padding-right: 10px;
 }
 
-label.has-error, label.error{
-    color: @brand-danger;
-}
-
-input.has-error, input.error{
-    border-color: @brand-danger;
+div.form-type-email.has-error {
+    label {
+        color: @brand-danger;
+    }
+    input {
+        border-color: @brand-danger;
+    }
 }
