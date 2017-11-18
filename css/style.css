@@ -7497,6 +7497,10 @@ nav#block-rir-main-menu ul.menu > li a.is-active {
   form#views-exposed-form-agents-page-agents > div.form-inline div.form-item-field-agent-operations-area-value input {
     width: 100%;
   }
+  div.view-id-services > div.view-content,
+  div.main-container > div.row > section {
+    display: table;
+  }
 }
 div#advert-main-slider.flexslider {
   margin: 0;
@@ -7691,10 +7695,6 @@ div.property-map-block > div.panel-heading > div.panel-title {
 }
 #post-advert-button {
   font-weight: bold;
-}
-div.view-id-services > div.view-content,
-div.main-container > div.row > section {
-  display: table;
 }
 section#block-hircreateagentblock {
   margin-bottom: 15px;
