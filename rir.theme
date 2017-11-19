@@ -151,13 +151,13 @@ function rir_preprocess_views_view_field(&$variables)
         }
     }
 
-    if ($view->storage->id() === 'adverts' and $view->current_display == 'page_manage_adverts' and $field->realField === 'nid') {
+    if ($view->storage->id() === 'adverts' and $view->current_display === 'page_manage_adverts' and $field->realField === 'nid') {
         $advert_id = intval($field->getValue($variables['row']));
-        $variables['output'] = Markup::create(getSimilarAdverts($advert_id));
+        $variables['output'] = Markup::create(getDuplicateAdverts($advert_id));
     }
 }
 
-function getSimilarAdverts($advert_id)
+function getDuplicateAdverts($advert_id)
 {
     $advert = Node::load($advert_id);
     $signature = $advert->get('field_advert_signature')->value;
