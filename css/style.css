@@ -7527,6 +7527,8 @@ div.flexslider {
 }
 div.flexslider ul.slides > li > img {
   width: auto;
+  display: block;
+  margin: auto;
 }
 form.contact-message-feedback-form > div.form-actions > button#edit-preview {
   display: none;
