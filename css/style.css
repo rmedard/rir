@@ -7525,7 +7525,7 @@ div.flexslider {
   border-color: #ecf0f1;
   border-radius: 6px;
 }
-div.flexslider .slides > img {
+div.flexslider ul.slides > li > img {
   width: auto;
 }
 form.contact-message-feedback-form > div.form-actions > button#edit-preview {
