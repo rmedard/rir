@@ -82,7 +82,7 @@ function rir_preprocess_menu(&$variables)
 function isMobile()
 {
     $mobile_detect = new MobileDetect();
-    return $mobile_detect->isMobile();
+    return $mobile_detect->isMobile() and !$mobile_detect->isTablet();
 }
 
 function rir_preprocess_page_title(&$variables)
