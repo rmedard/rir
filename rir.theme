@@ -82,15 +82,6 @@ function isMobile()
 {
     $mobile_detect = new Mobile_Detect();
     return $mobile_detect->isMobile();
-//    $detail = \Drupal::service('browscap')->getBrowser();
-//    $browser_data = implode(',', $detail);
-//    $mobile = preg_match('(Mobile)', $browser_data);
-//    $android = preg_match('(Android)', $browser_data);
-//    $iphone = preg_match('(IOS)', $browser_data);
-//    if ($mobile or $android or $iphone) {
-//        return TRUE;
-//    }
-//    return FALSE;
 }
 
 function rir_preprocess_page_title(&$variables)
