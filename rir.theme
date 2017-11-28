@@ -2,6 +2,7 @@
 
 use Drupal\Core\Render\Markup;
 use Drupal\node\Entity\Node;
+use Detection\MobileDetect;
 
 /**
  * @file
@@ -80,7 +81,7 @@ function rir_preprocess_menu(&$variables)
 
 function isMobile()
 {
-    $mobile_detect = new Mobile_Detect();
+    $mobile_detect = new MobileDetect();
     return $mobile_detect->isMobile();
 }
 
