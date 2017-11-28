@@ -1,8 +1,8 @@
 <?php
 
+use Detection\MobileDetect;
 use Drupal\Core\Render\Markup;
 use Drupal\node\Entity\Node;
-use Detection\MobileDetect;
 
 /**
  * @file
