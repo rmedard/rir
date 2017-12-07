@@ -7706,8 +7706,8 @@ div.view-display-id-page_agents > div.view-content {
   display: table;
 }
 div.view-display-id-page_agents > div.view-content div {
-  padding-right: 1px;
-  padding-left: 1px;
+  padding-right: 5px;
+  padding-left: 5px;
 }
 div.property-map-block > div.panel-heading > div.panel-title {
   font-weight: bolder;
