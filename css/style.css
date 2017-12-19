@@ -7704,6 +7704,7 @@ div.flex-caption:empty {
 }
 div.view-display-id-page_agents > div.view-content {
   display: table;
+  width: 100%;
 }
 div.view-display-id-page_agents > div.view-content div {
   padding-right: 5px;
