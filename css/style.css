@@ -7698,6 +7698,8 @@ div.flex-caption {
   background: rgba(0, 0, 0, 0.58);
   color: white;
   padding: 10px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 div.flex-caption:empty {
   display: none;
