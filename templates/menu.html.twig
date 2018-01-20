@@ -30,7 +30,7 @@
             {% if menu_name == 'adverts-secondary-menu' %}
                 <ul{{ attributes.addClass('nav', 'nav-pills', 'nav-justified') }}>
             {% else %}
-                <ul{{ attributes.addClass('menu', 'nav', 'navbar-nav') }}>
+                <ul{{ attributes.addClass('menu', 'nav') }}>
             {% endif %}
         {% else %}
             <ul{{ attributes.addClass('dropdown-menu') }}>
@@ -42,8 +42,8 @@
 
             {%
                 set item_classes = [item.is_expanded? 'expanded',
-                    item.is_expanded and menu_level == 0 ? 'dropdown',
-                    item.in_active_trail ? 'active']
+                item.is_expanded and menu_level == 0 ? 'dropdown',
+                item.in_active_trail ? 'active']
             %}
             {% if menu_level == 0 and item.is_expanded %}
             <li{{ item.attributes.addClass(item_classes) }}>
