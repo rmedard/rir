@@ -7553,6 +7553,7 @@ nav#block-advertssecondarymenu > ul.nav-pills li {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  font-size: 12px;
 }
 nav#block-advertssecondarymenu > ul.nav-pills li a {
   padding: 8px 10px;
