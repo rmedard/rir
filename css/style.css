@@ -7462,9 +7462,6 @@ nav#block-rir-main-menu ul.menu > li a.is-active {
   div.super-main div.main-container {
     padding-top: 10px;
   }
-  div.super-main div.main-container div.row > section {
-    min-height: 500px;
-  }
   body.toolbar-tray-open div.super-main {
     margin-top: 94px;
   }
@@ -7556,6 +7553,7 @@ nav#block-advertssecondarymenu > ul.nav-pills li {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  font-size: 12px;
 }
 nav#block-advertssecondarymenu > ul.nav-pills li a {
   padding: 8px 10px;
