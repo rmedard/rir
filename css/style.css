@@ -7740,9 +7740,12 @@ form#views-form-agents-page-manage-advertisers > div.form-group > div.form-group
   padding-right: 10px;
 }
 div.form-type-email.has-error label,
-div.form-type-email.has-error .description {
+div.form-type-textfield.has-error label,
+div.form-type-email.has-error .description,
+div.form-type-textfield.has-error .description {
   color: #E74C3C;
 }
-div.form-type-email.has-error input {
+div.form-type-email.has-error input,
+div.form-type-textfield.has-error input {
   border-color: #E74C3C;
 }
