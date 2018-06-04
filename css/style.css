@@ -7714,6 +7714,7 @@ div.field.field--name-field-advert-picture div.advert-picture-thumbnails {
   background: #ecf0f1;
   border-color: #ecf0f1;
   border-radius: 6px;
+  padding: 4px;
 }
 div.field.field--name-field-advert-picture div.advert-picture-thumbnails div.field--item.advert-picture-thumbnail {
   margin-right: 4px;
