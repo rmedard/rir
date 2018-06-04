@@ -7702,7 +7702,7 @@ div.flex-caption {
 div.flex-caption:empty {
   display: none;
 }
-div.field.field--name-field-advert-picture div:first-child.field--item {
+div.field.field--name-field-advert-picture div.field--item {
   background: #ecf0f1;
   border-color: #ecf0f1;
   border-radius: 6px;

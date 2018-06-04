@@ -24,7 +24,7 @@
         $('nav#block-advertssecondarymenu > ul.nav-pills').removeClass('nav-justified');
     }
 
-    $('div.field--name-field-advert-picture > div.field--item:not(:first-child)').wrapAll('<div class=\'advert-picture-thumbnails\' />');
+    $('div.field--name-field-advert-picture > div.field--item:not(:first-child)').wrapAll('<div class=\'advert-picture-thumbnails\' />').addClass('advert-picture-thumbnail');
 
 
     $('form#direct-access-form').addClass('form-inline');
