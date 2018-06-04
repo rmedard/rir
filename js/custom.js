@@ -24,6 +24,9 @@
         $('nav#block-advertssecondarymenu > ul.nav-pills').removeClass('nav-justified');
     }
 
+    $('div.field--name-field-advert-picture > div.field--item:not(:first-child)').wrapAll('<div class=\'advert-picture-thumbnails\' />');
+
+
     $('form#direct-access-form').addClass('form-inline');
     $('form#direct-access-form > button.form-submit').removeClass('btn-sm');
     $('form#views-exposed-form-adverts-page-manage-adverts > div.form--inline > div.form-actions > button.form-submit').removeClass('btn-sm');
@@ -66,13 +69,10 @@
     if($.trim(featuredWell.text()) === "") {
         featuredWell.hide();
     }
+
     /*
      * URL.js docs => https://websanova.com/plugins/url
      */
-
-    // var decodedUri = decodeURIComponent(window.location.href);
-    // var districtsStr = decodedUri.substring(decodedUri.indexOf('field_advert_district_target_id[]'), decodedUri.lastIndexOf('field_advert_district_target_id[]') + 37);
-    // var districts = districtsStr.match(/(\d+)/g) === null ? 'any' : districtsStr.match(/(\d+)/g).join('-');
 
     // var advertType = url('2', decodedUri); //Get second path variable
     var propertyLocation = getParameterByName('combine');
