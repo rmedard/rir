@@ -7702,7 +7702,13 @@ div.flex-caption {
 div.flex-caption:empty {
   display: none;
 }
-div.advert-picture-thumbnails {
+div.field--name-field-advert-picture div.field--item {
+  background: #ecf0f1;
+  border-color: #ecf0f1;
+  border-radius: 6px;
+  padding: 4px;
+}
+div.field--name-field-advert-picture div.advert-picture-thumbnails {
   display: flex;
   margin: 10px 0;
   background: #ecf0f1;
@@ -7710,7 +7716,7 @@ div.advert-picture-thumbnails {
   border-radius: 6px;
   padding: 4px;
 }
-div.advert-picture-thumbnails div.field--item {
+div.field--name-field-advert-picture div.advert-picture-thumbnails div.field--item {
   margin-right: 4px;
 }
 div.view-display-id-page_agents > div.view-content {
