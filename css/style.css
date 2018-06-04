@@ -7771,3 +7771,7 @@ div.form-type-textfield.has-error input,
 div.form-type-tel.has-error input {
   border-color: #E74C3C;
 }
+div.views-field-field-advert-location > div.field-content > div.panel div.panel-heading {
+  font-weight: bolder;
+  font-size: large;
+}
