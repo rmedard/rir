@@ -7670,7 +7670,7 @@ section#block-views-block-adverts-block-ads-per-agent > .block-title {
 #block-riradvertdetails {
   margin-bottom: 10px;
 }
-#block-riradvertdetails div.panel {
+#block-riradvertdetails div.panel:not(:last-child) {
   margin-bottom: 10px;
 }
 div.agent-thumbnail div.agent-logo {
