@@ -7708,9 +7708,10 @@ div.advert-picture-thumbnails {
   background: #ecf0f1;
   border-color: #ecf0f1;
   border-radius: 6px;
+  padding: 4px;
 }
 div.advert-picture-thumbnails div.field--item {
-  margin: 4px;
+  margin-right: 4px;
 }
 div.view-display-id-page_agents > div.view-content {
   display: table;
