@@ -7703,7 +7703,8 @@ div.flex-caption:empty {
   display: none;
 }
 div.advert-picture-thumbnails {
-  margin: 0 0 10px;
+  display: flex;
+  margin: 10px 0;
   background: #ecf0f1;
   border-color: #ecf0f1;
   border-radius: 6px;
