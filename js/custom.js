@@ -26,7 +26,7 @@
         let searchBar = $('div#search-bar-input-form');
         let searchBarHtml = searchBar.html();
 
-        let content = '<div class="panel panel-default">\n' +
+        let content = $('<div class="panel panel-default">\n' +
             '                    <div class="panel-heading" style="border-bottom: 1px #ccc solid">\n' +
             '                        <a href="#search-block-element" data-toggle="collapse" class="panel-title collapsed" role="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search</a>\n' +
             '                    </div>\n' +
@@ -39,9 +39,9 @@
             '                            </div>\n' +
             '                        </div>\n' +
             '                    </div>\n' +
-            '                </div>';
+            '                </div>');
         searchBar.remove();
-        content.insertBefore('.main-container');
+        content.insertBefore($('div.main-container'));
     }
 
     $('div.field--name-field-advert-picture > div.field--item:not(:first-child)').wrapAll('<div class=\'advert-picture-thumbnails\' />').addClass('advert-picture-thumbnail');
