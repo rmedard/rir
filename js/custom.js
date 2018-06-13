@@ -24,24 +24,26 @@
         $('nav#block-advertssecondarymenu > ul.nav-pills').removeClass('nav-justified');
 
         let searchBar = $('div#search-bar-input-form');
-        let searchBarHtml = searchBar.html();
+        if (searchBar) {
+            let searchBarHtml = searchBar.html();
 
-        let content = $('<div class="panel panel-default">\n' +
-            '                    <div class="panel-heading" style="border-bottom: 1px #ccc solid">\n' +
-            '                        <a href="#search-block-element" data-toggle="collapse" class="panel-title collapsed" role="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search</a>\n' +
-            '                    </div>\n' +
-            '                    <div class="panel-body panel-collapse collapse fade" id="search-block-element" style="padding:0">\n' +
-            '                        <div class = "container-fluid rir-search-bar well well-sm" style="margin: 0">\n' +
-            '                            <div class="container">\n' +
-            '                                <div class="row">\n' +
-            '                                    <div class="col-lg-12 col-md-12 col-sm-12">' + searchBarHtml + '</div>\n' +
-            '                                </div>\n' +
-            '                            </div>\n' +
-            '                        </div>\n' +
-            '                    </div>\n' +
-            '                </div>');
-        searchBar.remove();
-        content.insertBefore($('div.main-container'));
+            let content = $('<div class="panel panel-default">\n' +
+                '                    <div class="panel-heading" style="border-bottom: 1px #ccc solid">\n' +
+                '                        <a href="#search-block-element" data-toggle="collapse" class="panel-title collapsed" role="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search</a>\n' +
+                '                    </div>\n' +
+                '                    <div class="panel-body panel-collapse collapse fade" id="search-block-element" style="padding:0">\n' +
+                '                        <div class = "container-fluid rir-search-bar well well-sm" style="margin: 0">\n' +
+                '                            <div class="container">\n' +
+                '                                <div class="row">\n' +
+                '                                    <div class="col-lg-12 col-md-12 col-sm-12">' + searchBarHtml + '</div>\n' +
+                '                                </div>\n' +
+                '                            </div>\n' +
+                '                        </div>\n' +
+                '                    </div>\n' +
+                '                </div>');
+            searchBar.remove();
+            content.insertBefore($('div.main-container'));
+        }
     }
 
     $('div.field--name-field-advert-picture > div.field--item:not(:first-child)').wrapAll('<div class=\'advert-picture-thumbnails\' />').addClass('advert-picture-thumbnail');
