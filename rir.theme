@@ -1,6 +1,5 @@
 <?php
 
-use Detection\MobileDetect;
 use Drupal\Core\Render\Markup;
 use Drupal\node\Entity\Node;
 
@@ -13,8 +12,6 @@ use Drupal\node\Entity\Node;
 
 function rir_preprocess_menu(&$variables)
 {
-
-    $variables['is_mobile'] = isMobile();
 
     if ($variables['menu_name'] === 'adverts-secondary-menu') {
         $featured = \Drupal::entityQuery('node')
@@ -79,12 +76,6 @@ function rir_preprocess_menu(&$variables)
     }
 }
 
-function isMobile()
-{
-    $mobile_detect = new MobileDetect();
-    return $mobile_detect->isMobile() and !$mobile_detect->isTablet(); //Only phones, not tablets.
-}
-
 function rir_preprocess_page_title(&$variables)
 {
     $variables['show_page_title'] = TRUE;
@@ -104,8 +95,6 @@ function rir_preprocess_page(&$variables)
     $variables['show_sidebars'] = TRUE;
     $variables['show_rir_search'] = FALSE;
     $variables['management_page'] = FALSE;
-
-    $variables['is_mobile'] = isMobile();
 
     if (preg_match('(/pricing-plans)', $page_path) or preg_match('(/services)', $page_path)
         or preg_match('(/manage)', $page_path)) {
