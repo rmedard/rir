@@ -24,7 +24,7 @@
         $('nav#block-advertssecondarymenu > ul.nav-pills').removeClass('nav-justified');
 
         let searchBar = $('div#search-bar-input-form');
-        if (searchBar) {
+        if (searchBar.length) {
             let searchBarHtml = searchBar.html();
 
             let content = $('<div class="panel panel-default">\n' +
