@@ -1,5 +1,5 @@
 (function ($) {
-    var isMobile = {
+    const isMobile = {
         Android: function () {
             return navigator.userAgent.match(/Android/i);
         },
@@ -22,6 +22,26 @@
 
     if (isMobile.any()) {
         $('nav#block-advertssecondarymenu > ul.nav-pills').removeClass('nav-justified');
+
+        let searchBar = $('div#search-bar-input-form');
+        let searchBarHtml = searchBar.html();
+
+        let content = '<div class="panel panel-default">\n' +
+            '                    <div class="panel-heading" style="border-bottom: 1px #ccc solid">\n' +
+            '                        <a href="#search-block-element" data-toggle="collapse" class="panel-title collapsed" role="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search</a>\n' +
+            '                    </div>\n' +
+            '                    <div class="panel-body panel-collapse collapse fade" id="search-block-element" style="padding:0">\n' +
+            '                        <div class = "container-fluid rir-search-bar well well-sm" style="margin: 0">\n' +
+            '                            <div class="container">\n' +
+            '                                <div class="row">\n' +
+            '                                    <div class="col-lg-12 col-md-12 col-sm-12">' + searchBarHtml + '</div>\n' +
+            '                                </div>\n' +
+            '                            </div>\n' +
+            '                        </div>\n' +
+            '                    </div>\n' +
+            '                </div>';
+        searchBar.remove();
+        content.insertBefore($('div.main-container'));
     }
 
     $('div.field--name-field-advert-picture > div.field--item:not(:first-child)').wrapAll('<div class=\'advert-picture-thumbnails\' />').addClass('advert-picture-thumbnail');
@@ -65,7 +85,7 @@
 
     $('div.form-type-fivestar > div.form-type-select > div').removeClass('select-wrapper');
 
-    var featuredWell = $('div.view-adverts.well');
+    const featuredWell = $('div.view-adverts.well');
     if($.trim(featuredWell.text()) === "") {
         featuredWell.hide();
     }
@@ -75,10 +95,10 @@
      */
 
     // var advertType = url('2', decodedUri); //Get second path variable
-    var propertyLocation = getParameterByName('combine');
-    var advertType = getParameterByName('field_advert_type_value');
+    const propertyLocation = getParameterByName('combine');
+    const advertType = getParameterByName('field_advert_type_value');
     // var rooms = getParameterByName('field_advert_bedrooms_value');
-    var propertyType = getParameterByName('field_advert_property_type_value');
+    const propertyType = getParameterByName('field_advert_property_type_value');
     // var price = getParameterByName('field_price_in_rwf_value');
 
     $('section#block-rirsearchsubscribeblock > div#search-subscribe-button-id > a')
@@ -91,7 +111,7 @@
     //End
 
     $('div#edit-field-advert-advertiser-wrapper').append("<div><a href='/node/add/agent'>Can't find agent? Click here.</a></div>");
-    var menuTab = $('nav#block-advertssecondarymenu > ul.nav > li');
+    const menuTab = $('nav#block-advertssecondarymenu > ul.nav > li');
     menuTab.each(function (index) {
         if ($.trim($("nav#block-advertssecondarymenu > ul.nav > li:nth-child(" + (index + 1) + ") > a > span.badge").text()) === '0'){
             $(this).hide();
@@ -99,8 +119,8 @@
     });
 
     $('p.duplicate-refs').each(function () {
-       var size = $(this).text().length;
-       if (size > 5){
+        const size = $(this).text().length;
+        if (size > 5){
            $(this).parent().toggleClass('danger', true);
        }
     });
