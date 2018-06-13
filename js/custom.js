@@ -41,7 +41,7 @@
             '                    </div>\n' +
             '                </div>';
         searchBar.remove();
-        content.insertBefore($('div.main-container'));
+        content.insertBefore('.main-container');
     }
 
     $('div.field--name-field-advert-picture > div.field--item:not(:first-child)').wrapAll('<div class=\'advert-picture-thumbnails\' />').addClass('advert-picture-thumbnail');
