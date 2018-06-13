@@ -46,7 +46,7 @@ function handleDeviceChange(deviceMql, $) {
         }
     };
 
-    let deviceMql = window.matchMedia("(max-width: 480px)");
+    let deviceMql = window.matchMedia("(max-width: 767px)");
     deviceMql.addListener(handleDeviceChange);
     handleDeviceChange(deviceMql, $);
 
