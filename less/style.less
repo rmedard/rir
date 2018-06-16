@@ -386,21 +386,23 @@ div.field.field--name-field-advert-picture {
         border-color: #ecf0f1;
         border-radius: 6px;
     }
-    div.advert-picture-row {
+
+    > div.picture-row {
         background: #ecf0f1;
         border-color: #ecf0f1;
         border-radius: 6px;
-        margin: 4px;
-        overflow: hidden;
-        div.field--item:not(.advert-picture-thumbnail) {
-            padding-right: 4px;
-        }
-        div.advert-picture-thumbnails {
-            display: flex;
-            width: 3200%;
-            div.field--item.advert-picture-thumbnail {
-                a > img {
-                    width: 100px;
+        div.advert-picture-row {
+            overflow: hidden;
+            div.field--item:not(.advert-picture-thumbnail) {
+                padding-right: 4px;
+            }
+            div.advert-picture-thumbnails {
+                display: flex;
+                width: 3200%;
+                div.field--item.advert-picture-thumbnail {
+                    a > img {
+                        width: 100px;
+                    }
                 }
             }
         }
