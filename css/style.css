@@ -7702,7 +7702,7 @@ div.flex-caption {
 div.flex-caption:empty {
   display: none;
 }
-div.field.field--name-field-advert-picture div.field--item {
+div.field.field--name-field-advert-picture > div.field--item {
   padding: 4px;
   background: #ecf0f1;
   border-color: #ecf0f1;
@@ -7716,7 +7716,7 @@ div.field.field--name-field-advert-picture div.advert-picture-row {
   overflow: hidden;
 }
 div.field.field--name-field-advert-picture div.advert-picture-row div.field--item:not(.advert-picture-thumbnail) {
-  padding: 4px;
+  padding-right: 4px;
 }
 div.field.field--name-field-advert-picture div.advert-picture-row div.advert-picture-thumbnails {
   display: flex;
