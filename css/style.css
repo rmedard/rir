@@ -7717,9 +7717,13 @@ div.field.field--name-field-advert-picture div.advert-picture-thumbnails {
   border-radius: 6px;
   padding: 4px;
   overflow: hidden;
+  width: 3200%;
 }
 div.field.field--name-field-advert-picture div.advert-picture-thumbnails div.field--item.advert-picture-thumbnail {
   margin-right: 4px;
+}
+div.field.field--name-field-advert-picture div.advert-picture-thumbnails div.field--item.advert-picture-thumbnail a > img {
+  width: 100px;
 }
 div.view-display-id-page_agents > div.view-content {
   display: table;
