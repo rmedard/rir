@@ -7702,27 +7702,26 @@ div.flex-caption {
 div.flex-caption:empty {
   display: none;
 }
-div.field.field--name-field-advert-picture div.field--item:not(.advert-picture-thumbnail) {
+div.field.field--name-field-advert-picture div.advert-picture-row {
   background: #ecf0f1;
   border-color: #ecf0f1;
   border-radius: 6px;
-  padding: 4px;
   margin-bottom: 10px;
+  overflow: hidden;
 }
-div.field.field--name-field-advert-picture div.advert-picture-thumbnails {
+div.field.field--name-field-advert-picture div.advert-picture-row div.field--item:not(.advert-picture-thumbnail) {
+  padding: 4px;
+}
+div.field.field--name-field-advert-picture div.advert-picture-row div.advert-picture-thumbnails {
   display: flex;
   margin-bottom: 10px;
-  background: #ecf0f1;
-  border-color: #ecf0f1;
-  border-radius: 6px;
   padding: 4px;
-  overflow: hidden;
   width: 3200%;
 }
-div.field.field--name-field-advert-picture div.advert-picture-thumbnails div.field--item.advert-picture-thumbnail {
+div.field.field--name-field-advert-picture div.advert-picture-row div.advert-picture-thumbnails div.field--item.advert-picture-thumbnail {
   margin-right: 4px;
 }
-div.field.field--name-field-advert-picture div.advert-picture-thumbnails div.field--item.advert-picture-thumbnail a > img {
+div.field.field--name-field-advert-picture div.advert-picture-row div.advert-picture-thumbnails div.field--item.advert-picture-thumbnail a > img {
   width: 100px;
 }
 div.view-display-id-page_agents > div.view-content {
