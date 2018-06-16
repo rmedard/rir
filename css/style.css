@@ -7713,6 +7713,7 @@ div.field.field--name-field-advert-picture > div.picture-row {
   border-color: #ecf0f1;
   border-radius: 6px;
   padding: 4px;
+  margin: 10px 0;
 }
 div.field.field--name-field-advert-picture > div.picture-row div.advert-picture-row {
   overflow: hidden;
