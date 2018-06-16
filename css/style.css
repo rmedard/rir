@@ -7712,7 +7712,7 @@ div.field.field--name-field-advert-picture div.advert-picture-row {
   background: #ecf0f1;
   border-color: #ecf0f1;
   border-radius: 6px;
-  margin-bottom: 10px;
+  margin: 10px 0;
   overflow: hidden;
 }
 div.field.field--name-field-advert-picture div.advert-picture-row div.field--item:not(.advert-picture-thumbnail) {
