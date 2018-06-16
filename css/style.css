@@ -7724,9 +7724,6 @@ div.field.field--name-field-advert-picture div.advert-picture-row div.advert-pic
   padding: 4px;
   width: 3200%;
 }
-div.field.field--name-field-advert-picture div.advert-picture-row div.advert-picture-thumbnails div.field--item.advert-picture-thumbnail {
-  margin-right: 4px;
-}
 div.field.field--name-field-advert-picture div.advert-picture-row div.advert-picture-thumbnails div.field--item.advert-picture-thumbnail a > img {
   width: 100px;
 }
