@@ -3,11 +3,6 @@ global-styling:
     theme:
       css/style.css: {}
 
-bootstrap-scripts:
-  js:
-    contrib/bootstrap/js/tooltip.js: {}
-    contrib/bootstrap/js/modal.js: {}
-
 additional-scripts:
   js:
     js/url.js: {}
