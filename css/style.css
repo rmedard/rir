@@ -7376,7 +7376,7 @@ p:last-child,
 .control-group .help-inline:first-child {
   margin-top: 0;
 }
-@import-once 'bootswatch.less';
+@import-once 'bootswatch';
 body,
 .form-control {
   color: #2C3E50;
