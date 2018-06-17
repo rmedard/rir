@@ -7,6 +7,7 @@ bootstrap-scripts:
   js:
     bootstrap/js/tooltip.js: {}
     bootstrap/js/modal.js: {}
+    bootstrap/dist/js/bootstrap.min.js: {}
 
 additional-scripts:
   js:
