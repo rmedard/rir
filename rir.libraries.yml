@@ -5,7 +5,7 @@ global-styling:
 
 bootstrap-scripts:
   js:
-    bootstrap/js/*.js: {}
+    bootstrap/js/modal.js: {}
     bootstrap/dist/js/bootstrap.min.js: {}
 
 additional-scripts:
