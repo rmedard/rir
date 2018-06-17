@@ -145,8 +145,10 @@ function rir_preprocess_views_view_field(&$variables)
 }
 
 function rir_preprocess_input(&$variables) {
-    kint($variables['attributes']);
-    die();
+    if ($variables['attributes']['style']) {
+        kint($variables['attributes']['style']);
+        die();
+    }
 }
 
 function getDuplicateAdverts($advert_id)
