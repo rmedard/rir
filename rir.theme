@@ -147,7 +147,7 @@ function rir_preprocess_views_view_field(&$variables)
 function rir_preprocess_input(&$variables) {
     if ($variables['attributes']['style']) {
         kint($variables['attributes']['style']);
-        die();
+//        die();
     }
 }
 
