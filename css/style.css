@@ -7707,13 +7707,14 @@ div.field.field--name-field-advert-picture > div.field--item {
   background: #ecf0f1;
   border-color: #ecf0f1;
   border-radius: 6px;
+  margin-bottom: 10px;
 }
 div.field.field--name-field-advert-picture > div.picture-row {
   background: #ecf0f1;
   border-color: #ecf0f1;
   border-radius: 6px;
   padding: 4px;
-  margin: 10px 0;
+  margin-bottom: 10px;
 }
 div.field.field--name-field-advert-picture > div.picture-row div.advert-picture-row {
   overflow: hidden;
