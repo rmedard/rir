@@ -5,8 +5,8 @@ global-styling:
 
 bootstrap-scripts:
   js:
-    contrib/bootstrap/js/tooltip.js: {}
-    contrib/bootstrap/js/modal.js: {}
+    bootstrap/js/tooltip.js: {}
+    bootstrap/js/modal.js: {}
 
 additional-scripts:
   js:
