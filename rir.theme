@@ -144,6 +144,11 @@ function rir_preprocess_views_view_field(&$variables)
     }
 }
 
+function rir_preprocess_input(&$variables) {
+    kint($variables['attributes']);
+    die();
+}
+
 function getDuplicateAdverts($advert_id)
 {
     $advert = Node::load($advert_id);
