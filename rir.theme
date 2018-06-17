@@ -145,9 +145,9 @@ function rir_preprocess_views_view_field(&$variables)
 }
 
 function rir_preprocess_input(&$variables) {
-    if ($variables['attributes']['style']) {
+    if ($variables['attributes']['id'] == "notif_subscr_btn_id") {
         kint($variables['attributes']['style']);
-//        die();
+        die();
     }
 }
 
