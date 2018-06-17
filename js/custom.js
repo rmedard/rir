@@ -94,6 +94,8 @@ function handleDeviceChange(deviceMql, $) {
 
     $('div.form-type-fivestar > div.form-type-select > div').removeClass('select-wrapper');
 
+    $('button#notif_subscr_btn_id').removeAttr('style');
+
     const featuredWell = $('div.view-adverts.well');
     if($.trim(featuredWell.text()) === "") {
         featuredWell.hide();
