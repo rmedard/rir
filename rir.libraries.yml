@@ -3,6 +3,10 @@ global-styling:
     theme:
       css/style.css: {}
 
+bootstrap-scripts:
+  js:
+    bootstrap/js/tooltip.js: {}
+
 additional-scripts:
   js:
     js/url.js: {}
