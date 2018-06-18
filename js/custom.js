@@ -8,14 +8,7 @@ function handleDeviceChange(deviceMql, $) {
                 '                    <div class="panel-heading" style="border-bottom: 1px #ccc solid">\n' +
                 '                        <a href="#search-block-element" data-toggle="collapse" class="panel-title collapsed" role="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search</a>\n' +
                 '                    </div>\n' +
-                '                    <div class="panel-body panel-collapse collapse fade" id="search-block-element" style="padding:0">\n' +
-                '                        <div class = "container-fluid rir-search-bar well well-sm" style="margin: 0">\n' +
-                '                            <div class="container">\n' +
-                '                                <div class="row">\n' +
-                '                                    <div class="col-lg-12 col-md-12 col-sm-12">' + searchBarHtml + '</div>\n' +
-                '                                </div>\n' +
-                '                            </div>\n' +
-                '                        </div>\n' +
+                '                    <div class="panel-body panel-collapse collapse fade" id="search-block-element" style="padding:0">\n' + searchBarHtml +
                 '                    </div>\n' +
                 '                </div>');
             searchBar.remove();
