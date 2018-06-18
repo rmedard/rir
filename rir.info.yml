@@ -12,6 +12,7 @@ regions:
   navigation: 'Navigation'
   navigation_collapsible: 'Navigation (Collapsible)'
   rir_search_bar: 'RIR Search Bar'
+  rir_search_bar_right: 'RIR Search Bar Right'
   header: 'Top Bar'
   highlighted: 'Highlighted'
   help: 'Help'
