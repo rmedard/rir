@@ -105,16 +105,19 @@
 
 <div class="super-main">
     {% if page.rir_search_bar and show_rir_search %}
-        {% block rir_search_bar %}
             <div class = "container-fluid rir-search-bar well well-sm" id="search-bar-input-form">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">{{ page.rir_search_bar }}</div>
-                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">{{ page.rir_search_bar_right }}</div>
+                        {% block rir_search_bar %}
+                            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">{{ page.rir_search_bar }}</div>
+                        {% endblock %}
+                        {% block rir_search_bar_right %}
+                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">{{ page.rir_search_bar_right }}</div>
+                        {% endblock %}
                     </div>
                 </div>
             </div>
-        {% endblock %}
+
     {% endif %}
 {# Main #}
 {% block main %}
