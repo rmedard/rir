@@ -77,7 +77,7 @@
                 {% endif %}
                 <div class="navbar-header">
                     {{ page.navigation }}
-                    {# .btn-navbar is used as the toggle for collapsed navbar content #}
+                     {#.btn-navbar is used as the toggle for collapsed navbar content #}
                     {% if page.navigation_collapsible %}
                         <button type="button" class="navbar-toggle" data-toggle="collapse"
                                 data-target="#navbar-collapse">
@@ -111,9 +111,9 @@
                         {% block rir_search_bar %}
                             <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">{{ page.rir_search_bar }}</div>
                         {% endblock %}
-                        {% block rir_search_bar_right %}
-                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">{{ page.rir_search_bar_right }}</div>
-                        {% endblock %}
+                        {#{% block rir_search_bar_right %}#}
+                            {#<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">{{ page.rir_search_bar_right }}</div>#}
+                        {#{% endblock %}#}
                     </div>
                 </div>
             </div>
