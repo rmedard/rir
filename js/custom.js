@@ -1,7 +1,7 @@
 function handleDeviceChange(deviceMql, $) {
     if (deviceMql.matches) {
-        let searchBar = $('div#search-bar-input-form');
-        if (searchBar.length) {
+        // let searchBar = $('div#search-bar-input-form');
+        // if (searchBar.length) {
             // let searchBarHtml = searchBar.html();
             //
             // let content = $('<div class="panel panel-default">\n' +
@@ -13,7 +13,7 @@ function handleDeviceChange(deviceMql, $) {
             //     '                </div>');
             // searchBar.remove();
             // content.insertBefore($('div.main-container'));
-        }
+        // }
     }
 }
 
