@@ -1,19 +1,19 @@
 function handleDeviceChange(deviceMql, $) {
     if (deviceMql.matches) {
-        // let searchBar = $('div#search-bar-input-form');
-        // if (searchBar.length) {
-            // let searchBarHtml = searchBar.html();
-            //
-            // let content = $('<div class="panel panel-default">\n' +
-            //     '                    <div class="panel-heading" style="border-bottom: 1px #ccc solid">\n' +
-            //     '                        <a href="#search-block-element" data-toggle="collapse" class="panel-title collapsed" role="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search</a>\n' +
-            //     '                    </div>\n' +
-            //     '                    <div class="panel-body panel-collapse collapse fade" id="search-block-element" style="padding:0">' + searchBarHtml +
-            //     '                    </div>\n' +
-            //     '                </div>');
-            // searchBar.remove();
-            // content.insertBefore($('div.main-container'));
-        // }
+        let searchBar = $('div#search-bar-input-form');
+        if (searchBar.length) {
+            let searchBarHtml = searchBar.html();
+
+            let content = $('<div class="panel panel-default">\n' +
+                '                    <div class="panel-heading" style="border-bottom: 1px #ccc solid">\n' +
+                '                        <a href="#search-block-element" data-toggle="collapse" class="panel-title collapsed" role="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search</a>\n' +
+                '                    </div>\n' +
+                '                    <div class="panel-body panel-collapse collapse fade" id="search-block-element" style="padding:0">' + searchBarHtml +
+                '                    </div>\n' +
+                '                </div>');
+            searchBar.remove();
+            content.insertBefore($('div.main-container'));
+        }
     }
 }
 
@@ -90,7 +90,7 @@ function handleDeviceChange(deviceMql, $) {
     $('button#notif_subscr_btn_id').removeAttr('style');
 
     const featuredWell = $('div.view-adverts.well');
-    if($.trim(featuredWell.text()) === "") {
+    if ($.trim(featuredWell.text()) === "") {
         featuredWell.hide();
     }
 
@@ -106,7 +106,7 @@ function handleDeviceChange(deviceMql, $) {
     // var price = getParameterByName('field_price_in_rwf_value');
 
     $('section#block-rirsearchsubscribeblock > div#search-subscribe-button-id > a')
-        .attr('href', '/search-subscribe?advert='+ advertType +'&location='+ propertyLocation +'&property_type=' + propertyType);
+        .attr('href', '/search-subscribe?advert=' + advertType + '&location=' + propertyLocation + '&property_type=' + propertyType);
 
     //Activate home link while on homepage
     if ($('nav#block-rir-main-menu > ul.nav > li:first-child > a').hasClass('is-active')) {
@@ -117,27 +117,27 @@ function handleDeviceChange(deviceMql, $) {
     $('div#edit-field-advert-advertiser-wrapper').append("<div><a href='/node/add/agent'>Can't find agent? Click here.</a></div>");
     const menuTab = $('nav#block-advertssecondarymenu > ul.nav > li');
     menuTab.each(function (index) {
-        if ($.trim($("nav#block-advertssecondarymenu > ul.nav > li:nth-child(" + (index + 1) + ") > a > span.badge").text()) === '0'){
+        if ($.trim($("nav#block-advertssecondarymenu > ul.nav > li:nth-child(" + (index + 1) + ") > a > span.badge").text()) === '0') {
             $(this).hide();
         }
     });
 
     $('p.duplicate-refs').each(function () {
         const size = $(this).text().length;
-        if (size > 5){
-           $(this).parent().toggleClass('danger', true);
-       }
+        if (size > 5) {
+            $(this).parent().toggleClass('danger', true);
+        }
     });
 
 }(jQuery));
 
 function getParameterByName(name, url) {
-  if (!url) url = window.location.href;
-  name = name.replace(/[\[\]]/g, "\\$&");
-  var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-      results = regex.exec(url);
-  if (!results) return null;
-  if (!results[2]) return '';
-  return decodeURIComponent(results[2].replace(/\+/g, " "));
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
