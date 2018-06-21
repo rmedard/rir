@@ -7530,18 +7530,18 @@ div.flexslider ul.slides > li > img {
 form.contact-message-feedback-form > div.form-actions > button#edit-preview {
   display: none;
 }
-div.view-adverts > div.view-content > div.media-object > div.media {
+div.view-content > div.media-object > div.media {
   padding-bottom: 10px;
   border-bottom: #248cc7 2px solid;
 }
-div.view-adverts > div.view-content > div.media-object > div.media div.media-body > .media-heading a:hover {
+div.view-content > div.media-object > div.media div.media-body > .media-heading a:hover {
   text-decoration: none;
   color: #19826d;
 }
-div.view-adverts > div.view-content > div.media-object > div.media div.media-body > .media-heading span.label > small {
+div.view-content > div.media-object > div.media div.media-body > .media-heading span.label > small {
   color: #ecf0f1;
 }
-div.view-adverts > div.view-content > div.media-object > div.media div.pull-left {
+div.view-content > div.media-object > div.media div.pull-left {
   height: 90px;
   line-height: 90px;
   width: 90px;
