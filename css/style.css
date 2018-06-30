@@ -7511,6 +7511,9 @@ nav#block-rir-main-menu ul.menu > li a.is-active {
     display: table;
   }
 }
+label.error {
+  color: #E74C3C;
+}
 div#advert-main-slider.flexslider {
   margin: 0;
 }
