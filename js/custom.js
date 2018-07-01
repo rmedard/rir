@@ -83,6 +83,7 @@ function handleDeviceChange(deviceMql, $) {
         .addClass('input-sm');
     $('form#views-exposed-form-agents-page-agents > div.form-inline > div.form-item > div > input').attr('placeholder', 'Name of an advertiser');
     $('div.form-item-field-agent-operations-area-value > input').attr('placeholder', 'Location');
+    $('select#edit-field-advertiser-type-value > option[value="All"]').text('- Any type -');
 
 
     $('div.form-type-fivestar > div.form-type-select > div').removeClass('select-wrapper');
