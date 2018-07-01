@@ -7514,6 +7514,9 @@ nav#block-rir-main-menu ul.menu > li a.is-active {
 label.error {
   color: #E74C3C;
 }
+div.ui-dialog {
+  z-index: 1040;
+}
 div#advert-main-slider.flexslider {
   margin: 0;
 }
