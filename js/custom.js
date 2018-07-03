@@ -90,6 +90,7 @@ function handleDeviceChange(deviceMql, $) {
 
     $('button#notif_subscr_btn_id').removeAttr('style');
 
+    $('div.field--name-field-news-image').addClass('text-center');
     $('div.field--name-field-news-image > img').addClass('img-thumbnail');
 
     const featuredWell = $('div.view-adverts.well');
