@@ -105,6 +105,7 @@ function rir_preprocess_page(&$variables)
     }
 
     if (preg_match('(\/properties\/)', $page_path)
+        or preg_match('(\/property\/)', $page_path)
         or preg_match('(/search-adverts)', $page_path)
         or preg_match('(/for-rent)', $page_path)
         or preg_match('(/for-sale)', $page_path)
