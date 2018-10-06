@@ -7886,7 +7886,7 @@ div.views-field-field-advert-location div.field-content > div.panel div.panel-he
   font-weight: bolder;
   font-size: large;
 }
-section#block-disclaimerblock > div.field > div.well {
+section#block-disclaimerblock div.well {
   background-color: #fad9a4;
   border-color: #fad9a4;
   color: #976008;
