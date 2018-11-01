@@ -7891,3 +7891,7 @@ section#block-disclaimerblock div.well {
   border-color: #fad9a4;
   color: #976008;
 }
+div.region-sidebar-first section.block,
+div.region-sidebar-second section.block {
+  margin: 2px 0;
+}
