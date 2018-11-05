@@ -7730,10 +7730,13 @@ div.view-id-services > div.view-content div.pricing-plan-block {
 .rir-main-footer {
   background-color: #333333;
   padding-top: 15px;
+  padding-right: 0;
+  padding-left: 0;
   margin-top: 15px;
 }
 .rir-main-footer div#footer-hir-identity > footer {
   color: #ecf0f1;
+  background-color: #0d0d0d;
 }
 .rir-main-footer div.container section#rir-footer div.container > div.row > div.region {
   margin-bottom: 10px;
