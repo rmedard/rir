@@ -7734,12 +7734,16 @@ div.view-id-services > div.view-content div.pricing-plan-block {
   padding-left: 0;
   margin-top: 15px;
 }
+.rir-main-footer div.container section#rir-footer div.container > div.row > div.region {
+  margin-bottom: 10px;
+}
 .rir-main-footer div#footer-hir-identity > footer {
   color: #ecf0f1;
   background-color: #262626;
-}
-.rir-main-footer div.container section#rir-footer div.container > div.row > div.region {
-  margin-bottom: 10px;
+  border: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-top: 0;
 }
 section.block-rir-interface > div.panel > div.panel-heading {
   background-color: #248cc7;

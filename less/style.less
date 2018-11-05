@@ -304,10 +304,6 @@ div.view-id-services > div.view-content {
 }
 .rir-main-footer {
     background-color: @brand-dark;
-    div#footer-hir-identity > footer {
-        color: @gray-lighter;
-        background-color: darken(@brand-dark, 5%);
-    }
     padding-top: 15px;
     padding-right: 0;
     padding-left: 0;
@@ -318,10 +314,14 @@ div.view-id-services > div.view-content {
                 margin-bottom: 10px;
             }
         }
-        //footer {
-        //    padding-left: 0;
-        //    margin-top: 10px;
-        //}
+    }
+    div#footer-hir-identity > footer {
+        color: @gray-lighter;
+        background-color: darken(@brand-dark, 5%);
+        border: none;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        margin-top: 0;
     }
 }
 section.block-rir-interface > div.panel > div.panel-heading {
