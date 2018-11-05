@@ -61,9 +61,9 @@
 {% if page.navigation or page.navigation_collapsible %}
     {% block navbar %}
         {% set navbar_classes = [
-        'navbar',
-        theme.settings.navbar_inverse ? 'navbar-inverse' : 'navbar-default',
-        theme.settings.navbar_position ? 'navbar-' ~ theme.settings.navbar_position|clean_class : container,
+            'navbar',
+            theme.settings.navbar_inverse ? 'navbar-inverse' : 'navbar-default',
+            theme.settings.navbar_position ? 'navbar-' ~ theme.settings.navbar_position|clean_class : container,
         ] %}
         <header{{ navbar_attributes.addClass(navbar_classes) }} id="navbar">
             <div class="container-fluid rir-top-banner">
@@ -77,7 +77,7 @@
                 {% endif %}
                 <div class="navbar-header">
                     {{ page.navigation }}
-                     {#.btn-navbar is used as the toggle for collapsed navbar content #}
+                    {#.btn-navbar is used as the toggle for collapsed navbar content #}
                     {% if page.navigation_collapsible %}
                         <button type="button" class="navbar-toggle" data-toggle="collapse"
                                 data-target="#navbar-collapse">
@@ -105,141 +105,141 @@
 
 <div class="super-main">
     {% if page.rir_search_bar and show_rir_search %}
-            <div class = "container-fluid rir-search-bar well well-sm" id="search-bar-input-form">
-                <div class="container">
-                    <div class="row">
-                        {% block rir_search_bar %}
-                            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">{{ page.rir_search_bar }}</div>
-                        {% endblock %}
-                        {% block rir_search_bar_right %}
-                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">{{ page.rir_search_bar_right }}</div>
-                        {% endblock %}
-                    </div>
+        <div class="container-fluid rir-search-bar well well-sm" id="search-bar-input-form">
+            <div class="container">
+                <div class="row">
+                    {% block rir_search_bar %}
+                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">{{ page.rir_search_bar }}</div>
+                    {% endblock %}
+                    {% block rir_search_bar_right %}
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">{{ page.rir_search_bar_right }}</div>
+                    {% endblock %}
                 </div>
             </div>
+        </div>
 
     {% endif %}
-{# Main #}
-{% block main %}
-    {% set container = management_page ? 'container-fluid' : 'container' %}
-    <div role="main" class="main-container {{ container }} js-quickedit-main-content">
-        <div class="row">
+    {# Main #}
+    {% block main %}
+        {% set container = management_page ? 'container-fluid' : 'container' %}
+        <div role="main" class="main-container {{ container }} js-quickedit-main-content">
+            <div class="row">
 
-            {# Header #}
-            {% if page.header %}
-                {% block header %}
-                    <div class="col-sm-12" role="heading">
-                        {{ page.header }}
-                    </div>
-                {% endblock %}
-            {% endif %}
-
-            {# Content #}
-            {% set content_classes = [
-            page.sidebar_first and page.sidebar_second ? 'col-sm-8',
-            page.sidebar_first and page.sidebar_second is empty ? 'col-sm-10',
-            page.sidebar_second and page.sidebar_first is empty ? 'col-sm-10',
-            page.sidebar_first is empty and page.sidebar_second is empty ? 'col-sm-12'
-            ] %}
-
-            {% if not show_sidebars %}
-                {% set content_classes = ['col-sm-12'] %}
-            {% endif %}
-            <section{{ content_attributes.addClass(content_classes) }}>
-
-                {# Highlighted #}
-                {% if page.highlighted %}
-                    {% block highlighted %}
-                        <div class="highlighted">{{ page.highlighted }}</div>
-                    {% endblock %}
-                {% endif %}
-
-                {# Breadcrumbs #}
-                {% if breadcrumb %}
-                    {% block breadcrumb %}
-                        {{ breadcrumb }}
-                    {% endblock %}
-                {% endif %}
-
-                {# Action Links #}
-                {% if action_links %}
-                    {% block action_links %}
-                        <ul class="action-links">{{ action_links }}</ul>
-                    {% endblock %}
-                {% endif %}
-
-                {# Help #}
-                {% if page.help %}
-                    {% block help %}
-                        {{ page.help }}
+                {# Header #}
+                {% if page.header %}
+                    {% block header %}
+                        <div class="col-sm-12" role="heading">
+                            {{ page.header }}
+                        </div>
                     {% endblock %}
                 {% endif %}
 
                 {# Content #}
-                {% block content %}
-                    <a id="main-content"></a>
-                    {{ page.content }}
-                {% endblock %}
-            </section>
+                {% set content_classes = [
+                    page.sidebar_first and page.sidebar_second ? 'col-sm-8',
+                    page.sidebar_first and page.sidebar_second is empty ? 'col-sm-10',
+                    page.sidebar_second and page.sidebar_first is empty ? 'col-sm-10',
+                    page.sidebar_first is empty and page.sidebar_second is empty ? 'col-sm-12'
+                ] %}
 
-            {% if show_sidebars %}
-                <section class="col-sm-4">
-                    <div class="row">
-                        {% if page.rir_horizontal_sidebar %}
-                            <aside class="col-sm-12" role="complementary">
-                                {{ page.rir_horizontal_sidebar }}
-                            </aside>
-                        {% endif %}
+                {% if not show_sidebars %}
+                    {% set content_classes = ['col-sm-12'] %}
+                {% endif %}
+                <section{{ content_attributes.addClass(content_classes) }}>
 
-                        {# Sidebar First #}
-                        {% if page.sidebar_first %}
-                            {% block sidebar_first %}
-                                <aside class="col-sm-6" role="complementary">
-                                    {{ page.sidebar_first }}
-                                </aside>
-                            {% endblock %}
-                        {% endif %}
+                    {# Highlighted #}
+                    {% if page.highlighted %}
+                        {% block highlighted %}
+                            <div class="highlighted">{{ page.highlighted }}</div>
+                        {% endblock %}
+                    {% endif %}
 
-                        {# Sidebar Second #}
-                        {% if page.sidebar_second%}
-                            {% block sidebar_second %}
-                                <aside class="col-sm-6" role="complementary">
-                                    {{ page.sidebar_second }}
-                                </aside>
-                            {% endblock %}
-                        {% endif %}
-                    </div>
+                    {# Breadcrumbs #}
+                    {% if breadcrumb %}
+                        {% block breadcrumb %}
+                            {{ breadcrumb }}
+                        {% endblock %}
+                    {% endif %}
+
+                    {# Action Links #}
+                    {% if action_links %}
+                        {% block action_links %}
+                            <ul class="action-links">{{ action_links }}</ul>
+                        {% endblock %}
+                    {% endif %}
+
+                    {# Help #}
+                    {% if page.help %}
+                        {% block help %}
+                            {{ page.help }}
+                        {% endblock %}
+                    {% endif %}
+
+                    {# Content #}
+                    {% block content %}
+                        <a id="main-content"></a>
+                        {{ page.content }}
+                    {% endblock %}
                 </section>
-            {% endif %}
 
-            {#{% if page.rir_horizontal_sidebar and show_sidebars %}#}
+                {% if show_sidebars %}
+                    <section class="col-sm-4">
+                        <div class="row">
+                            {% if page.rir_horizontal_sidebar %}
+                                <aside class="col-sm-12" role="complementary">
+                                    {{ page.rir_horizontal_sidebar }}
+                                </aside>
+                            {% endif %}
+
+                            {# Sidebar First #}
+                            {% if page.sidebar_first %}
+                                {% block sidebar_first %}
+                                    <aside class="col-sm-6" role="complementary">
+                                        {{ page.sidebar_first }}
+                                    </aside>
+                                {% endblock %}
+                            {% endif %}
+
+                            {# Sidebar Second #}
+                            {% if page.sidebar_second %}
+                                {% block sidebar_second %}
+                                    <aside class="col-sm-6" role="complementary">
+                                        {{ page.sidebar_second }}
+                                    </aside>
+                                {% endblock %}
+                            {% endif %}
+                        </div>
+                    </section>
+                {% endif %}
+
+                {#{% if page.rir_horizontal_sidebar and show_sidebars %}#}
                 {#{% block rir_horizontal_sidebar %}#}
-                    {#<aside class="col-sm-4" role="complementary">#}
-                        {#{{ page.rir_horizontal_sidebar }}#}
-                    {#</aside>#}
+                {#<aside class="col-sm-4" role="complementary">#}
+                {#{{ page.rir_horizontal_sidebar }}#}
+                {#</aside>#}
                 {#{% endblock %}#}
-            {#{% endif %}#}
+                {#{% endif %}#}
 
-            {# Sidebar First #}
-            {#{% if page.sidebar_first and show_sidebars %}#}
+                {# Sidebar First #}
+                {#{% if page.sidebar_first and show_sidebars %}#}
                 {#{% block sidebar_first %}#}
-                    {#<aside class="col-sm-2" role="complementary">#}
-                        {#{{ page.sidebar_first }}#}
-                    {#</aside>#}
+                {#<aside class="col-sm-2" role="complementary">#}
+                {#{{ page.sidebar_first }}#}
+                {#</aside>#}
                 {#{% endblock %}#}
-            {#{% endif %}#}
+                {#{% endif %}#}
 
-            {# Sidebar Second #}
-            {#{% if page.sidebar_second and show_sidebars %}#}
+                {# Sidebar Second #}
+                {#{% if page.sidebar_second and show_sidebars %}#}
                 {#{% block sidebar_second %}#}
-                    {#<aside class="col-sm-2" role="complementary">#}
-                        {#{{ page.sidebar_second }}#}
-                    {#</aside>#}
+                {#<aside class="col-sm-2" role="complementary">#}
+                {#{{ page.sidebar_second }}#}
+                {#</aside>#}
                 {#{% endblock %}#}
-            {#{% endif %}#}
+                {#{% endif %}#}
+            </div>
         </div>
-    </div>
-{% endblock %}
+    {% endblock %}
 </div>
 {#End of Super Main #}
 {% if page.footer %}
@@ -247,13 +247,11 @@
         {% block footer %}
             <div class="container">
                 <section id="rir-footer">
-                    <div class="container">
-                        <div class="row">
-                            <div class="region region-rir-footer-1 col-lg-4 col-md-4 col-sm-4 col-xs-12">{{ page.rir_footer_1 }}</div>
-                            <div class="region region-rir-footer-2 col-lg-4 col-md-4 col-sm-4 col-xs-12">{{ page.rir_footer_2 }}</div>
-                            <div class="region region-rir-footer-3 col-lg-4 col-md-4 col-sm-4 col-xs-12">{{ page.rir_footer_3 }}</div>
-                            {#<div class="region region-rir-footer-4 col-lg-3 col-md-3 col-sm-3 col-xs-12">{{ page.rir_footer_4 }}</div>#}
-                        </div>
+                    <div class="row">
+                        <div class="region region-rir-footer-1 col-lg-4 col-md-4 col-sm-4 col-xs-12">{{ page.rir_footer_1 }}</div>
+                        <div class="region region-rir-footer-2 col-lg-4 col-md-4 col-sm-4 col-xs-12">{{ page.rir_footer_2 }}</div>
+                        <div class="region region-rir-footer-3 col-lg-4 col-md-4 col-sm-4 col-xs-12">{{ page.rir_footer_3 }}</div>
+                        {#<div class="region region-rir-footer-4 col-lg-3 col-md-3 col-sm-3 col-xs-12">{{ page.rir_footer_4 }}</div>#}
                     </div>
                 </section>
             </div>
