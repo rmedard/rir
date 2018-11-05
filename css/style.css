@@ -7732,7 +7732,7 @@ div.view-id-services > div.view-content div.pricing-plan-block {
   padding-top: 15px;
   margin-top: 15px;
 }
-.rir-main-footer div.footer-hir-identity > footer {
+.rir-main-footer div#footer-hir-identity > footer {
   color: #ecf0f1;
 }
 .rir-main-footer div.container section#rir-footer div.container > div.row > div.region {
