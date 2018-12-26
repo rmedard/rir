@@ -27,3 +27,5 @@ additional-scripts:
   js:
     js/url.js: {}
     js/custom.js: {}
+  dependencies:
+    - core/jquery
