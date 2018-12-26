@@ -48,8 +48,8 @@ function handleDeviceChange(deviceMql, $) {
         $('a#notif-subscribe-modal-id').removeClass().addClass('webform-dialog btn btn-success btn-sm btn-block');
     }
 
-    $("#dropdown").select2({
-        theme: "bootstrap"
+    $('#dropdown').select2({
+        theme: 'bootstrap'
     });
 
     $('div.field--name-field-advert-picture > div.field--item:not(:first-child)').wrapAll('<div class=\'picture-row\'><div class=\'advert-picture-row\'><div class=\'advert-picture-thumbnails\' /></div></div>').addClass('advert-picture-thumbnail');
