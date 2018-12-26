@@ -21,7 +21,7 @@ bootstrap-scripts:
 select2-bootstrap:
   css:
     theme:
-      css/select2-bootstrap.css: { minified: true }
+      css/select2-bootstrap.min.css: { minified: true }
 
 additional-scripts:
   js:
