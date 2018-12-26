@@ -45,6 +45,7 @@ function handleDeviceChange(deviceMql, $) {
 
     if (isMobile.any()) {
         $('nav#block-advertssecondarymenu > ul.nav-pills').removeClass('nav-justified');
+        $('a#notif-subscribe-modal-id').removeClass().addClass('webform-dialog btn btn-success btn-sm btn-block');
     }
 
     $("#dropdown").select2({
