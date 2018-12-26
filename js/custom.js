@@ -47,6 +47,10 @@ function handleDeviceChange(deviceMql, $) {
         $('nav#block-advertssecondarymenu > ul.nav-pills').removeClass('nav-justified');
     }
 
+    $("#dropdown").select2({
+        theme: "bootstrap"
+    });
+
     $('div.field--name-field-advert-picture > div.field--item:not(:first-child)').wrapAll('<div class=\'picture-row\'><div class=\'advert-picture-row\'><div class=\'advert-picture-thumbnails\' /></div></div>').addClass('advert-picture-thumbnail');
 
     $('form#direct-access-form').addClass('form-inline');

@@ -31,4 +31,5 @@ regions:
 libraries:
   - 'rir/global-styling'
   - 'rir/bootstrap-scripts'
+  - 'rir/select2-bootstrap'
   - 'rir/additional-scripts'
