@@ -28,4 +28,5 @@ additional-scripts:
     js/url.js: {}
     js/custom.js: {}
   dependencies:
+    - webform/webform.element.select2
     - core/jquery
