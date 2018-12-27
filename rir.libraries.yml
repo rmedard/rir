@@ -23,6 +23,7 @@ select2-bootstrap:
     theme:
       css/select2-bootstrap.min.css: { minified: true }
 
+# Get Select2 JS that comes with Webform module: modules/contrib/webform/webform.libraries.yml
 additional-scripts:
   js:
     js/url.js: {}
