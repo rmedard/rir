@@ -49,6 +49,8 @@ function handleDeviceChange(deviceMql, $) {
     }
 
     $.fn.select2.defaults.set('theme', 'bootstrap');
+    var input = document.querySelector("#edit-field-job-contact-phone-number-0-value");
+    window.intlTelInput(input);
 
     $('div.field--name-field-advert-picture > div.field--item:not(:first-child)').wrapAll('<div class=\'picture-row\'><div class=\'advert-picture-row\'><div class=\'advert-picture-thumbnails\' /></div></div>').addClass('advert-picture-thumbnail');
 

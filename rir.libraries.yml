@@ -30,3 +30,4 @@ additional-scripts:
     js/custom.js: {}
   dependencies:
     - webform/webform.element.select2
+    - webform/webform.element.telephone
