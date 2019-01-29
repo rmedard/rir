@@ -7912,4 +7912,5 @@ div#views-bootstrap-manage-property-requests-page-1 > div.row > div.col > div {
 }
 div#views-bootstrap-manage-property-requests-page-1 > div.row > div.col > div:hover {
   background: #f0f8ff;
+  cursor: pointer;
 }
