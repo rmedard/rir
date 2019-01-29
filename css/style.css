@@ -7905,3 +7905,6 @@ div.region-sidebar-second section.block {
 div#views-bootstrap-manage-property-requests-page-1 > div.row > div.col {
   margin-bottom: 15px;
 }
+div#views-bootstrap-manage-property-requests-page-1 > div.row > div.col div.panel > div {
+  padding: 10px;
+}
