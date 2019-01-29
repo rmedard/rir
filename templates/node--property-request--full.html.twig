@@ -100,7 +100,7 @@
             <strong>Maximum price: </strong> {{ node.field_pr_maximum.value }} {{ node.field_pr_currency.value }}<br>
             <strong>Payable: </strong> {{ node.field_pr_payable.value }} <br>
             <strong>Urgency: </strong> {{ node.field_pr_urgency.value|default }},
-            {{ drupal_field('field_pr_urgency', 'node', node.nid) }}
+            {{ drupal_field('field_pr_urgency', 'node', 1) }}
         </div>
     </div>
 </article>
