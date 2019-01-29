@@ -7910,3 +7910,6 @@ div#views-bootstrap-manage-property-requests-page-1 > div.row > div.col > div {
   border: #248cc7 2px solid;
   border-radius: 5px;
 }
+div#views-bootstrap-manage-property-requests-page-1 > div.row > div.col > div:hover {
+  background: #f0f8ff;
+}
