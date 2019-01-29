@@ -86,7 +86,7 @@
                 to {{ node.field_pr_request_type.value }}</strong> <br>
             <strong>Minimum bedrooms:</strong> {{ node.field_pr_minimum_bedrooms.value }} <br>
             <strong>Minimum bathrooms: </strong> {{ node.field_pr_minimum_bathrooms.value }} <br>
-            <strong>More property details:</strong> {{ node.field_pr_more_details }} <br>
+            <strong>More property details:</strong> {{ node.field_pr_more_details.value|escape('html') }} <br>
             <strong>Preferred neighborhood: </strong> {{ node.field_pr_area_city_interest.value }} <br>
             <strong>Preferred neighborhood description: </strong> {{ node.field_pr_neighborhood_descr.value }}
         </div>
