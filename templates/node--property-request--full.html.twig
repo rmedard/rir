@@ -65,49 +65,42 @@
  *   in different view modes.
  */
 #}
-{%
-    set classes = [
+{% set classes = [
     node.bundle|clean_class,
     node.isPromoted() ? 'is-promoted',
     node.isSticky() ? 'is-sticky',
     not node.isPublished() ? 'is-unpublished',
     view_mode ? view_mode|clean_class,
     'clearfix',
-]
-%}
+] %}
 <article{{ attributes.addClass(classes) }}>
-
-    {{ title_prefix }}
-    {% if not page %}
-        <h2{{ title_attributes }}>
-            <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-        </h2>
-    {% endif %}
-    {{ title_suffix }}
-
-    {% if display_submitted %}
-        <footer>
-            {{ author_picture }}
-            <div{{ author_attributes.addClass('author') }}>
-                {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
-                {{ metadata }}
-            </div>
-        </footer>
-    {% endif %}
-
-    <div{{ content_attributes.addClass('content') }}>
-        {{ content }}
-    </div>
 
     {{ kint(node) }}
 
     <div class="panel panel-primary">
         <div class="panel-heading">
-            <span class="panel-title">Property details</span>
+            <span class="panel-title">Property details & Location</span>
         </div>
         <div class="panel-body">
-            Call for {{ node.field_pr_equipment.value }} {{ node.field_pr_property_type.value }} to {{ node.field_pr_request_type.value }}
+            Call for {{ node.field_pr_equipment.value }} {{ node.field_pr_property_type.value }}
+            to {{ node.field_pr_request_type.value }}
+            <strong>Minimum bedrooms:</strong> {{ node.field_pr_minimum_bedrooms.value }} <br>
+            <strong>Minimum bathrooms: </strong> {{ node.field_pr_minimum_bathrooms.value }} <br>
+            <strong>More property details:</strong> {{ node.field_pr_more_details.value }} <br>
+            <strong>Preferred neighborhood: </strong> {{ node.field_pr_area_city_interest.value }} <br>
+            <strong>Preferred neighborhood description: </strong> {{ node.field_pr_neighborhood_descr.value }}
         </div>
     </div>
 
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <span class="panel-title">Budget & Urgency</span>
+        </div>
+        <div class="panel-body">
+            <strong>Minimum price: </strong> {{ node.field_pr_minimum.value }} {{ node.field_pr_currency.value }}<br>
+            <strong>Maximum price: </strong> {{ node.field_pr_maximum.value }} {{ node.field_pr_currency.value }}<br>
+            <strong>Payable: </strong> {{ node.field_pr_payable.value }} <br>
+            <strong>Urgency: </strong> {{ node.field_pr_urgency.value }}
+        </div>
+    </div>
 </article>
