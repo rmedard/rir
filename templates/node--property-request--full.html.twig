@@ -100,7 +100,7 @@
             <strong>Minimum price: </strong> {{ node.field_pr_minimum.value }} {{ node.field_pr_currency.value }}<br>
             <strong>Maximum price: </strong> {{ node.field_pr_maximum.value }} {{ node.field_pr_currency.value }}<br>
             <strong>Payable: </strong> {{ node.field_pr_payable.value }} <br>
-            <strong>Urgency: </strong> {{ node.field_pr_urgency.value }}
+            <strong>Urgency: </strong> {{ node.field_pr_urgency|view }}
         </div>
     </div>
 </article>
