@@ -75,7 +75,7 @@
 ] %}
 <article{{ attributes.addClass(classes) }}>
 
-    {{ kint(node) }}
+    {#{{ kint(node) }}#}
     <div class="panel panel-primary">
         <div class="panel-heading">
             <span class="panel-title">Property details & Location</span>
@@ -100,7 +100,7 @@
             <strong>Maximum price: </strong> {{ node.field_pr_maximum.value }} {{ node.field_pr_currency.value }}<br>
             <strong>Payable: </strong> {{ node.field_pr_payable.value }} <br>
             <strong>Urgency: </strong> {{ node.field_pr_urgency.value|default }},
-            {{ drupal_field('field_pr_urgency', 'node', 1) }}
+            {{ drupal_field('field_pr_urgency', 'node', node.id) }}
         </div>
     </div>
 </article>
