@@ -7902,3 +7902,6 @@ div.region-sidebar-first section.block,
 div.region-sidebar-second section.block {
   margin: 5px 0;
 }
+div#views-bootstrap-manage-property-requests-page-1 > div.row > div.col {
+  margin-bottom: 15px;
+}
