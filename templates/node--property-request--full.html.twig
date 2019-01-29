@@ -81,7 +81,7 @@
             <span class="panel-title">Property details & Location</span>
         </div>
         <div class="panel-body">
-            <strong>Call for {{ node.field_pr_equipment.value }} {{ node.field_pr_property_type.value }}
+            <strong>Call for {{ drupal_field('field_pr_equipment', 'node', node.id) }} {{ node.field_pr_property_type.value }}
                 to {{ node.field_pr_request_type.value }}</strong> <br>
             <strong>Minimum bedrooms:</strong> {{ node.field_pr_minimum_bedrooms.value }} <br>
             <strong>Minimum bathrooms: </strong> {{ node.field_pr_minimum_bathrooms.value }} <br>
@@ -96,10 +96,8 @@
             <span class="panel-title">Budget & Urgency</span>
         </div>
         <div class="panel-body">
-            <strong>Minimum price: </strong> {{ node.field_pr_minimum.value }} {{ node.field_pr_currency.value }}<br>
-            <strong>Maximum price: </strong> {{ node.field_pr_maximum.value }} {{ node.field_pr_currency.value }}<br>
-            {#<strong>Payable: </strong> {{ node.field_pr_payable.value }} <br>#}
-            {#<strong>Urgency: </strong> {{ node.field_pr_urgency.value|default }},#}
+            <strong>Minimum price: </strong> {{ node.field_pr_minimum.value }} {{ node.field_pr_currency.value|capitalize }}<br>
+            <strong>Maximum price: </strong> {{ node.field_pr_maximum.value }} {{ node.field_pr_currency.value|capitalize }}<br>
             {{ drupal_field('field_pr_payable', 'node', node.id) }}
             {{ drupal_field('field_pr_urgency', 'node', node.id) }}
         </div>
