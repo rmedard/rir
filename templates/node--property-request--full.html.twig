@@ -76,30 +76,43 @@
 <article{{ attributes.addClass(classes) }}>
 
     {#{{ kint(node) }}#}
-    <div class="panel panel-primary">
-        <div class="panel-heading">
-            <span class="panel-title">Property details & Location</span>
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <span class="panel-title">Property details</span>
+                </div>
+                <div class="panel-body">
+                    <strong>Property type:</strong> {{ node.field_pr_equipment.value }} {{ node.field_pr_property_type.value }}<br>
+                    <strong>Service:</strong> {{ node.field_pr_request_type.value }}
+                    <strong>Minimum bedrooms:</strong> {{ node.field_pr_minimum_bedrooms.value }} <br>
+                    <strong>Minimum bathrooms:</strong> {{ node.field_pr_minimum_bathrooms.value }} <br>
+                </div>
+            </div>
         </div>
-        <div class="panel-body">
-            <strong>Call for {{ drupal_field('field_pr_equipment', 'node', node.id) }} {{ node.field_pr_property_type.value }}
-                to {{ node.field_pr_request_type.value }}</strong> <br>
-            <strong>Minimum bedrooms:</strong> {{ node.field_pr_minimum_bedrooms.value }} <br>
-            <strong>Minimum bathrooms: </strong> {{ node.field_pr_minimum_bathrooms.value }} <br>
-            <strong>More property details:</strong> {{ node.field_pr_more_details.value|raw }} <br>
-            <strong>Preferred neighborhood: </strong> {{ node.field_pr_area_city_interest.value }} <br>
-            <strong>Preferred neighborhood description: </strong> {{ node.field_pr_neighborhood_descr.value|raw }}
+        <div class="col-md-6 col-sm-12">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <span class="panel-title">Budget & Urgency</span>
+                </div>
+                <div class="panel-body">
+                    <strong>Minimum price: </strong> {{ node.field_pr_minimum.value }} {{ node.field_pr_currency.value|capitalize }}<br>
+                    <strong>Maximum price: </strong> {{ node.field_pr_maximum.value }} {{ node.field_pr_currency.value|capitalize }}<br>
+                    {{ drupal_field('field_pr_payable', 'node', node.id) }}
+                    {{ drupal_field('field_pr_urgency', 'node', node.id) }}
+                </div>
+            </div>
         </div>
     </div>
 
     <div class="panel panel-primary">
         <div class="panel-heading">
-            <span class="panel-title">Budget & Urgency</span>
+            <span class="panel-title">More details</span>
         </div>
         <div class="panel-body">
-            <strong>Minimum price: </strong> {{ node.field_pr_minimum.value }} {{ node.field_pr_currency.value|capitalize }}<br>
-            <strong>Maximum price: </strong> {{ node.field_pr_maximum.value }} {{ node.field_pr_currency.value|capitalize }}<br>
-            {{ drupal_field('field_pr_payable', 'node', node.id) }}
-            {{ drupal_field('field_pr_urgency', 'node', node.id) }}
+            <strong>More property details:</strong> {{ node.field_pr_more_details.value|raw }} <br>
+            <strong>Preferred neighborhood: </strong> {{ node.field_pr_area_city_interest.value }} <br>
+            <strong>Preferred neighborhood description: </strong> {{ node.field_pr_neighborhood_descr.value|raw }}
         </div>
     </div>
 </article>
