@@ -82,7 +82,7 @@
                     <span class="panel-title">Property details</span>
                 </div>
                 <div class="panel-body">
-                    <strong>Property type:</strong> {{ node.field_pr_equipment|field_value }} {{ node.field_pr_equipment.value }} {{ node.field_pr_property_type.value }}<br>
+                    <strong>Property type:</strong> {{ node.field_pr_equipment|view }} {{ node.field_pr_equipment.value }} {{ node.field_pr_property_type.value }}<br>
                     <strong>Service:</strong> {{ node.field_pr_request_type.value }} <br>
                     <strong>Minimum bedrooms:</strong> {{ node.field_pr_minimum_bedrooms.value }} <br>
                     <strong>Minimum bathrooms:</strong> {{ node.field_pr_minimum_bathrooms.value }} <br>
