@@ -7905,8 +7905,10 @@ div.region-sidebar-second section.block {
 div#views-bootstrap-manage-property-requests-page-1 > div.row > div.col {
   margin-bottom: 15px;
 }
-div#views-bootstrap-manage-property-requests-block-top-prs div.row > div.col.col-sm-12,
-div#views-bootstrap-manage-property-requests-block-top-prs div.row > div.col.col-xs-12 {
+div.well.top-pr-block {
+  padding-bottom: 0;
+}
+div.well.top-pr-block div#views-bootstrap-manage-property-requests-block-top-prs div.row > div.col {
   margin-bottom: 10px;
 }
 div.panel.pr-panel > div {
