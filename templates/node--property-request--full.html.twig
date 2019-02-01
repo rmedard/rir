@@ -109,7 +109,6 @@
             <span class="panel-title">More details</span>
         </div>
         <div class="panel-body">
-            <p>{{ drupal_url('node/' ~ node.id, {absolute: true}) }}</p>
             <strong>More property details:</strong> {{ node.field_pr_more_details.value|raw }} <br>
             <strong>Preferred neighborhood: </strong> {{ node.field_pr_area_city_interest.value }} <br>
             <strong>Preferred neighborhood description: </strong> {{ node.field_pr_neighborhood_descr.value|raw }}
