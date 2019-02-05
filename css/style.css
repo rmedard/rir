@@ -7914,3 +7914,9 @@ div.well.top-pr-block div#views-bootstrap-manage-property-requests-block-top-prs
 div.panel.pr-panel > div {
   padding: 10px;
 }
+div.top-pr-block nav > ul.pagination {
+  margin: 0;
+}
+div.top-pr-block nav > ul.pagination li > a {
+  padding: 2px 10px;
+}
