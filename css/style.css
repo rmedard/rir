@@ -7909,7 +7909,7 @@ div.well.top-pr-block {
   padding-bottom: 0;
 }
 div.well.top-pr-block div#views-bootstrap-manage-property-requests-block-top-prs div.row > div.col {
-  margin-bottom: 10px;
+  margin-bottom: 0;
 }
 div.panel.pr-panel > div {
   padding: 10px;
