@@ -7908,8 +7908,8 @@ div#views-bootstrap-manage-property-requests-page-1 > div.row > div.col {
 div.well.top-pr-block {
   padding-bottom: 0;
 }
-div.well.top-pr-block div#views-bootstrap-manage-property-requests-block-top-prs div.row > div.col {
-  margin-bottom: 0;
+div.well.top-pr-block div#views-bootstrap-manage-property-requests-page-pr-public-list div.row > div.col {
+  margin-bottom: 10px;
 }
 div.panel.pr-panel > div {
   padding: 10px;
