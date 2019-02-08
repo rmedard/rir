@@ -77,6 +77,9 @@ function rir_preprocess_menu(&$variables)
 
 function rir_preprocess_page_title(&$variables)
 {
+    $page_path = \Drupal::request()->getPathInfo();
+    kint(array($page_path, $variables));
+    die();
     $variables['show_page_title'] = TRUE;
     $exception = \Drupal::request()->attributes->get('exception');
     if ($exception and ($exception->getStatusCode() == '404' or $exception->getStatusCode() == '403')) {
