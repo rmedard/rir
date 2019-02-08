@@ -78,7 +78,7 @@ function rir_preprocess_menu(&$variables)
 function rir_preprocess_page_title(&$variables)
 {
     $page_path = \Drupal::request()->getPathInfo();
-    kint(array($page_path, $variables));
+    kint(array($page_path, $variables, \Drupal::request()->getQueryString()));
     die();
     $variables['show_page_title'] = TRUE;
     $exception = \Drupal::request()->attributes->get('exception');
