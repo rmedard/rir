@@ -92,8 +92,14 @@
                 {# Navigation (collapsible) #}
                 {% if page.navigation_collapsible %}
                     <div id="navbar-collapse" class="navbar-collapse collapse">
-                        {{ page.navigation_collapsible }}
-                        <a href="/services" class="btn btn-warning" id="post-advert-button">Post an advert</a>
+                        <div class="row">
+                            <div class="col-md-8 col-sm-12">
+                                {{ page.navigation_collapsible }}
+                            </div>
+                            <div class="col-md-4 col-sm-12">
+                                <a href="/services" class="btn btn-warning" id="post-advert-button">Post an advert</a>
+                            </div>
+                        </div>
                     </div>
                 {% endif %}
                 {% if not navbar_attributes.hasClass(container) %}
