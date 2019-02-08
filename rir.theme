@@ -86,9 +86,6 @@ function rir_preprocess_page_title(&$variables)
     if ($exception and ($exception->getStatusCode() == '404' or $exception->getStatusCode() == '403')) {
         $variables['show_page_title'] = FALSE;
     }
-
-    kint($variables);
-    die();
 }
 
 function rir_preprocess_page(&$variables)
