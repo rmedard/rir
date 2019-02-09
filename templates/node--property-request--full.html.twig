@@ -96,6 +96,7 @@
                     <span class="panel-title">Location, Budget & Urgency</span>
                 </div>
                 <div class="panel-body">
+                    <i class="fas fa-map-marker-alt"></i> {{ node.field_pr_area_city_interest.value }} <br>
                     <strong>Minimum price: </strong> {{ node.field_pr_minimum.value }} {{ node.field_pr_currency.value|capitalize }}<br>
                     <strong>Maximum price: </strong> {{ node.field_pr_maximum.value }} {{ node.field_pr_currency.value|capitalize }}<br>
                     {{ drupal_field('field_pr_payable', 'node', node.id) }}
