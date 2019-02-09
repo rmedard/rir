@@ -78,7 +78,7 @@ function rir_preprocess_menu(&$variables)
 function rir_preprocess_page_title(&$variables)
 {
     $queryString = \Drupal::request()->getQueryString();
-    if (isset($queryString) && preg_match('(field_advert_target_pr_id)', $queryString)) {
+    if (isset($queryString) && preg_match('(advert_target_pr)', $queryString)) {
         $variables['title'] = t('Submit a property');
     }
     $variables['show_page_title'] = TRUE;
