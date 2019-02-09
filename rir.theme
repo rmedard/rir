@@ -87,7 +87,7 @@ function rir_preprocess_page_title(&$variables)
     if ($node instanceof NodeInterface && $node->bundle() == 'property_request') {
         if (!$node->get('field_pr_reference')->isEmpty()) {
             $title = $variables['title'];
-            $variables['title'] .= ($title . ' (PR_' . $node->get('field_pr_reference')->getEntity()->id() . ')');
+            $variables['title'] = ($title . ' (PR_' . $node->get('field_pr_reference')->getEntity()->id() . ')');
         }
     }
 
