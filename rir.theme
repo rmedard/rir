@@ -2,6 +2,7 @@
 
 use Drupal\Core\Render\Markup;
 use Drupal\node\Entity\Node;
+use Drupal\node\NodeInterface;
 
 /**
  * @file
@@ -81,6 +82,13 @@ function rir_preprocess_page_title(&$variables)
     if (isset($queryString) && preg_match('(advert_target_pr)', $queryString)) {
         $variables['title'] = t('Submit a property');
     }
+
+    $node = \Drupal::routeMatch()->getParameter('node');
+    if ($node instanceof NodeInterface && $node->bundle() == 'property_request') {
+        $variables['title'] .= $variables['title'] . ' (PR_' . $node->get('field_pr_reference')->getValue() . ')';
+    }
+
+
     $variables['show_page_title'] = TRUE;
     $exception = \Drupal::request()->attributes->get('exception');
     if ($exception and ($exception->getStatusCode() == '404' or $exception->getStatusCode() == '403')) {
