@@ -105,15 +105,29 @@
             </div>
         </div>
     </div>
-
     <div class="panel panel-info pr-panel">
         <div class="panel-heading">
-            <span class="panel-title">More details</span>
+            <span class="panel-title">Property details</span>
         </div>
         <div class="panel-body">
-            <strong>More property details:</strong> {{ node.field_pr_more_details.value|raw }} <br>
+            {{ drupal_field('field_pr_more_details', 'node', node.id) }}
+        </div>
+    </div>
+    <div class="panel panel-info pr-panel">
+        <div class="panel-heading">
+            <span class="panel-title">Details about the location and neighborhood</span>
+        </div>
+        <div class="panel-body">
             <strong>Preferred neighborhood: </strong> {{ node.field_pr_area_city_interest.value }} <br>
             <strong>Preferred neighborhood description: </strong> {{ node.field_pr_neighborhood_descr.value|raw }}
+        </div>
+    </div>
+    <div class="panel panel-info pr-panel">
+        <div class="panel-heading">
+            <span class="panel-title">How to submit your property <small>(For Owners/managers of properties)</small></span>
+        </div>
+        <div class="panel-body">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem beatae, blanditiis dolores, esse, facilis fuga ipsum nemo neque nesciunt nulla numquam omnis voluptatibus. Blanditiis inventore labore libero omnis, quas tempore.
         </div>
         <div class="panel-footer" style="display: flex; justify-content: flex-end">
             <a href="/node/add/advert?edit[field_advert_posting_plan]=standard&advert_target_pr={{ node.id }}" class="btn btn-sm btn-primary">Propose a property</a>
