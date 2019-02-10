@@ -7591,10 +7591,6 @@ nav#block-rir-main-menu ul.menu > li a.is-active {
   form#views-exposed-form-agents-page-agents > div.form-inline div.form-item-field-advertiser-type-value div.select-wrapper select {
     width: 100%;
   }
-  div.view-id-services > div.view-content,
-  div.main-container > div.row > section {
-    display: table;
-  }
 }
 label.error {
   color: #E74C3C;
@@ -7703,18 +7699,32 @@ form#direct-access-form div.form-item {
 form#direct-access-form div.form-item input {
   width: 100%;
 }
-div.view-id-services > div.view-content div.pricing-plan-block {
+div.view-id-services > div.view-content,
+div.view-pr-posting-plans > div.view-content,
+div.view-agents > div.view-content {
+  display: table;
+  width: 100%;
+}
+div.view-id-services > div.view-content div.pricing-plan-block,
+div.view-pr-posting-plans > div.view-content div.pricing-plan-block,
+div.view-agents > div.view-content div.pricing-plan-block {
   margin-bottom: 15px;
   padding-left: 10px;
   padding-right: 10px;
 }
-.rir-pricing-plan {
+div.view-id-services > div.view-content div.pricing-plan-block .rir-pricing-plan,
+div.view-pr-posting-plans > div.view-content div.pricing-plan-block .rir-pricing-plan,
+div.view-agents > div.view-content div.pricing-plan-block .rir-pricing-plan {
   text-align: center;
 }
-.rir-pricing-plan .panel-heading {
+div.view-id-services > div.view-content div.pricing-plan-block .rir-pricing-plan .panel-heading,
+div.view-pr-posting-plans > div.view-content div.pricing-plan-block .rir-pricing-plan .panel-heading,
+div.view-agents > div.view-content div.pricing-plan-block .rir-pricing-plan .panel-heading {
   font-size: x-large;
 }
-.rir-pricing-plan .rir-pricing-price {
+div.view-id-services > div.view-content div.pricing-plan-block .rir-pricing-plan .rir-pricing-price,
+div.view-pr-posting-plans > div.view-content div.pricing-plan-block .rir-pricing-plan .rir-pricing-price,
+div.view-agents > div.view-content div.pricing-plan-block .rir-pricing-plan .rir-pricing-price {
   font-weight: bolder;
   font-variant: small-caps;
   font-size: xx-large;
@@ -7825,11 +7835,6 @@ div.field.field--name-field-advert-picture > div.picture-row div.advert-picture-
 }
 div.field.field--name-field-advert-picture > div.picture-row div.advert-picture-row div.advert-picture-thumbnails div.field--item.advert-picture-thumbnail a > img {
   width: 100px;
-}
-div.view-display-id-page_agents > div.view-content,
-div.view-display-id-page_pr_plans > div.view-content {
-  display: table;
-  width: 100%;
 }
 div.property-map-block > div.panel-heading > div.panel-title {
   font-weight: bolder;
