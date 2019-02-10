@@ -7827,12 +7827,12 @@ div.field.field--name-field-advert-picture > div.picture-row div.advert-picture-
   width: 100px;
 }
 div.view-display-id-page_agents > div.view-content,
-div.view-display-id-page_pr_plan {
+div.view-display-id-page_pr_plan > div.view-content {
   display: table;
   width: 100%;
 }
 div.view-display-id-page_agents > div.view-content div,
-div.view-display-id-page_pr_plan div {
+div.view-display-id-page_pr_plan > div.view-content div {
   padding-right: 5px;
   padding-left: 5px;
 }

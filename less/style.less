@@ -104,7 +104,6 @@ nav#block-rir-main-menu {
     //#post-advert-button {
     //    margin-bottom: 8px;
     //}
-
     .page-header {
         font-size: 1.5em;
     }
@@ -163,7 +162,6 @@ nav#block-rir-main-menu {
     //    margin-top: 8px;
     //    margin-left: 15px;
     //}
-
     section#rir-footer > div.container > div.row > div.region {
         padding-left: 5px;
         padding-right: 5px;
@@ -509,12 +507,15 @@ div.field.field--name-field-advert-picture {
     }
 }
 
-div.view-display-id-page_agents > div.view-content, div.view-display-id-page_pr_plan {
-    display: table;
-    width: 100%;
-    div {
-        padding-right: 5px;
-        padding-left: 5px;
+div.view-display-id-page_agents, div.view-display-id-page_pr_plan {
+    > div.view-content {
+        display: table;
+        width: 100%;
+
+        div {
+            padding-right: 5px;
+            padding-left: 5px;
+        }
     }
 }
 
@@ -612,6 +613,7 @@ div.panel.pr-panel > div {
 div.top-pr-block {
     nav > ul {
         margin: 5px;
+
         li > a {
             color: white;
             padding: 1px 18px;
