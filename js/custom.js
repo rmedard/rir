@@ -35,6 +35,7 @@
     });
     $('#edit-field-pr-request-type-value').select2();
     $('input#edit-location').addClass('input-sm');
+    $('span.input-group-addon').addClass('input-sm');
 
     $('div.field--name-field-advert-picture > div.field--item:not(:first-child)').wrapAll('<div class=\'picture-row\'><div class=\'advert-picture-row\'><div class=\'advert-picture-thumbnails\' /></div></div>').addClass('advert-picture-thumbnail');
 
