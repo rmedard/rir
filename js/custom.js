@@ -30,7 +30,9 @@
     }
 
     $.fn.select2.defaults.set('theme', 'bootstrap');
-    $('#edit-field-pr-property-type-value').select2();
+    $('#edit-field-pr-property-type-value').select2({
+        placeholder: "Select property type"
+    });
     $('#edit-field-pr-request-type-value').select2();
 
     $('div.field--name-field-advert-picture > div.field--item:not(:first-child)').wrapAll('<div class=\'picture-row\'><div class=\'advert-picture-row\'><div class=\'advert-picture-thumbnails\' /></div></div>').addClass('advert-picture-thumbnail');
