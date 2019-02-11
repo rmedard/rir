@@ -20,9 +20,9 @@
         }
     };
 
-    let deviceMql = window.matchMedia("(max-width: 767px)");
-    deviceMql.addListener(handleDeviceChange);
-    handleDeviceChange(deviceMql, $);
+    // let deviceMql = window.matchMedia("(max-width: 767px)");
+    // deviceMql.addListener(handleDeviceChange);
+    // handleDeviceChange(deviceMql, $);
 
     if (isMobile.any()) {
         $('nav#block-advertssecondarymenu > ul.nav-pills').removeClass('nav-justified');
@@ -30,6 +30,7 @@
     }
 
     $.fn.select2.defaults.set('theme', 'bootstrap');
+    $('#edit-field-pr-property-type-value').select2();
 
     $('div.field--name-field-advert-picture > div.field--item:not(:first-child)').wrapAll('<div class=\'picture-row\'><div class=\'advert-picture-row\'><div class=\'advert-picture-thumbnails\' /></div></div>').addClass('advert-picture-thumbnail');
 
