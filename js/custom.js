@@ -34,8 +34,7 @@
         placeholder: 'Select property type'
     });
     $('#edit-field-pr-request-type-value').select2({
-        minimumResultsForSearch: Infinity,
-        placeholder: 'Select request type'
+        minimumResultsForSearch: Infinity
     });
     $('input#edit-location').addClass('input-sm');
     $('span.input-group-addon').addClass('input-sm');
