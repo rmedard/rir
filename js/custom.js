@@ -32,7 +32,7 @@
     $.fn.select2.defaults.set('theme', 'bootstrap');
     $('#edit-field-pr-property-type-value').select2({
         placeholder: 'Select property type',
-        width: '30%'
+        width: '180px'
     });
     $('#edit-field-pr-request-type-value').select2({
         minimumResultsForSearch: Infinity
