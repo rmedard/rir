@@ -97,9 +97,9 @@
                 </div>
                 <div class="panel-body">
                     <i class="fas fa-map-marker-alt"></i> {{ node.field_pr_area_city_interest.value }} <br>
-                    <strong>Budget: </strong> {{ node.field_pr_maximum.value }}<small>/{{ node.field_pr_payable.value }}</small><br>
+                    <strong>Budget:</strong> {{ node.field_pr_maximum.value }}<small>/{{ node.field_pr_payable.value }}</small><br>
                     {{ drupal_field('field_pr_urgency', 'node', node.id) }}
-                    <strong>Published on</strong> {{ node.created.value|date("d/m/Y") }}
+                    <strong>Published on:</strong> {{ node.created.value|date("d/m/Y") }}
                 </div>
             </div>
         </div>
