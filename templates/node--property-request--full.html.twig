@@ -100,7 +100,7 @@
                     <strong>Budget:</strong> {{ node.field_pr_maximum.value }} {{ node.field_pr_currency.value|upper }}
                     {% if node.field_pr_request_type.value == 'rent' %} <small> /{{ node.field_pr_payable.value }}</small>{% endif %}<br>
                     {{ drupal_field('field_pr_urgency', 'node', node.id) }}
-                    <strong>Published on:</strong> {{ node.created.value|date("d/m/Y") }}
+                    <strong>Published on:</strong> {{ node.created.value|date("d/m/Y") }} <br>
                     <strong>Expires on:</strong> {{ node.field_pr_expiry_date.value|date("d/m/Y") }}
                 </div>
             </div>
