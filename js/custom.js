@@ -31,9 +31,12 @@
 
     $.fn.select2.defaults.set('theme', 'bootstrap');
     $('#edit-field-pr-property-type-value').select2({
-        placeholder: "Select property type"
+        placeholder: 'Select property type',
+        width: '180px'
     });
-    $('#edit-field-pr-request-type-value').select2();
+    $('#edit-field-pr-request-type-value').select2({
+        minimumResultsForSearch: Infinity
+    });
     $('input#edit-location').addClass('input-sm');
     $('span.input-group-addon').addClass('input-sm');
 
