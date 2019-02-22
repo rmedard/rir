@@ -97,7 +97,7 @@ function rir_preprocess_page_title(&$variables)
     }
 
     $nodeTypes = array('property_request', 'advert', 'news');
-    if (in_array($node->bundle(), $nodeTypes)) {
+    if ($node instanceof NodeInterface && in_array($node->bundle(), $nodeTypes)) {
         $variables['show_page_title'] = TRUE;
     }
 }
