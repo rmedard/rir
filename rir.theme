@@ -100,6 +100,12 @@ function rir_preprocess_page_title(&$variables)
     if ($node instanceof NodeInterface && in_array($node->bundle(), $nodeTypes)) {
         $variables['show_page_title'] = TRUE;
     }
+
+    if (preg_match('(/form/)', Drupal::request()->getPathInfo())) {
+        $variables['show_page_title'] = TRUE;
+        kint($variables);
+        die();
+    }
 }
 
 function rir_preprocess_page(&$variables)
