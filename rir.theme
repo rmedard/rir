@@ -103,8 +103,6 @@ function rir_preprocess_page_title(&$variables)
 
     if (preg_match('(/form/)', Drupal::request()->getPathInfo())) {
         $variables['show_page_title'] = TRUE;
-        kint($variables);
-        die();
     }
 }
 
