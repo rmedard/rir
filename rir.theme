@@ -90,10 +90,15 @@ function rir_preprocess_page_title(&$variables)
         }
     }
 
-    $variables['show_page_title'] = TRUE;
+    $variables['show_page_title'] = FALSE;
     $exception = \Drupal::request()->attributes->get('exception');
     if ($exception and ($exception->getStatusCode() == '404' or $exception->getStatusCode() == '403')) {
         $variables['show_page_title'] = FALSE;
+    }
+
+    $nodeTypes = array('property_request', 'advert', 'news');
+    if (in_array($node->bundle(), $nodeTypes)) {
+        $variables['show_page_title'] = TRUE;
     }
 }
 
