@@ -14,49 +14,49 @@ use Drupal\node\NodeInterface;
 function rir_preprocess_menu(&$variables)
 {
     if (isset($variables['menu_name']) and $variables['menu_name'] === 'adverts-secondary-menu') {
-        $featured = \Drupal::entityQuery('node')
+        $featured = Drupal::entityQuery('node')
             ->condition('type', 'advert')
             ->condition('status', Node::PUBLISHED)
             ->condition('field_advert_posting_plan', 'standard', '<>')
             ->count();
         $featured_count = $featured->execute();
 
-        $house = \Drupal::entityQuery('node')
+        $house = Drupal::entityQuery('node')
             ->condition('type', 'advert')
             ->condition('status', Node::PUBLISHED)
             ->condition('field_advert_property_type', ['house', 'building'], 'IN')
             ->count();
         $house_count = $house->execute();
 
-        $apart = \Drupal::entityQuery('node')
+        $apart = Drupal::entityQuery('node')
             ->condition('type', 'advert')
             ->condition('status', Node::PUBLISHED)
             ->condition('field_advert_property_type', 'apartment')
             ->count();
         $apart_count = $apart->execute();
 
-        $commerce = \Drupal::entityQuery('node')
+        $commerce = Drupal::entityQuery('node')
             ->condition('type', 'advert')
             ->condition('status', Node::PUBLISHED)
             ->condition('field_advert_property_type', 'commerce')
             ->count();
         $commerce_count = $commerce->execute();
 
-        $room = \Drupal::entityQuery('node')
+        $room = Drupal::entityQuery('node')
             ->condition('type', 'advert')
             ->condition('status', Node::PUBLISHED)
             ->condition('field_advert_property_type', ['room', 'shared_room'], 'IN')
             ->count();
         $room_count = $room->execute();
 
-        $office = \Drupal::entityQuery('node')
+        $office = Drupal::entityQuery('node')
             ->condition('type', 'advert')
             ->condition('status', Node::PUBLISHED)
             ->condition('field_advert_property_type', 'office')
             ->count();
         $office_count = $office->execute();
 
-        $land = \Drupal::entityQuery('node')
+        $land = Drupal::entityQuery('node')
             ->condition('type', 'advert')
             ->condition('status', Node::PUBLISHED)
             ->condition('field_advert_property_type', 'land')
@@ -78,12 +78,12 @@ function rir_preprocess_menu(&$variables)
 
 function rir_preprocess_page_title(&$variables)
 {
-    $queryString = \Drupal::request()->getQueryString();
+    $queryString = Drupal::request()->getQueryString();
     if (isset($queryString) && preg_match('(advert_target_pr)', $queryString)) {
         $variables['title'] = t('Submit a property');
     }
 
-    $node = \Drupal::routeMatch()->getParameter('node');
+    $node = Drupal::routeMatch()->getParameter('node');
     if ($node instanceof NodeInterface && $node->bundle() == 'property_request') {
         if (!$node->get('field_pr_reference')->isEmpty()) {
             $variables['title'] = ($node->getTitle() . ' (N° ' . $node->get('field_pr_reference')->value . ')');
@@ -91,7 +91,7 @@ function rir_preprocess_page_title(&$variables)
     }
 
     $variables['show_page_title'] = FALSE;
-    $exception = \Drupal::request()->attributes->get('exception');
+    $exception = Drupal::request()->attributes->get('exception');
     if ($exception and ($exception->getStatusCode() == '404' or $exception->getStatusCode() == '403')) {
         $variables['show_page_title'] = FALSE;
     }
@@ -112,7 +112,7 @@ function rir_preprocess_page(&$variables)
     $variables['#cache']['contexts'][] = 'url.path';
     $variables['#cache']['contexts'][] = 'url.query_args'; // If you have query args available and want to update cache when they change.
 
-    $page_path = \Drupal::request()->getPathInfo();
+    $page_path = Drupal::request()->getPathInfo();
     $variables['show_sidebars'] = TRUE;
     $variables['show_rir_search'] = FALSE;
     $variables['management_page'] = FALSE;
@@ -132,7 +132,7 @@ function rir_preprocess_page(&$variables)
         $variables['show_rir_search'] = TRUE;
     }
 
-    $exception = \Drupal::request()->attributes->get('exception');
+    $exception = Drupal::request()->attributes->get('exception');
     if ($exception and ($exception->getStatusCode() == '404' or $exception->getStatusCode() == '403')) {
         $variables['show_sidebars'] = FALSE;
     }
@@ -173,7 +173,7 @@ function getDuplicateAdverts($advert_id)
     $signature = $advert->get('field_advert_signature')->value;
     $output = '<p class="duplicate-refs">';
     if (isset($signature) and !empty($signature)) {
-        $advertsQuery = \Drupal::entityQuery('node')
+        $advertsQuery = Drupal::entityQuery('node')
             ->condition('type', 'advert')
             ->condition('status', Node::PUBLISHED)
             ->condition('nid', $advert_id, '<>')
