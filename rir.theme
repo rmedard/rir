@@ -86,7 +86,7 @@ function rir_preprocess_page_title(&$variables)
     $node = \Drupal::routeMatch()->getParameter('node');
     if ($node instanceof NodeInterface && $node->bundle() == 'property_request') {
         if (!$node->get('field_pr_reference')->isEmpty()) {
-            $variables['title'] = ($node->getTitle() . ' (N° ' . $node->get('field_pr_reference')->getEntity()->id() . ')');
+            $variables['title'] = ($node->getTitle() . ' (N° ' . $node->get('field_pr_reference')->value . ')');
         }
     }
 
