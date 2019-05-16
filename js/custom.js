@@ -1,6 +1,6 @@
 (function ($, Drupal) {
 
-    // 'use strict';
+    'use strict';
 
     Drupal.webform = Drupal.webform || {};
     Drupal.webform.intlTelInput = Drupal.webform.intlTelInput || {};
