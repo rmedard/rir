@@ -26,9 +26,9 @@
 
             // $.fn.select2.defaults.set('theme', 'bootstrap');
 
-            $(context).find('input.form-tel').once(main).each(function () {
-                $(this).intlTelInput({initialCountry: 'rw', nationalMode: false});
-            });
+            // $(context).find('input.form-tel').once(main).each(function () {
+            //     $(this).intlTelInput({initialCountry: 'rw', nationalMode: false});
+            // });
 
             $(context).find('select#edit-field-pr-property-type-valuer').once(main).select2({
                 theme: 'bootstrap',
