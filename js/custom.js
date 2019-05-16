@@ -3,7 +3,7 @@
     'use strict';
 
     Drupal.webform = Drupal.webform || {};
-    Drupal.webform.intlTelInput = Drupal.webform.intlTelInput || {};
+    // Drupal.webform.intlTelInput = Drupal.webform.intlTelInput || {};
     Drupal.webform.select2 = Drupal.webform.select2 || {};
 
     Drupal.behaviors.mainBehavior = {
