@@ -31,7 +31,7 @@
                 $(this).intlTelInput({initialCountry: 'rw', nationalMode: false});
             });
 
-            $(context).find('select#edit-field-pr-property-type-valuer').once(main).select2({
+            $(context).find('select#edit-field-pr-property-type-value').once(main).select2({
                 theme: 'bootstrap',
                 placeholder: 'Select property type',
                 width: '180px'
