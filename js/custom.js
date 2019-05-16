@@ -42,6 +42,10 @@
                 minimumResultsForSearch: Infinity
             });
 
+            $(context).find('select#edit-property-location').once(main).select2({
+                theme: 'bootstrap'
+            });
+
             $('input#edit-location').addClass('input-sm');
             $('span.input-group-addon').addClass('input-sm');
 
