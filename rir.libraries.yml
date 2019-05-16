@@ -26,6 +26,7 @@ select2-bootstrap:
 # Get Select2 JS that comes with Webform module: modules/contrib/webform/webform.libraries.yml
 additional-scripts:
   js:
+    js/mobile-detect.min.js: { minified: true }
     js/url.js: {}
     js/custom.js: {}
   dependencies:
