@@ -23,7 +23,6 @@ select2-bootstrap:
     theme:
       css/select2-bootstrap.min.css: { minified: true }
 
-# Get Select2 JS that comes with Webform module: modules/contrib/webform/webform.libraries.yml
 additional-scripts:
   js:
     js/mobile-detect.mini.js: { minified: true }
@@ -31,3 +30,4 @@ additional-scripts:
     js/custom.js: {}
   dependencies:
     - webform/webform.element.select2
+    - webform/webform.element.telephone
