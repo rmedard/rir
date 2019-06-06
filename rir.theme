@@ -101,7 +101,8 @@ function rir_preprocess_page_title(&$variables)
         $variables['show_page_title'] = TRUE;
     }
 
-    if (preg_match('(/form/)', Drupal::request()->getPathInfo())) {
+    $currentPath = Drupal::request()->getPathInfo();
+    if (preg_match('(/form/)', $currentPath) or preg_match('(/unsubscribe/)', $currentPath)) {
         $variables['show_page_title'] = TRUE;
     }
 }
