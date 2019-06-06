@@ -132,6 +132,10 @@ function rir_preprocess_page(&$variables)
         $variables['show_rir_search'] = TRUE;
     }
 
+    if (preg_match('(\/unsubscribe\/)', $page_path)) {
+        $variables['attributes']['class'][] = 'well well-sm';
+    }
+
     $exception = Drupal::request()->attributes->get('exception');
     if ($exception and ($exception->getStatusCode() == '404' or $exception->getStatusCode() == '403')) {
         $variables['show_sidebars'] = FALSE;
