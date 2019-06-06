@@ -122,12 +122,8 @@
             <div class="container">
                 <div class="row">
                     {% block rir_search_bar %}
-                        {#<div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">{{ page.rir_search_bar }}</div>#}
                         <div class="col-xs-12">{{ page.rir_search_bar }}</div>
                     {% endblock %}
-                    {#{% block rir_search_bar_right %}#}
-                        {#<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">{{ page.rir_search_bar_right }}</div>#}
-                    {#{% endblock %}#}
                 </div>
             </div>
         </div>
@@ -225,32 +221,6 @@
                         </div>
                     </section>
                 {% endif %}
-
-                {#{% if page.rir_horizontal_sidebar and show_sidebars %}#}
-                {#{% block rir_horizontal_sidebar %}#}
-                {#<aside class="col-sm-4" role="complementary">#}
-                {#{{ page.rir_horizontal_sidebar }}#}
-                {#</aside>#}
-                {#{% endblock %}#}
-                {#{% endif %}#}
-
-                {# Sidebar First #}
-                {#{% if page.sidebar_first and show_sidebars %}#}
-                {#{% block sidebar_first %}#}
-                {#<aside class="col-sm-2" role="complementary">#}
-                {#{{ page.sidebar_first }}#}
-                {#</aside>#}
-                {#{% endblock %}#}
-                {#{% endif %}#}
-
-                {# Sidebar Second #}
-                {#{% if page.sidebar_second and show_sidebars %}#}
-                {#{% block sidebar_second %}#}
-                {#<aside class="col-sm-2" role="complementary">#}
-                {#{{ page.sidebar_second }}#}
-                {#</aside>#}
-                {#{% endblock %}#}
-                {#{% endif %}#}
             </div>
         </div>
     {% endblock %}
