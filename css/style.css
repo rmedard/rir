@@ -7843,7 +7843,8 @@ div.view-content > div.media-object > div.media {
   padding-bottom: 10px;
   border-bottom: #248cc7 2px solid;
 }
-div.view-content > div.media-object > div.media div.media-body > .media-heading a:hover {
+div.view-content > div.media-object > div.media div.media-body > .media-heading a:hover,
+div.view-content > div.media-object > div.media div.media-body > .media-heading a:focus {
   text-decoration: none;
   color: #19826d;
 }
