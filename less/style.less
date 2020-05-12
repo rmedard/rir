@@ -14,597 +14,601 @@
 @brand-violet: #9b59b6;
 @brand-yellow: #f1c40f;
 
-@brand-text:            #2C3E50;
-@brand-dark:            #333333;
+@brand-text: #2C3E50;
+@brand-dark: #333333;
 
 body, .form-control {
-    color: @brand-text;
+  color: @brand-text;
 }
 
 .label-violet {
-    background-color: @brand-violet;
+  background-color: @brand-violet;
 }
 
 .label-yellow {
-    background-color: @brand-yellow;
+  background-color: @brand-yellow;
 }
 
 .rir-top-banner {
-    display: none;
+  display: none;
 }
 
 nav#block-rir-main-menu {
-    ul.menu > li {
-        a:hover {
-            color: @brand-dark;
-        }
-
-        a.is-active {
-            color: @brand-dark;
-            font-weight: bolder;
-        }
+  ul.menu > li {
+    a:hover {
+      color: @brand-dark;
     }
+
+    a.is-active {
+      color: @brand-dark;
+      font-weight: bolder;
+    }
+  }
 }
 
 @media (max-width: @screen-sm) {
-    header#navbar {
-        background-color: @gray-lighter;
-        border-bottom: 1px @brand-primary solid;
+  header#navbar {
+    background-color: @gray-lighter;
+    border-bottom: 1px @brand-primary solid;
 
-        div.container > div.navbar-header {
-            border-bottom: 1px @brand-primary solid;
+    div.container > div.navbar-header {
+      border-bottom: 1px @brand-primary solid;
 
-            div.region-navigation > .navbar-text {
-                display: none;
-            }
-        }
+      div.region-navigation > .navbar-text {
+        display: none;
+      }
+    }
+  }
+
+  button.navbar-toggle {
+    background-color: @brand-primary;
+  }
+
+  button[aria-expanded='true'] {
+    background: darken(@brand-primary, 13, 5%);
+  }
+
+  nav#block-rir-main-menu {
+    ul.menu > li {
+      a {
+        color: @gray-darker;
+      }
     }
 
-    button.navbar-toggle {
-        background-color: @brand-primary;
+    ul.menu > li:hover {
+      background-color: @gray-light;
     }
-
-    button[aria-expanded='true'] {
-        background: darken(@brand-primary, 13, 5%);
-    }
-
-    nav#block-rir-main-menu {
-        ul.menu > li {
-            a {
-                color: @gray-darker;
-            }
-        }
-
-        ul.menu > li:hover {
-            background-color: @gray-light;
-        }
-    }
+  }
 }
 
 @media (max-width: @screen-md-min) {
-    //Less than desktop
-    a.logo > img {
-        height: 45px;
-        width: auto;
-    }
+  //Less than desktop
+  a.logo > img {
+    height: 45px;
+    width: auto;
+  }
 
-    a.navbar-brand {
-        display: none;
-    }
+  a.navbar-brand {
+    display: none;
+  }
 
-    ul.nav-mobile-primary > li {
-        display: table-cell;
-        width: 1%;
-        float: none;
+  ul.nav-mobile-primary > li {
+    display: table-cell;
+    width: 1%;
+    float: none;
 
-        a {
-            border-radius: 4px 4px 0 0;
-            text-align: center;
-        }
+    a {
+      border-radius: 4px 4px 0 0;
+      text-align: center;
     }
+  }
 
-    .page-header {
-        font-size: 1.5em;
-    }
+  .page-header {
+    font-size: 1.5em;
+  }
 
-    div.ui-dialog {
-        width: auto;
-    }
+  div.ui-dialog {
+    width: auto;
+  }
 }
 
 @media (min-width: @screen-md-min) {
-    a.logo > img {
-        max-height: 94px;
-        width: auto;
+  a.logo > img {
+    max-height: 94px;
+    width: auto;
+  }
+
+  div.super-main {
+    margin-top: 169px;
+
+    div.rir-search-bar {
+      margin-bottom: 0;
     }
 
+    div.main-container {
+      padding-top: 10px;
+    }
+  }
+
+  body.toolbar-tray-open > {
     div.super-main {
-        margin-top: 169px;
+      margin-top: 94px;
+    }
+  }
 
-        div.rir-search-bar {
-            margin-bottom: 0;
+  .rir-top-banner {
+    display: block;
+    background-color: white;
+  }
+
+  ul.nav-pills {
+    font-weight: bolder;
+
+    li > a {
+      border-radius: 4px 4px 0 0;
+    }
+  }
+
+  header > .container > .navbar-header {
+    display: none;
+  }
+
+  div.form-item-combine > div.input-group {
+    width: 310px;
+  }
+
+  //#post-advert-button {
+  //    margin-top: 8px;
+  //    margin-left: 15px;
+  //}
+  section#rir-footer > div.container > div.row > div.region {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  form#views-exposed-form-agents-page-agents > div.form-inline {
+    div.form-item-title {
+      width: 230px;
+    }
+
+    div.form-item-field-agent-operations-area-value {
+      width: 200px;
+
+      input {
+        width: 100%;
+      }
+    }
+
+    div.form-item-field-advertiser-type-value {
+      max-width: 210px;
+
+      div.select-wrapper {
+        width: 100%;
+
+        select {
+          width: 100%;
         }
-
-        div.main-container {
-            padding-top: 10px;
-        }
+      }
     }
-
-    body.toolbar-tray-open > {
-        div.super-main {
-            margin-top: 94px;
-        }
-    }
-
-    .rir-top-banner {
-        display: block;
-        background-color: white;
-    }
-
-    ul.nav-pills {
-        font-weight: bolder;
-
-        li > a {
-            border-radius: 4px 4px 0 0;
-        }
-    }
-
-    header > .container > .navbar-header {
-        display: none;
-    }
-
-    div.form-item-combine > div.input-group {
-        width: 310px;
-    }
-
-    //#post-advert-button {
-    //    margin-top: 8px;
-    //    margin-left: 15px;
-    //}
-    section#rir-footer > div.container > div.row > div.region {
-        padding-left: 5px;
-        padding-right: 5px;
-    }
-
-    form#views-exposed-form-agents-page-agents > div.form-inline {
-        div.form-item-title {
-            width: 230px;
-        }
-
-        div.form-item-field-agent-operations-area-value {
-            width: 200px;
-
-            input {
-                width: 100%;
-            }
-        }
-
-        div.form-item-field-advertiser-type-value {
-            max-width: 210px;
-
-            div.select-wrapper {
-                width: 100%;
-
-                select {
-                    width: 100%;
-                }
-            }
-        }
-    }
+  }
 }
 
 label.error {
-    color: @brand-danger;
+  color: @brand-danger;
 }
 
 div.ui-dialog {
-    z-index: 1040;
+  z-index: 1040;
 }
 
 div#advert-main-slider.flexslider {
-    margin: 0;
+  margin: 0;
 }
 
 div#advert-slider-thumbnails.flexslider {
-    margin: 0 0 10px;
+  margin: 0 0 10px;
 }
 
 div.flexslider {
-    background: @gray-lighter;
-    border-color: @gray-lighter;
-    border-radius: 6px;
+  background: @gray-lighter;
+  border-color: @gray-lighter;
+  border-radius: 6px;
 
-    ul.slides > li > img {
-        width: auto;
-        display: block;
-        margin: auto
-    }
+  ul.slides > li > img {
+    width: auto;
+    display: block;
+    margin: auto
+  }
 }
 
 form.contact-message-feedback-form > div.form-actions > button#edit-preview {
-    display: none;
+  display: none;
 }
 
-div.view-content > div.media-object > div.media {
+div.view-content > div.media-object {
+  div.media:not(:last-of-type) {
     padding-bottom: 10px;
     border-bottom: @brand-primary 2px solid;
+  }
 
+  div.media {
     div.media-body > .media-heading {
-        a:hover, a:focus {
-            text-decoration: none;
-            color: @brand-dark-green;
-        }
+      a:hover, a:focus {
+        text-decoration: none;
+        color: @brand-dark-green;
+      }
 
-        span.label > small {
-            color: @gray-lighter;
-        }
+      span.label > small {
+        color: @gray-lighter;
+      }
     }
 
     div.pull-left {
-        height: 90px;
-        line-height: 90px;
-        width: 90px;
+      height: 90px;
+      line-height: 90px;
+      width: 90px;
     }
+  }
 }
 
 nav#block-advertssecondarymenu > ul.nav-pills {
-    font-size: 13px;
+  font-size: 13px;
 
-    li {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        font-size: 12px;
+  li {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 12px;
 
-        a {
-            padding: 8px 10px;
-        }
+    a {
+      padding: 8px 10px;
     }
+  }
 }
 
 #block-advertssecondarymenu {
-    border-bottom: @brand-primary 2px solid;
+  border-bottom: @brand-primary 2px solid;
 }
 
 div.view-adverts-view {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 div.advert-summary-block {
-    .panel-heading {
-        text-align: center;
+  .panel-heading {
+    text-align: center;
+  }
+
+  ul {
+    font-size: smaller;
+
+    li {
+      padding: 5px;
     }
 
-    ul {
-        font-size: smaller;
-
-        li {
-            padding: 5px;
-        }
-
-        li.advert-views-count {
-            display: none;
-        }
+    li.advert-views-count {
+      display: none;
     }
+  }
 }
 
 div.intl-tel-input {
-    width: 100%;
+  width: 100%;
 }
 
 div.agent-block-summary {
-    div.group-left {
-        width: 20%;
-    }
+  div.group-left {
+    width: 20%;
+  }
 
-    div.group-right {
-        width: 80%;
+  div.group-right {
+    width: 80%;
 
-        div.field > .agent-block-title {
-            margin-top: 0;
-        }
+    div.field > .agent-block-title {
+      margin-top: 0;
     }
+  }
 }
 
 section#block-views-block-adverts-view-block-adverts-per-agent > .block-title {
-    margin-top: 0;
-    text-align: center;
+  margin-top: 0;
+  text-align: center;
 }
 
 section#block-request-details-webform, section#block-registertoourfreepropertyalert {
-    .block-title {
-        text-align: center;
-    }
+  .block-title {
+    text-align: center;
+  }
 
-    div > form > div.form-actions {
-        margin-bottom: 0;
-    }
+  div > form > div.form-actions {
+    margin-bottom: 0;
+  }
 }
 
 .page-header {
-    margin-bottom: 0;
-    text-align: center;
+  margin-bottom: 0;
+  text-align: center;
 }
 
 .ref-number {
-    color: @gray;
+  color: @gray;
 }
 
 form#direct-access-form {
-    div.form-item {
-        width: 80%;
+  div.form-item {
+    width: 80%;
 
-        input {
-            width: 100%;
-        }
+    input {
+      width: 100%;
     }
+  }
 }
 
 div.view-id-services, div.view-pr-posting-plans, div.view-agents {
-    > div.view-content {
-        display: table;
-        width: 100%;
+  > div.view-content {
+    display: table;
+    width: 100%;
 
-        div.pricing-plan-block {
-            margin-bottom: 15px;
-            padding-left: 10px;
-            padding-right: 10px;
+    div.pricing-plan-block {
+      margin-bottom: 15px;
+      padding-left: 10px;
+      padding-right: 10px;
 
-            .rir-pricing-plan {
-                text-align: center;
+      .rir-pricing-plan {
+        text-align: center;
 
-                .panel-heading {
-                    font-size: x-large;
-                }
-
-                .rir-pricing-price {
-                    font-weight: bolder;
-                    font-variant: small-caps;
-                    font-size: xx-large;
-                    background-color: @gray-lighter;
-                }
-            }
+        .panel-heading {
+          font-size: x-large;
         }
+
+        .rir-pricing-price {
+          font-weight: bolder;
+          font-variant: small-caps;
+          font-size: xx-large;
+          background-color: @gray-lighter;
+        }
+      }
     }
+  }
 }
 
 .rir-main-footer {
-    background-color: @brand-dark;
+  background-color: @brand-dark;
+  padding-top: 15px;
+  padding-right: 0;
+  padding-left: 0;
+  margin-top: 15px;
+
+  div.container {
+    section#rir-footer {
+      div.row > div.region {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  div#footer-hir-identity > footer {
+    color: @gray-lighter;
+    background-color: darken(@brand-dark, 5%);
+    border: none;
     padding-top: 15px;
-    padding-right: 0;
-    padding-left: 0;
-    margin-top: 15px;
-
-    div.container {
-        section#rir-footer {
-            div.row > div.region {
-                margin-bottom: 15px;
-            }
-        }
-    }
-
-    div#footer-hir-identity > footer {
-        color: @gray-lighter;
-        background-color: darken(@brand-dark, 5%);
-        border: none;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        margin-top: 0;
-    }
+    padding-bottom: 15px;
+    margin-top: 0;
+  }
 }
 
 section.block-rir-interface > div.panel > div.panel-heading {
-    background-color: @brand-primary;
+  background-color: @brand-primary;
 }
 
 div.toolbar-menu-administration > ul.toolbar-menu > li:last-child {
-    background-color: @brand-success;
+  background-color: @brand-success;
 
-    a {
-        color: @gray-darker;
-    }
+  a {
+    color: @gray-darker;
+  }
 }
 
 div.region-rir-horizontal-sidebar {
-    section {
-        margin-bottom: 10px;
-    }
+  section {
+    margin-bottom: 10px;
+  }
 }
 
 div.chosen-container {
-    padding: 0;
-    height: auto;
+  padding: 0;
+  height: auto;
 }
 
 div#search-subscribe-button-id {
-    padding: 10px;
-    margin-bottom: 0;
+  padding: 10px;
+  margin-bottom: 0;
 }
 
 #block-riradvertdetails {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 
-    div.panel:not(:last-child) {
-        margin-bottom: 10px;
-    }
+  div.panel:not(:last-child) {
+    margin-bottom: 10px;
+  }
 }
 
 div.agent-thumbnail {
-    div.agent-logo {
-        height: 105px;
+  div.agent-logo {
+    height: 105px;
 
-        img {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            max-width: 100%;
-        }
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 100%;
     }
+  }
 
-    div.caption {
-        background: @gray-lighter;
-        width: 100%;
-        text-align: center;
-        min-height: 67px;
-    }
+  div.caption {
+    background: @gray-lighter;
+    width: 100%;
+    text-align: center;
+    min-height: 67px;
+  }
 }
 
 div.flex-caption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.58);
-    color: white;
-    padding: 10px;
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.58);
+  color: white;
+  padding: 10px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 div.flex-caption:empty {
-    display: none;
+  display: none;
 }
 
 div.field.field--name-field-advert-picture {
-    > div.field--item {
-        padding: 4px;
-        background: #ecf0f1;
-        border-color: #ecf0f1;
-        border-radius: 6px;
-        margin-bottom: 10px;
-    }
+  > div.field--item {
+    padding: 4px;
+    background: #ecf0f1;
+    border-color: #ecf0f1;
+    border-radius: 6px;
+    margin-bottom: 10px;
+  }
 
-    > div.picture-row {
-        background: #ecf0f1;
-        border-color: #ecf0f1;
-        border-radius: 6px;
-        padding: 4px;
-        margin-bottom: 10px;
+  > div.picture-row {
+    background: #ecf0f1;
+    border-color: #ecf0f1;
+    border-radius: 6px;
+    padding: 4px;
+    margin-bottom: 10px;
 
-        div.advert-picture-row {
-            overflow: hidden;
+    div.advert-picture-row {
+      overflow: hidden;
 
-            div.field--item:not(.advert-picture-thumbnail) {
-                padding-right: 4px;
-            }
+      div.field--item:not(.advert-picture-thumbnail) {
+        padding-right: 4px;
+      }
 
-            div.advert-picture-thumbnails {
-                display: flex;
-                width: 3200%;
+      div.advert-picture-thumbnails {
+        display: flex;
+        width: 3200%;
 
-                div.field--item.advert-picture-thumbnail {
-                    margin-right: 4px;
+        div.field--item.advert-picture-thumbnail {
+          margin-right: 4px;
 
-                    a > img {
-                        width: 100px;
-                    }
-                }
-            }
+          a > img {
+            width: 100px;
+          }
         }
+      }
     }
+  }
 }
 
 div.property-map-block > div.panel-heading > div.panel-title {
-    font-weight: bolder;
-    font-size: large;
+  font-weight: bolder;
+  font-size: large;
 }
 
 #post-advert-button {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 section#block-hircreateagentblock {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 div.field--name-field-introductory-images {
-    margin-top: 6px;
-    width: 99%;
-    float: left;
+  margin-top: 6px;
+  width: 99%;
+  float: left;
 
-    div.field--item {
-        margin-right: 5px;
-        margin-bottom: 5px;
-        float: left;
-    }
+  div.field--item {
+    margin-right: 5px;
+    margin-bottom: 5px;
+    float: left;
+  }
 }
 
 form#views-form-adverts-page-manage-adverts > div.form-group > div.form-group > div.form-item,
 form#views-form-agents-page-manage-advertisers > div.form-group > div.form-group > div.form-item {
-    width: 20%;
+  width: 20%;
 }
 
 .featured-star {
-    color: @brand-warning;
-    padding-right: 10px;
+  color: @brand-warning;
+  padding-right: 10px;
 }
 
 div.form-type-email.has-error,
 div.form-type-textfield.has-error,
 div.form-type-tel.has-error {
-    label, .description {
-        color: @brand-danger;
-    }
+  label, .description {
+    color: @brand-danger;
+  }
 
-    input {
-        border-color: @brand-danger;
-    }
+  input {
+    border-color: @brand-danger;
+  }
 }
 
 div.views-field-field-advert-location {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 
-    div.field-content > div.panel {
-        div.panel-heading {
-            font-weight: bolder;
-            font-size: large
-        }
+  div.field-content > div.panel {
+    div.panel-heading {
+      font-weight: bolder;
+      font-size: large
     }
+  }
 }
 
 section#block-disclaimerblock div.well {
-    background-color: #fad9a4;
-    border-color: #fad9a4;
-    color: #976008;
+  background-color: #fad9a4;
+  border-color: #fad9a4;
+  color: #976008;
 }
 
 div.region-sidebar-first, div.region-sidebar-second {
-    section.block {
-        margin: 5px 0;
-    }
+  section.block {
+    margin: 5px 0;
+  }
 }
 
 div#views-bootstrap-manage-property-requests-page-1 {
-    > div.row > div.col {
-        margin-bottom: 15px;
-    }
+  > div.row > div.col {
+    margin-bottom: 15px;
+  }
 }
 
 div.well.top-pr-block {
-    padding-bottom: 0;
+  padding-bottom: 0;
 }
 
 div#views-bootstrap-manage-property-requests-page-pr-public-list {
-    div.row > div.col {
-        margin-bottom: 10px;
-    }
+  div.row > div.col {
+    margin-bottom: 10px;
+  }
 }
 
 div.panel.pr-panel > div {
-    padding: 10px;
+  padding: 10px;
 }
 
 div.top-pr-block {
-    nav > ul {
-        margin: 5px;
+  nav > ul {
+    margin: 5px;
 
-        li > a {
-            color: white;
-            padding: 1px 18px;
-        }
+    li > a {
+      color: white;
+      padding: 1px 18px;
     }
+  }
 }
 
 div.optionset-pr-slider {
-    margin: 0 0 40px;
+  margin: 0 0 40px;
 }
