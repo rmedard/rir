@@ -7898,7 +7898,8 @@ div.agent-block-summary div.group-right {
 div.agent-block-summary div.group-right div.field > .agent-block-title {
   margin-top: 0;
 }
-section#block-views-block-adverts-block-ads-per-agent > .block-title {
+section#block-views-block-adverts-view-block-adverts-per-agent > .block-title {
+  margin-top: 0;
   text-align: center;
 }
 section#block-request-details-webform .block-title,
@@ -7990,9 +7991,6 @@ div.chosen-container {
 div#search-subscribe-button-id {
   padding: 10px;
   margin-bottom: 0;
-}
-section#block-views-block-adverts-block-ads-per-agent > .block-title {
-  margin-top: 0;
 }
 #block-riradvertdetails {
   margin-bottom: 10px;
