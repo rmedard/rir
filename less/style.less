@@ -226,8 +226,10 @@ form.contact-message-feedback-form > div.form-actions > button#edit-preview {
 }
 
 div.view-content > div.media-object > div.media {
-    padding-bottom: 10px;
-    border-bottom: @brand-primary 2px solid;
+    :not(:last-of-type) {
+        padding-bottom: 10px;
+        border-bottom: @brand-primary 2px solid;
+    }
 
     div.media-body > .media-heading {
         a:hover, a:focus {

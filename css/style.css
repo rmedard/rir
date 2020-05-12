@@ -7839,7 +7839,7 @@ div.flexslider ul.slides > li > img {
 form.contact-message-feedback-form > div.form-actions > button#edit-preview {
   display: none;
 }
-div.view-content > div.media-object > div.media {
+div.view-content > div.media-object > div.media :not(:last-of-type) {
   padding-bottom: 10px;
   border-bottom: #248cc7 2px solid;
 }

@@ -95,7 +95,7 @@
             $('div.field--name-field-news-image').addClass('text-center');
             $('div.field--name-field-news-image > img').addClass('img-thumbnail');
 
-            const featuredWell = $('div.view-adverts.well');
+            const featuredWell = $('div.view-adverts-view.well');
             const prsWell = $('div.view-manage-property-requests.well');
             if ($.trim(featuredWell.text()) === "") {
                 featuredWell.hide();
