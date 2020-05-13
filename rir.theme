@@ -84,9 +84,24 @@ function rir_preprocess_page_title(&$variables)
     }
 
     $node = Drupal::routeMatch()->getParameter('node');
-    if ($node instanceof NodeInterface && $node->bundle() == 'property_request') {
-        if (!$node->get('field_pr_reference')->isEmpty()) {
-            $variables['title'] = ($node->getTitle() . ' (N° ' . $node->get('field_pr_reference')->value . ')');
+    if ($node instanceof NodeInterface) {
+        if ($node->bundle() == 'property_request') {
+            if (!$node->get('field_pr_reference')->isEmpty()) {
+                $variables['title'] = ($node->getTitle() . ' (N° ' . $node->get('field_pr_reference')->value . ')');
+            }
+        }
+
+        if (in_array($node->bundle(), array('property_request', 'advert', 'news'))) {
+            $variables['show_page_title'] = TRUE;
+        }
+
+        if ($node->bundle() == 'advert' and $node->get('field_advert_rented_sold')->value == true) {
+            if ($node->get('field_advert_type')->value == 'rent') {
+                $flag = 'Rented';
+            } else {
+                $flag = 'Sold';
+            }
+            $variables['title'] = Markup::create('<span class="label label-danger">' . $flag . '</span> ') . $variables['title'];
         }
     }
 
@@ -94,11 +109,6 @@ function rir_preprocess_page_title(&$variables)
     $exception = Drupal::request()->attributes->get('exception');
     if ($exception and ($exception->getStatusCode() == '404' or $exception->getStatusCode() == '403')) {
         $variables['show_page_title'] = FALSE;
-    }
-
-    $nodeTypes = array('property_request', 'advert', 'news');
-    if ($node instanceof NodeInterface && in_array($node->bundle(), $nodeTypes)) {
-        $variables['show_page_title'] = TRUE;
     }
 
     $currentPath = Drupal::request()->getPathInfo();
