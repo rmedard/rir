@@ -97,7 +97,6 @@ function rir_preprocess_page_title(&$variables)
             $variables['show_page_title'] = TRUE;
         }
 
-        Drupal::messenger()->addStatus($node->get('field_advert_rented_sold'));
         Drupal::messenger()->addStatus($node->get('field_advert_rented_sold')->value);
         Drupal::messenger()->addStatus($node->get('field_advert_rented_sold')->getValue());
         if ($node->bundle() == 'advert' and $node->get('field_advert_rented_sold')->value == true) {
