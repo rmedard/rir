@@ -83,6 +83,8 @@ function rir_preprocess_page_title(&$variables)
         $variables['title'] = t('Submit a property');
     }
 
+    $variables['show_page_title'] = FALSE;
+
     $node = Drupal::routeMatch()->getParameter('node');
     if ($node instanceof NodeInterface) {
         if ($node->bundle() == 'property_request') {
@@ -106,7 +108,6 @@ function rir_preprocess_page_title(&$variables)
 //        }
     }
 
-    $variables['show_page_title'] = FALSE;
     $exception = Drupal::request()->attributes->get('exception');
     if ($exception and ($exception->getStatusCode() == '404' or $exception->getStatusCode() == '403')) {
         $variables['show_page_title'] = FALSE;
