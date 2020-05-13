@@ -95,14 +95,15 @@ function rir_preprocess_page_title(&$variables)
             $variables['show_page_title'] = TRUE;
         }
 
-        if ($node->bundle() == 'advert' and $node->get('field_advert_rented_sold')->value == true) {
-            if ($node->get('field_advert_type')->value == 'rent') {
-                $flag = 'Rented';
-            } else {
-                $flag = 'Sold';
-            }
-            $variables['title'] = Markup::create('<span class="label label-danger">' . $flag . '</span> ') . $variables['title'];
-        }
+//        if ($node->bundle() == 'advert' and $node->get('field_advert_rented_sold')->value == true) {
+//            if ($node->get('field_advert_type')->value == 'rent') {
+//                $flag = 'Rented';
+//            } else {
+//                $flag = 'Sold';
+//            }
+////            $variables['title'] = Markup::create('<span class="label label-danger">' . $flag . '</span> ') . $variables['title'];
+//            $variables['title'] = Markup::create('<span class="label label-danger">' . $flag . '</span> ');
+//        }
     }
 
     $variables['show_page_title'] = FALSE;
