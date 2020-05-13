@@ -99,12 +99,10 @@ function rir_preprocess_page_title(&$variables)
 
         if ($node->bundle() == 'advert' and $node->get('field_advert_rented_sold')->value == true) {
             if ($node->get('field_advert_type')->value == 'rent') {
-                $flag = 'Rented';
+                $variables['rented_sold'] = 'Rented';
             } else {
-                $flag = 'Sold';
+                $variables['rented_sold'] = 'Sold';
             }
-            $variables['title'] = Markup::create('<span class="label label-danger">' . $flag . '</span> ') . $variables['title'];
-//            $variables['title'] = Markup::create('<span class="label label-danger">' . $flag . '</span> ');
         }
     }
 
