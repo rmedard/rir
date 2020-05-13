@@ -18,7 +18,7 @@
 #}
 {% if title and show_page_title %}
     {% if rented_sold %}
-        <h2{{ title_attributes.addClass('page-header') }}><small><span class="label label-danger">{{ rented_sold }}</span></small> {{ title }}</h2>
+        <h2{{ title_attributes.addClass('page-header') }}><span class="label label-danger">{{ rented_sold }}</span> {{ title }}</h2>
     {% else %}
         <h2{{ title_attributes.addClass('page-header') }}>{{ title }}</h2>
     {% endif %}
