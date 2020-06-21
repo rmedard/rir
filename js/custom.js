@@ -7,7 +7,7 @@
     Drupal.webform.intlTelInput.options = Drupal.webform.intlTelInput.options || {};
     Drupal.webform.select2 = Drupal.webform.select2 || {};
 
-    Drupal.behaviors.mainBehavior = {
+    Drupal.behaviors.rir = {
 
         attach: function (context, settings) {
 

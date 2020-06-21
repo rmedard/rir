@@ -31,3 +31,4 @@ additional-scripts:
   dependencies:
     - webform/webform.element.select2
     - webform/webform.element.telephone
+    - core/jquery.ui.autocomplete
