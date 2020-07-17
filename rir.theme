@@ -209,11 +209,3 @@ function getDuplicateAdverts($advert_id)
     $output .= '</p>';
     return $output;
 }
-
-/**
- * Implements hook_page_top().
- */
-function rir_page_top(array &$page_top)
-{
-    array_push($page_top, Markup::create('<span id="geolocation-google-places-api-attribution"></span>'));
-}
