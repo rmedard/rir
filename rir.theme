@@ -38,7 +38,7 @@ function rir_preprocess_menu(&$variables)
         $commerce = Drupal::entityQuery('node')
             ->condition('type', 'advert')
             ->condition('status', Node::PUBLISHED)
-            ->condition('field_advert_property_type', 'commerce')
+            ->condition('field_advert_property_type', ['commerce', 'warehouse'], 'IN')
             ->count();
         $commerce_count = $commerce->execute();
 

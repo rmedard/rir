@@ -7700,6 +7700,9 @@ body,
 .label-yellow {
   background-color: #f1c40f;
 }
+.label-choco {
+  background-color: #795548;
+}
 .rir-top-banner {
   display: none;
 }
