@@ -15,6 +15,8 @@
             // deviceMql.addListener(handleDeviceChange);
             // handleDeviceChange(deviceMql, $);
 
+            console.log(settings);
+
             const main = 'mainBehavior';
 
             const mobileDetect = new MobileDetect(window.navigator.userAgent);
