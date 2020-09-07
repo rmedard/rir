@@ -15,7 +15,7 @@
             // deviceMql.addListener(handleDeviceChange);
             // handleDeviceChange(deviceMql, $);
 
-            console.log(settings);
+            console.log(settings.bid);
 
             const main = 'mainBehavior';
 
