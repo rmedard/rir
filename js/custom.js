@@ -15,17 +15,16 @@
             // deviceMql.addListener(handleDeviceChange);
             // handleDeviceChange(deviceMql, $);
 
-            console.log(settings.bid);
-
             const main = 'mainBehavior';
 
             const mobileDetect = new MobileDetect(window.navigator.userAgent);
             const isMobile = mobileDetect.mobile() !== null;
 
-            $('#countdown').countdown(settings.bid.expiration, function(event) {
-                $(this).html(event.strftime('%D days %H:%M:%S'));
+            const expirationDate = moment.tz(settings.bid.expiration, "Africa/Kigali");
+            $('#countdown').countdown(expirationDate, function(event) {
+                $(this).html(event.strftime('%D day%!D %H:%M:%S'));
             }).on('finish.countdown', function (event) {
-                $(this).html("Closed").addClass('text-danger');
+                $(this).html("Closed").addClass('text-danger font-weight-bold');
             });
 
             if (isMobile) {
