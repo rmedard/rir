@@ -20,12 +20,14 @@
             const mobileDetect = new MobileDetect(window.navigator.userAgent);
             const isMobile = mobileDetect.mobile() !== null;
 
-            const expirationDate = moment.tz(settings.bid.expiration, "UCT");
-            $('#countdown').countdown(expirationDate.toDate(), function(event) {
-                $(this).html(event.strftime('%D day%!D %H:%M:%S'));
-            }).on('finish.countdown', function (event) {
-                $(this).html("Closed").addClass('text-danger font-weight-bold');
-            });
+            if (settings.bid !== undefined) {
+                const expirationDate = moment.tz(settings.bid.expiration, "UCT");
+                $('#countdown').countdown(expirationDate.toDate(), function(event) {
+                    $(this).html(event.strftime('%D day%!D %H:%M:%S'));
+                }).on('finish.countdown', function (event) {
+                    $(this).html("Closed").addClass('text-danger font-weight-bold');
+                });
+            }
 
             if (isMobile) {
                 $(context).find('nav#block-advertssecondarymenu > ul.nav-pills').once(main).removeClass('nav-justified');
