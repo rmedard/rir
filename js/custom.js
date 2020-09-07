@@ -20,7 +20,7 @@
             const mobileDetect = new MobileDetect(window.navigator.userAgent);
             const isMobile = mobileDetect.mobile() !== null;
 
-            const expirationDate = moment.tz(settings.bid.expiration, "Africa/Kigali");
+            const expirationDate = moment.tz(settings.bid.expiration, "UCT");
             $('#countdown').countdown(expirationDate.toDate(), function(event) {
                 $(this).html(event.strftime('%D day%!D %H:%M:%S'));
             }).on('finish.countdown', function (event) {
