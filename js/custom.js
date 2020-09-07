@@ -24,6 +24,8 @@
 
             $('#countdown').countdown(settings.bid.expiration, function(event) {
                 $(this).html(event.strftime('%D days %H:%M:%S'));
+            }).on('finish.countdown', function (event) {
+                $(this).html("Closed").addClass('text-danger');
             });
 
             if (isMobile) {
