@@ -22,6 +22,10 @@
             const mobileDetect = new MobileDetect(window.navigator.userAgent);
             const isMobile = mobileDetect.mobile() !== null;
 
+            $('#countdown').countdown(settings.bid.expiration, function(event) {
+                $(this).html(event.strftime('%D days %H:%M:%S'));
+            });
+
             if (isMobile) {
                 $(context).find('nav#block-advertssecondarymenu > ul.nav-pills').once(main).removeClass('nav-justified');
                 $(context).find('a#notif-subscribe-modal-id').once(main).removeClass().addClass('webform-dialog btn btn-success btn-sm btn-block');
