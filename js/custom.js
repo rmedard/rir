@@ -21,7 +21,7 @@
             const isMobile = mobileDetect.mobile() !== null;
 
             const expirationDate = moment.tz(settings.bid.expiration, "Africa/Kigali");
-            $('#countdown').countdown(expirationDate, function(event) {
+            $('#countdown').countdown(expirationDate.toDate(), function(event) {
                 $(this).html(event.strftime('%D day%!D %H:%M:%S'));
             }).on('finish.countdown', function (event) {
                 $(this).html("Closed").addClass('text-danger font-weight-bold');
