@@ -23,9 +23,9 @@
             if (settings.bid !== undefined) {
                 const expirationDate = moment.tz(settings.bid.expiration, "UCT");
                 $('#countdown').countdown(expirationDate.toDate(), function(event) {
-                    $(this).html(event.strftime('%D day%!D %H:%M:%S'));
+                    $(this).html(event.strftime('%D day%!D %H:%M:%S')).addClass('text-danger').css('font-weight', 'bold');
                 }).on('finish.countdown', function (event) {
-                    $(this).html("Closed").css('font-weight', 'bold');
+                    $(this).html("Closed").addClass('text-danger').css('font-weight', 'bold');
                 });
             }
 
