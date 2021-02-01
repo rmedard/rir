@@ -34,6 +34,7 @@
                 $(context).find('a#notif-subscribe-modal-id').once(main).removeClass().addClass('webform-dialog btn btn-success btn-sm btn-block');
                 $(context).find('div#navbar-collapse > div.row > div.col-md-4 > div.row > div').removeClass('col-sm-12')
                     .addClass('col-sm-6 col-xs-6').css('margin-top', '0');
+                $(context).find('div#navbar-collapse ul.menu--main').css('margin-top', '0');
             }
 
             // $.fn.select2.defaults.set('theme', 'bootstrap');
