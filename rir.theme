@@ -101,7 +101,7 @@ function rir_preprocess_page_title(&$variables)
             if ($node->get('field_advert_type')->value == 'rent') {
                 $variables['rented_sold'] = 'Rented';
             } else {
-                $variables['rented_sold'] = 'Sold';
+                $variables['rented_sold'] = 'Closed';
             }
         }
     }
