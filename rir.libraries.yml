@@ -29,7 +29,6 @@ additional-scripts:
     js/jquery.countdown.min.js: { minified: true }
     js/moment.min.js: { minified: true }
     js/moment-timezone-with-data.min.js: { minified: true }
-    js/url.js: {}
     js/custom.js: {}
   dependencies:
     - webform/webform.element.select2

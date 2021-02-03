@@ -116,11 +116,6 @@
                 prsWell.hide();
             }
 
-            /*
-             * URL.js docs => https://websanova.com/plugins/url
-             */
-
-            // var advertType = url('2', decodedUri); //Get second path variable
             const propertyLocation = getParameterByName('combine');
             const advertType = getParameterByName('field_advert_type_value');
             // var rooms = getParameterByName('field_advert_bedrooms_value');
@@ -130,11 +125,9 @@
             $('section#block-rirsearchsubscribeblock > div#search-subscribe-button-id > a')
                 .attr('href', '/search-subscribe?advert=' + advertType + '&location=' + propertyLocation + '&property_type=' + propertyType);
 
-            //Activate home link while on homepage
-            if ($('nav#block-rir-main-menu > ul.nav > li:first-child > a').hasClass('is-active')) {
+            if(settings.path.isFront) {
                 $('nav#block-rir-main-menu > ul.nav > li:first-child').addClass('active');
             }
-            //End
 
             $('div#edit-field-advert-advertiser-wrapper').append("<div><a href='/node/add/agent'>Can't find agent? Click here.</a></div>");
             const menuTab = $('nav#block-advertssecondarymenu > ul.nav > li');
