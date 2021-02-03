@@ -7984,7 +7984,8 @@ div.view-agents > div.view-content div.pricing-plan-block .rir-pricing-plan .rir
 .rir-main-footer div#footer-hir-identity > footer div.region-rir-footer-social {
   margin-bottom: 1rem;
 }
-.rir-main-footer div#footer-hir-identity > footer div.region-rir-footer-social a.hir-social-link:hover {
+.rir-main-footer div#footer-hir-identity > footer div.region-rir-footer-social a.hir-social-link:hover,
+.rir-main-footer div#footer-hir-identity > footer div.region-rir-footer-social a.hir-social-link:focus {
   text-decoration: none;
 }
 section.block-rir-interface > div.panel > div.panel-heading {
