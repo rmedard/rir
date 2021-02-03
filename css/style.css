@@ -7987,9 +7987,6 @@ div.view-agents > div.view-content div.pricing-plan-block .rir-pricing-plan .rir
 .rir-main-footer div#footer-hir-identity > footer div.region-rir-footer-social a.hir-social-link:hover {
   text-decoration: none;
 }
-.rir-main-footer div#footer-hir-identity > footer div.region-rir-footer-social a.hir-social-link > svg:hover {
-  transform: rotateY(360deg);
-}
 section.block-rir-interface > div.panel > div.panel-heading {
   background-color: #248cc7;
 }
