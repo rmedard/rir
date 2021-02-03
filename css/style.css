@@ -7984,6 +7984,9 @@ div.view-agents > div.view-content div.pricing-plan-block .rir-pricing-plan .rir
 .rir-main-footer div#footer-hir-identity > footer div.region-rir-footer-social {
   margin-bottom: 1rem;
 }
+.rir-main-footer div#footer-hir-identity > footer div.region-rir-footer-social i.fa {
+  margin: 0 0.3rem;
+}
 section.block-rir-interface > div.panel > div.panel-heading {
   background-color: #248cc7;
 }
