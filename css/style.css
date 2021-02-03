@@ -7965,24 +7965,24 @@ div.view-agents > div.view-content div.pricing-plan-block .rir-pricing-plan .rir
 }
 .rir-main-footer {
   background-color: #333333;
-  padding-top: 15px;
+  padding-top: 1.5rem;
   padding-right: 0;
   padding-left: 0;
-  margin-top: 15px;
+  margin-top: 1.5rem;
 }
 .rir-main-footer div.container section#rir-footer div.row > div.region {
-  margin-bottom: 15px;
+  margin-bottom: 1.5rem;
 }
 .rir-main-footer div#footer-hir-identity > footer {
   color: #ecf0f1;
   background-color: #262626;
   border: none;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   margin-top: 0;
 }
 .rir-main-footer div#footer-hir-identity > footer div.region-rir-footer-social {
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 }
 section.block-rir-interface > div.panel > div.panel-heading {
   background-color: #248cc7;
