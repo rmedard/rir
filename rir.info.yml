@@ -23,6 +23,7 @@ regions:
   sidebar_second: 'Secondary'
   rir_footer_1: 'RIR Footer 1'
   rir_footer_2: 'RIR Footer 2'
+  rir_footer_2_social: 'RIR Footer 2 Social'
   rir_footer_3: 'RIR Footer 3'
   rir_footer_4: 'RIR Footer 4'
   footer: 'Footer'
