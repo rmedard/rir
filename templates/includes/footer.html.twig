@@ -1,0 +1,28 @@
+<div>
+  <p>Best regards, <br>{{ drupal_token('site:name') }}<br>T: {{ drupal_token('site:phone') }}<br/>E: {{ drupal_token('site:mail') }}</p>
+</div>
+{% if drupal_token('site:linkedin') is not empty %}
+  <a href="{{ drupal_token('site:linkedin') }}" target="_blank" style="text-decoration: none">
+    <i class="fa fa-linkedin fa-2x" aria-hidden="true" style="color: #0074B1; margin-right: 3px;"></i>
+  </a>
+{% endif %}
+{% if drupal_token('site:facebook') is not empty %}
+  <a href="{{ drupal_token('site:facebook') }}" target="_blank" style="text-decoration: none">
+    <i class="fa fa-facebook-official fa-2x" aria-hidden="true" style="color: #0B8AEF; margin-left: 3px; margin-right: 3px;"></i>
+  </a>
+{% endif %}
+{% if drupal_token('site:twitter') is not empty %}
+  <a href="{{ drupal_token('site:twitter') }}" target="_blank" style="text-decoration: none">
+    <i class="fa fa-twitter-square fa-2x" aria-hidden="true" style="color: #1A91DA; margin-left: 3px; margin-right: 3px;"></i>
+  </a>
+{% endif %}
+{% if drupal_token('site:instagram') is not empty %}
+  <a href="{{ drupal_token('site:instagram') }}" target="_blank" style="text-decoration: none">
+    <i class="fa fa-instagram fa-2x" aria-hidden="true" style="color: #D62977; margin-left: 3px; margin-right: 3px;"></i>
+  </a>
+{% endif %}
+{% if drupal_token('site:youtube') is not empty %}
+  <a href="{{ drupal_token('site:youtube') }}" target="_blank" style="text-decoration: none">
+    <i class="fa fa-youtube fa-2x" aria-hidden="true" style="color: #FF0100; margin-left: 3px; margin-right: 3px;"></i>
+  </a>
+{% endif %}

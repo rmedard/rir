@@ -11,10 +11,6 @@
 
         attach: function (context, settings) {
 
-            // let deviceMql = window.matchMedia("(max-width: 767px)");
-            // deviceMql.addListener(handleDeviceChange);
-            // handleDeviceChange(deviceMql, $);
-
             const main = 'mainBehavior';
 
             const mobileDetect = new MobileDetect(window.navigator.userAgent);
@@ -157,23 +153,4 @@ function getParameterByName(name, url) {
     if (!results) return null;
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, " "));
-}
-
-function handleDeviceChange(deviceMql, $) {
-    if (deviceMql.matches) {
-        let searchBar = $('div#search-bar-input-form');
-        if (searchBar.length) {
-            let searchBarHtml = searchBar.html();
-
-            let content = $('<div class="panel panel-default">\n' +
-                '                    <div class="panel-heading" style="border-bottom: 1px #ccc solid">\n' +
-                '                        <a href="#search-block-element" data-toggle="collapse" class="panel-title collapsed" role="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search</a>\n' +
-                '                    </div>\n' +
-                '                    <div class="panel-body panel-collapse collapse fade" id="search-block-element" style="padding:10px 0">' + searchBarHtml +
-                '                    </div>\n' +
-                '                </div>');
-            searchBar.remove();
-            content.insertBefore($('div.main-container'));
-        }
-    }
 }
