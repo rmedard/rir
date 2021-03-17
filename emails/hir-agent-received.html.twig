@@ -18,13 +18,14 @@
             <td valign="top" id="templateBody">
               <!-- BEGIN MODULE: BODY CONTENT // -->
               <div>
-                <h3>Your advertiser profile has been posted on {{ drupal_token('site:name') }}</h3>
+                <h3>Your web space at {{ drupal_token('site:name') }} is ready!</h3>
 
                 <p><strong>Dear {{ agent.title.value }}!</strong></p>
 
-                <p>Your real estate advertiser profile has been created and it is online:
+                <p>Your advertising web space has been created and it is online:
                   <a href="{{ drupal_url('node/' ~ agent.id, {absolute: true}) }}">Here</a><br>
                   Would you please double check that your details below are correct? </p>
+
                 <strong>Your public details:</strong>
                 <ul>
                   <li><strong>Full name</strong>: {{ agent.title.value }}</li>
