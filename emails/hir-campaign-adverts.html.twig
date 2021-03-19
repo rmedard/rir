@@ -34,11 +34,13 @@
                 <td class="tg-0pky">
                     <p id="titleId">
                         <a href="{{ drupal_url('node/' ~ advert.id, {absolute: true}) }}">{{ advert.title.value|capitalize }}</a>
-                        - Ref: <span>{{ advert.field_advert_reference.value }}</span> -
-                        {% if advert.field_advert_price_negociable.value == '1' %}
-                            <span>Negotiable</span>
-                        {% else %}
-                            <span>{{ advert.field_advert_price.value }} {{ advert.field_advert_currency.value|upper }}</span>
+                        - Ref: <span>{{ advert.field_advert_reference.value }}</span>
+                        {% if advert.field_advert_type.value != 'auction' %}
+                            {% if advert.field_advert_price_negociable.value == '1' %}
+                                <span> - Negotiable</span>
+                            {% else %}
+                                <span> - {{ advert.field_advert_price.value }} {{ advert.field_advert_currency.value|upper }}</span>
+                            {% endif %}
                         {% endif %}
                         <br/>
                         {{ advert.field_advert_district.entity.name.value }}, {{ advert.field_advert_sector.value }}
