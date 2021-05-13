@@ -39,7 +39,7 @@
                             {% if advert.field_advert_price_negociable.value == '1' %}
                                 <span> - Negotiable</span>
                             {% else %}
-                                <span> - {{ advert.field_advert_price.value }} {{ advert.field_advert_currency.value|upper }}</span>
+                                <span> - {{ advert.field_advert_price.value|number_format }} {{ advert.field_advert_currency.value|upper }}</span>
                             {% endif %}
                         {% endif %}
                         <br/>

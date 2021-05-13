@@ -34,7 +34,7 @@
           <p id="titleId">
             <a href="{{ drupal_url('node/' ~ advert.id, {absolute: true}) }}">{{ advert.title.value|capitalize }}</a>
             - Ref: <span>{{ advert.field_advert_reference.value }}</span> -
-            <span>{{ advert.field_advert_price.value }} {{ advert.field_advert_currency.value|upper }}</span><br/>
+            <span>{{ advert.field_advert_price.value|number_format }} {{ advert.field_advert_currency.value|upper }}</span><br/>
             {{ advert.field_advert_district.entity.name.value }}, {{ advert.field_advert_sector.value }}
             <br/>
             {{ advert.field_advert_property_type.value|capitalize }}
