@@ -11,54 +11,57 @@ use Drupal\node\NodeInterface;
  * Place your custom PHP code in this file.
  */
 
+/**
+ * Implements hook_preprocess_HOOK().
+ */
 function rir_preprocess_menu(&$variables)
 {
     if (isset($variables['menu_name']) and $variables['menu_name'] === 'adverts-secondary-menu') {
         $featured = Drupal::entityQuery('node')
             ->condition('type', 'advert')
-            ->condition('status', Node::PUBLISHED)
+            ->condition('status', NodeInterface::PUBLISHED)
             ->condition('field_advert_posting_plan', 'standard', '<>')
             ->count();
         $featured_count = $featured->execute();
 
         $house = Drupal::entityQuery('node')
             ->condition('type', 'advert')
-            ->condition('status', Node::PUBLISHED)
+            ->condition('status', NodeInterface::PUBLISHED)
             ->condition('field_advert_property_type', ['house', 'building'], 'IN')
             ->count();
         $house_count = $house->execute();
 
         $apart = Drupal::entityQuery('node')
             ->condition('type', 'advert')
-            ->condition('status', Node::PUBLISHED)
+            ->condition('status', NodeInterface::PUBLISHED)
             ->condition('field_advert_property_type', 'apartment')
             ->count();
         $apart_count = $apart->execute();
 
         $commerce = Drupal::entityQuery('node')
             ->condition('type', 'advert')
-            ->condition('status', Node::PUBLISHED)
+            ->condition('status', NodeInterface::PUBLISHED)
             ->condition('field_advert_property_type', ['commerce', 'warehouse'], 'IN')
             ->count();
         $commerce_count = $commerce->execute();
 
         $room = Drupal::entityQuery('node')
             ->condition('type', 'advert')
-            ->condition('status', Node::PUBLISHED)
+            ->condition('status', NodeInterface::PUBLISHED)
             ->condition('field_advert_property_type', ['room', 'shared_room'], 'IN')
             ->count();
         $room_count = $room->execute();
 
         $office = Drupal::entityQuery('node')
             ->condition('type', 'advert')
-            ->condition('status', Node::PUBLISHED)
+            ->condition('status', NodeInterface::PUBLISHED)
             ->condition('field_advert_property_type', 'office')
             ->count();
         $office_count = $office->execute();
 
         $land = Drupal::entityQuery('node')
             ->condition('type', 'advert')
-            ->condition('status', Node::PUBLISHED)
+            ->condition('status', NodeInterface::PUBLISHED)
             ->condition('field_advert_property_type', 'land')
             ->count();
         $land_count = $land->execute();
@@ -76,6 +79,9 @@ function rir_preprocess_menu(&$variables)
     }
 }
 
+/**
+ * Implements hook_preprocess_HOOK().
+ */
 function rir_preprocess_page_title(&$variables)
 {
     $queryString = Drupal::request()->getQueryString();
@@ -117,6 +123,9 @@ function rir_preprocess_page_title(&$variables)
     }
 }
 
+/**
+ * Implements hook_preprocess_HOOK().
+ */
 function rir_preprocess_page(&$variables)
 {
 
@@ -154,6 +163,9 @@ function rir_preprocess_page(&$variables)
     }
 }
 
+/**
+ * Implements hook_preprocess_HOOK().
+ */
 function rir_preprocess_block(&$variables)
 {
     if ($variables['derivative_plugin_id'] == 'rir_realtime_block') {
@@ -161,6 +173,10 @@ function rir_preprocess_block(&$variables)
     }
 }
 
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
 function rir_preprocess_views_view_field(&$variables)
 {
     $view = $variables['view'];
@@ -183,7 +199,7 @@ function rir_preprocess_views_view_field(&$variables)
     }
 }
 
-function getDuplicateAdverts($advert_id)
+function getDuplicateAdverts($advert_id): string
 {
     $advert = Node::load($advert_id);
     $signature = $advert->get('field_advert_signature')->value;
