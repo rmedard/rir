@@ -26,7 +26,7 @@
                 <ul>
                   <li><strong>Reference</strong>: {{ advert.field_advert_reference.value }}</li>
                   <li><strong>Property title</strong>: {{ advert.title.value }}</li>
-                  <li><strong>Property address:</strong> {{ advert.field_advert_district.entity.name.value }}, {{ advert.field_advert_sector.value }}, {{ advert.field_advert_village.value }} {{ advert.field_advert_street.value }}</li>
+                  <li><strong>Property address:</strong> {{ advert.field_advert_locality.entity.name.value }}, {{ advert.field_advert_sector.value }}, {{ advert.field_advert_village.value }} {{ advert.field_advert_street.value }}</li>
                   {% if advert.field_advert_posting_plan.value == 'standard' %}
                     <li><strong>Posting type</strong>: Standard</li>
                   {% elseif advert.field_advert_posting_plan.value == 'featured' %}
